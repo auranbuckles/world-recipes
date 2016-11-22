@@ -1,11 +1,14 @@
 (function() {
 	'use strict';
 
-	function RecipeController ($scope) {
-		$scope.name = "Auran is in recipes"
-	}
+	function RecipeController (RecipeService) {
+		var vm = this;
 
-	RecipeController.$inject = ['$scope']
+		RecipeService.getRecipes()
+			.then(function(response) {
+				vm.recipes = response.data;
+			});
+	}
 
 	angular
 		.module('app')
