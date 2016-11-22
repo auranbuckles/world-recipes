@@ -14,13 +14,34 @@ User.create([
 	{ username: 'yingyee', email: 'yingyee@gmail.com', password: 'meowmeow'},
 	{ username: 'ivyhievia', email: 'ivehie@gmail.com', password: 'funfunfun'},
 	{ username: 'brianh', email: 'brianh@gmail.com', password: 'hihihihihi'},
-	{ username: 'cocoaexpert', email: 'cocoaforlife@gmail.com', password: 'byebyebye'}
+	{ username: 'cocoaexpert', email: 'cocoaforlife@gmail.com', password: 'byebyebye'},
+	{ username: 'lazycook', email: 'garrett44@gmail.com', password: 'littlebasil'}
 ])
 
 Recipe.create([
 	{ title: 'Crepes', difficulty: 2, time: 35, servings: 12, ingredients: ['1 cup all-purpose flour', '1 teaspoon white sugar', '1/4 teaspoon salt', '3 eggs', '2 cups milk', '2 tablespoons butter, melted'],
 		directions: ['Sift together flour, sugar and salt; set aside. In a large bowl, beat eggs and milk together with an electric mixer. Beat in flour mixture until smooth; stir in melted butter.', 'Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 2 tablespoons for each crepe. Tip and rotate pan to spread batter as thinly as possible. Brown on both sides and serve hot.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
+	},
+	{ title: 'French Leek Pie', difficulty: 3, time: 60, servings: 6, ingredients: ['1 (9 inch) refrigerated pie crust', '2 teaspoons butter', '3 leeks, chopped', '1 pinch salt and black pepper to taste', '1 cup light cream', '1 1/4 cups shredded Gruyere cheese'],
+		directions: ['Preheat oven to 375 degrees F (190 degrees C).', 
+			'Melt butter in a large saucepan over medium-low heat. Stir in leeks; cook, stirring occasionally, for about 10 minutes, or until soft. Season with salt and pepper. Reduce heat to low. Stir in cream and cheese, and warm through. Pour mixture into pie shell.', 
+			'Bake in preheated oven for 30 minutes, or until custard is set and golden on top. Allow to sit 10 minutes before cutting pie into wedges.'],
+		category_id: 2, author_id: rand(1..8)
+	},
+	{ title: 'Biscotti Toscani', difficulty: 4, time: 90, servings: 42, ingredients: ['1/3 cup butter', '3/4 cup white sugar', '2 eggs', '1 teaspoon vanilla extract', '1/4 teaspoon almond extract', '2 teaspoons orange zest', '2 1/4 cups all-purpose flour', '1 1/2 teaspoons baking powder', '1/8 teaspoon ground nutmeg', '1/4 teaspoon salt', '1 cup semisweet chocolate chips', '1/2 cup toasted almond pieces'],
+		directions: ['Preheat the oven to 325 degrees F (165 degrees C). Grease and flour a large baking sheet.', 
+			'In a large bowl, cream butter and sugar until light and fluffy. Beat in eggs, vanilla, almond extract, and zest. Combine flour, baking powder, nutmeg, and salt. Stir into the creamed mixture until just blended. Mix in almonds. Divide dough into two pieces. Form into long flat loaves about 1/2 inch tall and 12 inches long. Place the loaves 2 inches apart on the prepared baking sheet.', 
+			'Bake in preheated oven for 25 minutes, or until a light golden brown. Cool on a wire rack for 5 minutes.', 
+			'With a serrated knife, cut diagonally into slices about 1/2 inch thick. Lay the slices flat on the baking sheet. Bake for 10 minutes, turning over once. Transfer to a wire rack to cool.', 
+			'Place chocolate chips into a small, microwave-safe bowl. Melt chocolate in the microwave, stirring every 20 to 30 seconds until smooth. Use a spatula to spread chocolate onto one side of each cookie. Let stand at room temperature until set. Store biscotti at room temperature in an airtight container.'],
+		category_id: 2, author_id: rand(1..8)
+	},
+	{ title: 'Traditional Osso Buco', difficulty: 4, time: 110, servings: 4, ingredients: ['2 pounds veal shanks, cut into short lengths', '1/4 cup all-purpose flour', '1/4 cup Butter', '2 cloves garlic, crushed', '1 large onion, chopped', '1 large carrot, chopped', '2/3 cup dry white wine', '2/3 cup beef stock', '1 (14.5 ounce) can diced tomatoes', 'salt and pepper to taste', '1/2 cup chopped fresh flat leaf parsley', '1 clove garlic, minced', '2 teaspoons grated lemon zest'],
+		directions: ['Dust the veal shanks lightly with flour. Melt the butter in a large skillet over medium to medium-high heat. Add the veal, and cook until browned on the outside. Remove to a bowl, and keep warm. Add two cloves of crushed garlic and onion to the skillet; cook and stir until onion is tender. Return the veal to the pan and mix in the carrot and wine. Simmer for 10 minutes.', 
+			'Pour in the tomatoes and beef stock, and season with salt and pepper. Cover, and simmer over low heat for 1 1/2 hours, basting the veal every 15 minutes or so. The meat should be tender, but not falling off the bone.', 
+			'In a small bowl, mix together the parsley, 1 clove of garlic and lemon zest. Sprinkle the gremolata over the veal just before serving.'],
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Baked Ziti', difficulty: 4, time: 75, servings: 8,
 		ingredients: ['1 pound dry ziti pasta', '1 onion, chopped', '1 pound lean ground beef', '2 (26 ounce) jars spaghetti sauce', '6 ounces provolone cheese, sliced', '1 1/2 cups sour cream', '6 ounces mozzarella cheese, shredded', '2 tablespoons grated Parmesan cheese'],
@@ -28,20 +49,42 @@ Recipe.create([
 			'In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes.', 
 			'Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture. Top with grated Parmesan cheese.', 
 			'Bake for 30 minutes in the preheated oven, or until cheeses are melted.'],
-		category_id: 3, author_id: rand(1..7)
+		category_id: 3, author_id: rand(1..8)
+	},
+	{ title: 'Italian Spaghetti Sauce with Meatballs', difficulty: 3, time: 140, servings: 6,
+		ingredients: ['Meatballs', '1 pound lean ground beef', '1 cup fresh bread crumbs', '1 tablespoon dried parsley', '1 tablespoon grated Parmesan cheese', '1/4 teaspoon ground black pepper', '1/8 teaspoon garlic powder', '1 egg, beaten', 'sauce', '3/4 cup chopped onion', '5 cloves garlic, minced', '1/4 cup olive oil', '2 (28 ounce) cans whole peeled tomatoes', '2 teaspoons salt', '1 teaspoon white sugar', '1 bay leaf', '1 (6 ounce) can tomato paste', '3/4 teaspoon dried basil', '1/2 teaspoon ground black pepper'],
+		directions: ['In a large bowl, combine ground beef, bread crumbs, parsley, Parmesan, 1/4 teaspoon black pepper, garlic powder and beaten egg. Mix well and form into 12 balls. Store, covered, in refrigerator until needed.', 
+			'In a large saucepan over medium heat, saute onion and garlic in olive oil until onion is translucent. Stir in tomatoes, salt, sugar and bay leaf. Cover, reduce heat to low, and simmer 90 minutes. Stir in tomato paste, basil, 1/2 teaspoon pepper and meatballs and simmer 30 minutes more. Serve.'],
+		category_id: 3, author_id: rand(1..8)
+	},
+	{ title: 'Eggplant Parmesan', difficulty: 3, time: 60, servings: 10,
+		ingredients: ['3 eggplant, peeled and thinly sliced', '2 eggs, beaten', '4 cups Italian seasoned bread crumbs', '6 cups spaghetti sauce, divided', '1 (16 ounce) package mozzarella cheese, shredded and divided', '1/2 cup grated Parmesan cheese, divided', '1/2 teaspoon dried basil'],
+		directions: ['Preheat oven to 350 degrees F (175 degrees C).', 
+			'Dip eggplant slices in egg, then in bread crumbs. Place in a single layer on a baking sheet. Bake in preheated oven for 5 minutes on each side.', 
+			'In a 9x13 inch baking dish spread spaghetti sauce to cover the bottom. Place a layer of eggplant slices in the sauce. Sprinkle with mozzarella and Parmesan cheeses. Repeat with remaining ingredients, ending with the cheeses. Sprinkle basil on top.', 
+			'Bake in preheated oven for 35 minutes, or until golden brown.'],
+		category_id: 3, author_id: rand(1..8)
+	},
+	{ title: 'Gourmet Mushroom Risotto', difficulty: 4, time: 50, servings: 6,
+		ingredients: ['6 cups chicken broth, divided', '3 tablespoons olive oil, divided', '1 pound portobello mushrooms, thinly sliced', '1 pound white mushrooms, thinly sliced', '2 shallots, diced', '1 1/2 cups Arborio rice', '1/2 cup dry white wine', 'sea salt to taste', 'freshly ground black pepper to taste', '3 tablespoons finely chopped chives', '4 tablespoons butter', '1/3 cup freshly grated Parmesan cheese'],
+		directions: ['In a saucepan, warm the broth over low heat.', 
+			'Warm 2 tablespoons olive oil in a large saucepan over medium-high heat. Stir in the mushrooms, and cook until soft, about 3 minutes. Remove mushrooms and their liquid, and set aside.', 
+			'Add 1 tablespoon olive oil to skillet, and stir in the shallots. Cook 1 minute. Add rice, stirring to coat with oil, about 2 minutes. When the rice has taken on a pale, golden color, pour in wine, stirring constantly until the wine is fully absorbed. Add 1/2 cup broth to the rice, and stir until the broth is absorbed. Continue adding broth 1/2 cup at a time, stirring continuously, until the liquid is absorbed and the rice is al dente, about 15 to 20 minutes.', 
+			'Remove from heat, and stir in mushrooms with their liquid, butter, chives, and parmesan. Season with salt and pepper to taste.'],
+		category_id: 3, author_id: rand(1..8)
 	},
 	{ title: 'Rocket and Parma Ham Salad', difficulty: 1, time: 5, servings: 2,
 		ingredients: ['1 (7 ounce) bag arugula', '7 ounces Parma ham, torn into thin strips', '1/4 cup olive oil', '1/4 cup balsamic vinegar'],
 		directions: ['Arrange arugula on a large, flat platter.', 
 			'Top arugula with Parma ham.', 
 			'Drizzle olive oil and balsamic vinegar over the salad.'],
-		category_id: 3, author_id: rand(1..7)
+		category_id: 3, author_id: rand(1..8)
 	},
 	{ title: 'Sushi Rice', difficulty: 2, time: 25, servings: 15,
 		ingredients: ['2 cups uncooked glutinous white rice (sushi rice)', '3 cups water', '1/2 cup rice vinegar', '1 tablespoon vegetable oil', '1/4 cup white sugar', '1 teaspoon salt'],
 		directions: ['Rinse the rice in a strainer or colander until the water runs clear. Combine with water in a medium saucepan. Bring to a boil, then reduce the heat to low, cover and cook for 20 minutes. Rice should be tender and water should be absorbed. Cool until cool enough to handle.', 
 		'In a small saucepan, combine the rice vinegar, oil, sugar and salt. Cook over medium heat until the sugar dissolves. Cool, then stir into the cooked rice. When you pour this in to the rice it will seem very wet. Keep stirring and the rice will dry as it cools.'],
-		category_id: 4, author_id: rand(1..7)
+		category_id: 4, author_id: rand(1..8)
 	},
 	{ title: 'Oyakodon', difficulty: 3, time: 40, servings: 2,
 		ingredients: ['1 cup uncooked short-grain white rice', '2 cups water', '1 cup chicken stock', '1/4 cup soy sauce', '2 tablespoons brown sugar', '1/2 onion, thinly sliced', '1/2 cup shiitake mushrooms, thinly sliced', '1 skinless, boneless chicken breast half - cut into strips', '4 green onions, cut into 1-inch pieces', '2 eggs, beaten', '6 snow peas, thinly sliced'],
@@ -49,7 +92,49 @@ Recipe.create([
 			'Bring the chicken stock to a boil in a small saucepan. Stir in the soy sauce and brown sugar until the sugar has dissolved. Reduce heat to low; keep warm.', 
 			'Heat several tablespoons of the chicken sauce in a skillet over medium heat. Cook and stir the onion and shiitake mushrooms in the sauce until the onion has softened, about 3 minutes. Add the chicken, green onions, and a few more tablespoons of the sauce; continue cooking until the chicken is no longer pink in the center, about 5 minutes more. Spread the chicken mixture evenly over the skillet; pour the beaten egg overtop. Reduce heat to medium-low and sprinkle with the snow peas. Cook and stir until the egg has firmed and is no longer runny, about 3 minutes.', 
 			'Divide the rice between two bowls and spoon the egg mixture evenly overtop. Pour additional chicken sauce over the rice to serve.'],
-		category_id: 4, author_id: rand(1..7)
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Yakitori Chicken', difficulty: 3, time: 45, servings: 6,
+		ingredients: ['1/2 cup sake', '1/2 cup soy sauce', '1 tablespoon sugar', '1 clove garlic, crushed', '1 (2 inch) piece fresh ginger root, grated', '1 pound skinless, boneless chicken breast meat - cubed', '3 leeks, white part only, cut into 1/2 inch pieces'],
+		directions: ['In a medium dish, mix together the sake, soy sauce, sugar, garlic and ginger. Add chicken, and allow to marinate for 15 minutes.', 
+			'Preheat your oven\'s broiler. Grease six metal skewers, and thread alternately with 3 pieces of chicken and 2 pieces of leek. Place on a baking sheet or broiling pan, and brush with the marinade.', 
+			'Broil for about 5 minutes, baste again, then broil for another 5 minutes, or until chicken is cooked through. Discard remaining marinade.'],
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Tonkatsu (Asian-Style Pork Chop)', difficulty: 3, time: 40, servings: 8,
+		ingredients: ['2 eggs', '1 teaspoon milk', '1/2 teaspoon minced garlic', 'salt to taste', '1/2 teaspoon pepper', '1 cup vegetable oil for frying', '8 thin cut boneless pork chops', '1 1/2 cups panko crumbs'],
+		directions: ['In a medium bowl, mix together the eggs, milk, garlic, salt and pepper. Heat oil in a large heavy skillet over medium-high heat. Place the panko crumbs in a shallow bowl.', 
+			'Rinse pork chops with water, then dip in the egg mixture. Coat with panko crumbs, dip in the egg mixture again, then coat with another layer of panko crumbs. Lay coated chops on a plate until the rest are finished. If you have time, let them set for about 10 minutes, and the coating will set very well. If you wish to freeze the chops, now is the time.', 
+			'When the oil is very hot, place pork chops into the pan, and fry for about 5 minutes on each side, until golden brown.'],
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Cucumber Sunomono', difficulty: 2, time: 75, servings: 5,
+		ingredients: ['2 large cucumbers, peeled', '1/3 cup rice vinegar', '4 teaspoons white sugar', '1 teaspoon salt', '1 1/2 teaspoons minced fresh ginger root'],
+		directions: ['Cut cucumbers in half lengthwise and scoop out any large seeds. Slice crosswise into very thin slices.', 
+			'In a small bowl combine vinegar, sugar, salt and ginger. Mix well. Place cucumbers inside of the bowl, stir so that cucumbers are coated with the mixture. Refrigerate the bowl of cucumbers for at least 1 hour before serving.'],
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Miso Salmon', difficulty: 3, time: 50, servings: 6,
+		ingredients: ['2 (1 1/2-pound) salmon fillets, skin removed', '1 cup miso paste', '1/4 cup sake', '1/2 cup brown sugar', '2 tablespoons sesame seeds', '1 teaspoon sesame oil', '1/4 cup water', '1/2 cup prepared soy-ginger salad dressing', '3 tablespoons seasoned rice vinegar'],
+		directions: ['Preheat the oven to 400 degrees F (200 degrees C). Fill a large skillet with about 1 inch of water and bring to a boil. Poach fish just until cooked on the outside, about 2 minutes per side. Transfer fillets to a broiler pan.', 
+			'In a small bowl, stir together the miso paste, sake, brown sugar, sesame seeds, sesame oil, water, salad dressing and rice vinegar. Spread this over the tops of the salmon fillets.', 
+			'Bake for 15 minutes in the preheated oven, or until almost cooked through. Switch the oven to broil, and broil until the top is browned and bubbly, about 5 more minutes. Cut fillets into portions to serve.'],
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Miso Braised Pork', difficulty: 4, time: 225, servings: 12,
+		ingredients: ['1 tablespoon canola oil', '5 pounds pork butt (shoulder roast) cut into 2-inch slices', '2 tablespoons minced garlic', '1 teaspoon minced ginger', '2 cups water, more if needed', '1/3 cup soy sauce', '1/3 cup brown sugar', '3/4 cup white (shiro) miso'],
+		directions: ['Heat canola oil in a large Dutch oven over medium-high heat until hot. Sear pork slices until well browned on both sides, then remove. Stir in the garlic and ginger, cook until fragrant, about 30 seconds. Add the water, soy sauce, brown sugar, and miso; bring to a simmer, scraping the bottom of the pan to dissolve the caramelized juices.', 
+			'Place pork into pot, add additional water if needed to cover pork with the sauce. Then, reduce heat to medium-low, cover, and simmer for 3 hours until the pork is tender, and the sauce has thickened.'],
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Green Tea Layer Cake', difficulty: 4, time: 55, servings: 12,
+		ingredients: ['1 cup all-purpose flour', '1 cup cake flour', '1 teaspoon baking soda', '1 teaspoon salt', '4 teaspoons powdered green tea', '1 1/4 cups white sugar', '1 cup vegetable oil', '3 eggs', '1 cup plain yogurt', '1 1/2 teaspoons vanilla extract', '1 1/4 cups confectioners\' sugar', '2 teaspoons powdered green tea', '2 tablespoons butter, softened', '1 (3 ounce) package cream cheese, softened', '1/2 teaspoon vanilla extract', '1 1/2 teaspoons milk'],
+		directions: ['Preheat oven to 350 degrees F (175 degrees C). Grease and flour 2 - 9 inch round pans. Sift together the all-purpose flour, cake flour, baking soda, salt, and green tea powder; set aside.', 
+			'In a large bowl, beat together sugar, oil, and eggs until smooth. Stir in 1 1/2 teaspoons vanilla. Beat in the flour mixture alternately with the yogurt, mixing just until incorporated. Pour batter into prepared pans.', 
+			'Bake in the preheated oven for 30 to 40 minutes, or until a toothpick inserted into the center of the cake comes out clean. Cool on wire rack for 30 minutes before turning out of the pans.', 
+			'To make Green Tea Frosting: Sift together confectioners\' sugar and green tea powder. In a medium bowl, combine tea mixture with butter, cream cheese, vanilla and milk. Beat with an electric mixer until smooth.', 
+			'To assemble the cakes: when the cakes are completely cooled, put one layer on a flat serving plate. Spread a thin layer of frosting over it. Place the other layer of cake on top, and spread frosting to cover the top and sides of cake. Dust with green tea powder if desired. Serve cold or at room temperature.'],
+		category_id: 4, author_id: rand(1..8)
 	},
 	{ title: 'Chinese Steamed Buns', difficulty: 5, time: 60, servings: 24,
 		ingredients: ['1 tablespoon active dry yeast', '1 teaspoon white sugar', '1/4 cup all-purpose flour', '1/4 cup water', '1/2 cup warm water', '1 1/2 cups all-purpose flour', '1/4 teaspoon salt', '2 tablespoons white sugar', '1 tablespoon vegetable oil', '1/2 teaspoon baking powder'],
@@ -58,14 +143,43 @@ Recipe.create([
 			'Punch down dough, and spread out on a floured board. Sprinkle baking powder evenly on surface, and knead for 5 minutes. Divide dough into 2 parts, and place the piece you are not working with in a covered bowl. Divide each half into 12 parts. Shape each part into a ball with smooth surface up. Put each ball on a wax paper square. Let stand covered until double, about 30 minutes.', 
 			'Bring water to a boil in wok, and reduce heat to medium; the water should still be boiling. Place steam-plate on a small wire rack in the middle of the wok. Transfer as many buns on wax paper as will comfortably fit onto steam-plate leaving 1 to 2 inches between the buns. At least 2 inches space should be left between steam-plate and the wok. Cover wok with lid. Steam buns over boiling water for 15 minutes.', 
 			'REMOVE LID BEFORE you turn off heat, or else water will drip back onto bun surface and produce yellowish "blisters" on bun surfaces. Continue steaming batches of buns until all are cooked.'],
-		category_id: 1, author_id: rand(1..7)
+		category_id: 1, author_id: rand(1..8)
 	},
-	{ title: 'Chinese Green Bean Stir-Fry', difficulty: 3, time: 35, servings: 40,
+	{ title: 'Chinese Green Bean Stir-Fry', difficulty: 2, time: 35, servings: 40,
 		ingredients: ['1 cup vegetable oil', '13 pounds fresh green beans, trimmed', '5 tablespoons minced garlic', '5 tablespoons minced fresh ginger root', '2 tablespoons kosher salt', '1 tablespoon coarsely ground black pepper', '2 (8 ounce) bottles black bean sauce'],
 		directions: ['In a large wok, heat oil over medium-high heat. Stir in green beans; cook, stirring frequently, for 1 to 2 minutes. Stir in garlic and ginger; cook, stirring frequently, for 3 to 4 minutes.', 
 			'Season with salt and pepper, and then stir in black bean sauce. Continue cooking until green beans are tender.'],
-			category_id: 1, author_id: rand(1..7)
-		},
+			category_id: 1, author_id: rand(1..8)
+	},
+	{ title: 'Cantonese Style Pork and Shrimp Dumplings', difficulty: 3, time: 50, servings: 10,
+		ingredients: ['1/4 pound ground pork', '1 cup chopped watercress', '1/2 (8 ounce) can water chestnuts, drained and chopped', '1/4 cup chopped green onions', '1 tablespoon oyster sauce', '1 1/2 tablespoons sesame oil', '1 teaspoon minced garlic', '1 teaspoon soy sauce', '1/8 teaspoon ground white pepper', '1/8 teaspoon salt', '1 (16 ounce) package round dumpling skins', '1 pound peeled and deveined medium shrimp'],
+		directions: ['In a large bowl, combine the pork, watercress, water chestnuts, green onion, oyster sauce, sesame oil, garlic, soy sauce, ground white pepper and salt and mix together well.', 
+			'Place 1/2 teaspoonful of this filling onto each dumpling skin. Place 1 shrimp on the filling, slightly wet the edge of the dumpling skin, fold over and pinch with your fingers to form a seal all the way around.', 
+			'To cook: Pan fry the dumplings in a large skillet over medium heat with oil for 15 minutes, turning over halfway through OR Place them in a pot of boiling water for 10 minutes; drain and serve in hot chicken broth.'],
+			category_id: 1, author_id: rand(1..8)
+	},
+	{ title: 'Chinese Tea Leaf Eggs', difficulty: 2, time: 200, servings: 8,
+		ingredients: ['8 eggs', '1 teaspoon salt', '3 cups water', '1 tablespoon soy sauce', '1 tablespoon black soy sauce', '1/4 teaspoon salt', '2 tablespoons black tea leaves', '2 pods star anise', '1 (2 inch) piece cinnamon stick', '1 tablespoon tangerine zest'],
+		directions: ['In a large saucepan, combine eggs and 1 teaspoon salt; cover with cold water. Bring to a boil, reduce heat, and simmer for 20 minutes. Remove from heat, drain, and cool. When cool, tap eggs with the back of a spoon to crack shells (do not remove shells).', 
+			'In a large saucepan, combine 3 cups water, soy sauce, black soy sauce, salt, tea leaves, star anise, cinnamon stick, and tangerine zest. Bring to a boil, then reduce heat, cover, and simmer for 3 hours. Remove from heat, add eggs, and let steep for at least 8 hours.'],
+			category_id: 1, author_id: rand(1..8)
+	},
+	{ title: 'Crab Rangoon', difficulty: 4, time: 30, servings: 10,
+		ingredients: ['1 (14 ounce) package small won ton wrappers', '2 (8 ounce) packages cream cheese, softened', '1 teaspoon minced fresh ginger root', '1/2 teaspoon chopped fresh cilantro', '1/2 teaspoon dried parsley', '3 tablespoons dark soy sauce', '1 pound crabmeat, shredded', '1 quart oil for frying'],
+		directions: ['Heat oil in a large heavy skillet or deep fryer to 360 degrees F (180 degrees C).', 
+			'In a small bowl, mix together cream cheese, soy sauce, ginger, garlic, parsley, cilantro and crabmeat.', 
+			'Place 1/2 to 1 teaspoon of the cream cheese mixture into the center of each wonton wrapper. Fold the won ton wrapper over the stuffing to make a triangle or a half moon, depending on the shape of the won ton wrappers you have purchased. Moisten the edges with a little water, and seal. Place prepared won tons under a slightly moist paper towel until ready for frying.', 
+			'Add 3 or 4 wontons to the hot oil, and cook until golden brown, turning once. Set aside on paper towels to drain. Repeat until all wontons have been fried. Serve hot.'],
+			category_id: 1, author_id: rand(1..8)
+	},
+	{ title: 'Jian Bing (Chinese Crepes)', difficulty: 3, time: 20, servings: 1,
+		ingredients: ['2 tablespoons millet flour', '2 tablespoons soy milk', '1/2 teaspoon vegetable oil', '1 teaspoon water, if needed', '1 tablespoon Chinese black bean sauce', '1 teaspoon water', '1/2 teaspoon Asian chile pepper sauce, or to taste', '1 teaspoon water', 'cooking spray', '1 egg, beaten', '1/2 green onion, sliced', '1 tablespoon torn fresh cilantro leaves', '2 whole crackers'],
+		directions: ['Whisk together millet flour, soy milk, and vegetable oil in a bowl to make a batter the consistency of heavy cream. Add a teaspoon of water to thin the batter, if necessary.', 
+			'Mash the black bean sauce in a small bowl with 1 teaspoon of water to make it easy to spread. In a separate small bowl, mix the hot chili sauce with 1 teaspoon of water. Set the sauces aside.', 
+			'Spray a large skillet generously with cooking spray, and heat over medium-low heat. Pour the batter into the skillet, and spread evenly to make a thin crepe. Cook the crepe for 1 to 2 minutes, until firm. Pour the egg evenly over the crepe. Cook an additional 1 to 2 minutes, until the egg is set. Sprinkle the crepe with green onion slices and cilantro leaves, pressing them firmly into the cooked egg.', 
+			'Flip the crepe and spread with bean sauce and chili sauce. Place the crackers in the center of the crepe, leaving about 1/4 inch of space between the two crackers. Flip the top third of the crepe down over the crackers, flip the bottom third up, and then fold the crepe in half so the crackers are stacked on top of each other in a tidy package. Serve hot.'],
+			category_id: 1, author_id: rand(1..8)
+	},
 	{ title: 'Creme Brulee', difficulty: 3, time: 40, servings: 4,
 		ingredients: ['1/2 cup semi-sweet chocolate chips', '2 cups heavy cream', '1/4 cup white sugar', '1 pinch salt', '2 teaspoons vanilla extract', '5 egg yolks', '4 tablespoons white sugar'],
 		directions: ['Preheat the oven to 300 degrees F (150 degrees C).', 
@@ -75,7 +189,7 @@ Recipe.create([
 			'Place a towel in the bottom of a baking dish, and place the filled ramekins on top of the towel. Place in the oven, and pour boiling water carefully into the baking dish until it comes half way up the sides of the ramekins. Cover the dish loosely with aluminum foil.', 
 			'Bake for 35 to 40 minutes in the preheated oven, just until the custard is set. Remove ramekins from the dish, and refrigerate for 4 to 6 hours.', 
 			'Before serving, sprinkle 1 tablespoon of sugar over the top of each creme brulee. Use a kitchen torch or your oven broiler to caramelize the sugar. It may take 2 to 3 minutes in the broiler. Serve immediately.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Ratatouille', difficulty: 3, time: 60, servings: 4,
 		ingredients: ['2 tablespoons olive oil', '3 cloves garlic, minced', '2 teaspoons dried parsley', '1 eggplant, cut into 1/2 inch cubes', 'salt to taste', '1 cup grated Parmesan cheese', '2 zucchini, sliced', '1 large onion, sliced into rings', '2 cups sliced fresh mushrooms', '1 green bell pepper, sliced', '2 large tomatoes, chopped'],
@@ -83,14 +197,14 @@ Recipe.create([
 			'Heat remaining 1 tablespoon olive oil in a medium skillet over medium heat. Cook and stir garlic until lightly browned. Mix in parsley and eggplant. Cook and stir until eggplant is soft, about 10 minutes. Season with salt to taste.', 
 			'Spread eggplant mixture evenly across bottom of prepared casserole dish. Sprinkle with a few tablespoons of Parmesan cheese. Spread zucchini in an even layer over top. Lightly salt and sprinkle with a little more cheese. Continue layering in this fashion, with onion, mushrooms, bell pepper, and tomatoes, covering each layer with a sprinkling of salt and cheese.', 
 			'Bake in preheated oven for 45 minutes.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Baked Chicken Cordon Bleu', difficulty: 4, time: 60, servings: 6,
 		ingredients: ['6 skinless, boneless chicken breast halves - pounded to 1/2 inch thickness', '6 string cheese sticks', '6 slices ham', '1/2 cup butter, melted', '1 cup seasoned dry bread crumbs', 'toothpicks'],
 		directions: ['Preheat the oven to 350 degrees F (175 degrees C).', 
 			'Lay out the pounded chicken breasts on a clean surface. Place a slice of ham on each piece, then one stick of cheese. Roll the chicken up around the cheese and ham, and secure with toothpicks. Dip each roll in melted butter, then roll in bread crumbs. Place in a shallow baking dish.', 
 			'Bake for 40 minutes in the preheated oven, or until chicken is browned and juices run clear.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Zuppa Toscana', difficulty: 4, time: 70, servings: 6,
 		ingredients: ['1 (16 ounce) package smoked sausage', '2 potatoes, cut into 1/4-inch slices', '3/4 cup chopped onion', '6 slices bacon', '1 1/2 teaspoons minced garlic', '2 cups kale - washed, dried, and shredded', '2 tablespoons chicken bouillon powder', '1 quart water', '1/3 cup heavy whipping cream'],
@@ -100,34 +214,34 @@ Recipe.create([
 			'Remove bacon and crumble. Set aside.', 
 			'Add garlic to the onions and cook an additional 1 minute. Add chicken base or bouillon, water, and potatoes, simmer 15 minutes.', 
 			'Add crumbled bacon, sausage, kale, and cream. Simmer 4 minutes and serve.'],
-		category_id: 3, author_id: rand(1..7)
+		category_id: 3, author_id: rand(1..8)
 	},
 	{ title: 'Japanese-Style Deep-Fried Shrimp', difficulty: 3, time: 20, servings: 4,
 		ingredients: ['1 pound medium shrimp, peeled (tails left on) and deveined', '1/2 teaspoon salt', '1/2 teaspoon ground black pepper', '1/2 teaspoon garlic powder', '1 cup all-purpose flour', '1 teaspoon paprika', '2 eggs, beaten', '1 cup panko crumbs', '1 quart vegetable oil for frying'],
 		directions: ['Place the shrimp in a bowl and season with salt, pepper and garlic powder. In a small bowl, stir together the flour and paprika. Place eggs and panko crumbs into separate bowls.', 
 			'Heat the oil in a deep-fryer or deep skillet to 375 degrees F (190 degrees C). Dip each shrimp into the flour mixture, then into the egg, and finally into the panko crumbs to coat. Fry a few at a time until golden brown. This should take no longer than 5 minutes. Remove with a slotted spoon and drain on paper towels before serving.'],
-			category_id: 4, author_id: rand(1..7)
+			category_id: 4, author_id: rand(1..8)
 		},
 	{ title: 'Sesame Seared Tuna', difficulty: 3, time: 20, servings: 4,
 		ingredients: ['1/4 cup soy sauce', '1 tablespoon mirin (Japanese sweet wine)', '1 tablespoon honey', '2 tablespoons sesame oil', '1 tablespoon rice wine vinegar', '4 (6 ounce) tuna steaks', '1/2 cup sesame seeds', 'wasabi paste', '1 tablespoon olive oil'],
 		directions: ['In a small bowl, stir together the soy sauce, mirin, honey and sesame oil. Divide into two equal parts. Stir the rice vinegar into one part and set aside as a dipping sauce.', 
 			'Spread the sesame seeds out on a plate. Coat the tuna steaks with the remaining soy sauce mixture, then press into the sesame seeds to coat.', 
 			'Heat olive oil in a cast iron skillet over high heat until very hot. Place steaks in the pan, and sear for about 30 seconds on each side. Serve with the dipping sauce and wasabi paste.'],
-		category_id: 4, author_id: rand(1..7)
+		category_id: 4, author_id: rand(1..8)
 	},
 	{ title: 'Honey Walnut Shrimp', difficulty: 3, time: 30, servings: 4,
 		ingredients: ['1 cup water', '2/3 cup white sugar', '1/2 cup walnuts', '4 egg whites', '2/3 cup mochiko (glutinous rice flour)', '1/4 cup mayonnaise', '1 pound large shrimp, peeled and deveined', '2 tablespoons honey', '1 tablespoon canned sweetened condensed milk', '1 cup vegetable oil for frying'],
 		directions: ['Stir together the water and sugar in a small saucepan. Bring to a boil and add the walnuts. Boil for 2 minutes, then drain and place walnuts on a cookie sheet to dry.', 
 			'Whip egg whites in a medium bowl until foamy. Stir in the mochiko until it has a pasty consistency. Heat the oil in a heavy deep skillet over medium-high heat. Dip shrimp into the mochiko batter, and then fry in the hot oil until golden brown, about 5 minutes. Remove with a slotted spoon and drain on paper towels.', 
 			'In a medium serving bowl, stir together the mayonnaise, honey and sweetened condensed milk. Add shrimp and toss to coat with the sauce. Sprinkle the candied walnuts on top and serve.'],
-		category_id: 1, author_id: rand(1..7)
+		category_id: 1, author_id: rand(1..8)
 	},
 	{ title: 'Pork Dumplings', difficulty: 4, time: 35, servings: 6,
 		ingredients: ['100 (3.5 inch square) wonton wrappers', '1 3/4 pounds ground pork', '1 tablespoon minced fresh ginger root', '4 cloves garlic, minced', '2 tablespoons thinly sliced green onion', '4 tablespoons soy sauce', '3 tablespoons sesame oil', '1 egg, beaten', '5 cups finely shredded Chinese cabbage'],
 		directions: ['In a large bowl, combine the pork, ginger, garlic, green onion, soy sauce, sesame oil, egg and cabbage. Stir until well mixed.', 
 			'Place 1 heaping teaspoon of pork filling onto each wonton skin. Moisten edges with water and fold edges over to form a triangle shape. Roll edges slightly to seal in filling. Set dumplings aside on a lightly floured surface until ready to cook.', 
 			'To Cook: Steam dumplings in a covered bamboo or metal steamer for about 15 to 20 minutes. Serve immediately.'],
-		category_id: 1, author_id: rand(1..7)
+		category_id: 1, author_id: rand(1..8)
 	},
 	{ title: 'Chicken Milano', difficulty: 3, time: 30, servings: 4,
 		ingredients: ['1 tablespoon butter', '2 cloves garlic, minced', '1/2 cup sun-dried tomatoes, chopped', '1 cup chicken broth, divided', '1 cup heavy cream', '1 pound skinless, boneless chicken breast halves', 'salt and pepper to taste', '2 tablespoons vegetable oil', '2 tablespoons chopped fresh basil', '8 ounces dry fettuccini pasta'],
@@ -135,19 +249,19 @@ Recipe.create([
 			'Sprinkle the chicken with salt and pepper on both sides. In a large skillet over medium heat, warm oil and saute chicken. Press on chicken occasionally with a slotted spatula. Cook for about 4 minutes per side or until the meat feels springy and is no longer pink inside. Transfer to a board; cover and keep warm. Discard the fat from the skillet.',
 			'In the same skillet, over medium heat, bring 1/4 cup chicken broth to a boil; stirring the pan juices. Reduce slightly and add to the cream sauce; stir in basil and adjust seasonings to taste.',
 			'Meanwhile, bring a large pot of lightly salted water to a boil. Add fettuccine and cook for 8 to 10 minutes or until al dente; drain, transfer to a bowl and toss with 3 to 4 tablespoons of the sauce.', 'Cut each chicken breast into 2 to 3 diagonal slices. Reheat the sauce gently if needed. Transfer the pasta to serving plates; top with chicken and coat with the cream sauce; serve.'],
-		category_id: 3, author_id: rand(1..7)
+		category_id: 3, author_id: rand(1..8)
 	},
 	{ title: 'Omelet in a Bag', difficulty: 2, time: 30, servings: 1,
 		ingredients: ['2 eggs', '2 slices ham, chopped (optional)', '1/2 cup shredded Cheddar cheese', '1 tablespoon chopped onion (optional)', '1 tablespoon chopped green bell pepper (optional)', '2 tablespoons chopped fresh tomato (optional)', '1 tablespoon chunky salsa (optional)', '2 fresh mushrooms, sliced (optional)'],
 		directions: ['Crack the eggs into a large resealable freezer bag. Press out most of the air, and seal. Shake or squeeze to beat the eggs. Open the bag, and add the ham, cheese, onion, green pepper, tomato, salsa, and mushrooms. Squeeze out as much of the air as you can, and seal the bag.', 'Bring a large pot of water to a boil. Place up to 8 bags at a time into the boiling water. Cook for exactly 13 minutes. Open the bag, and let the omelet roll out onto a plate. The omelet should roll out easily.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Okonomiyaki', difficulty: 4, time: 45, servings: 4,
 		ingredients: ['12 ounces sliced bacon', '1 1/3 cups water', '4 eggs', '3 cups all-purpose flour', '1 teaspoon salt', '1 medium head cabbage, cored and sliced', '2 tablespoons minced pickled ginger', '1/4 cup tonkatsu sauce or barbeque sauce'],
 		directions: ['Fry the bacon in a large skillet over medium heat until slightly crispy. Remove to paper towels to drain and set aside.', 
 			'In a large bowl, stir together the water and eggs. Gradually stir in the flour and salt until smooth. Add the cabbage and ginger; stir until evenly distributed.', 
 			'Heat a skillet over medium heat and coat with cooking spray. Pour about 1/4 of the batter into the center of the skillet. Place 4 slices of cooked bacon in the center. Use a spatula to shape the pancake into a circle. Fry for about 5 minutes or until the edges are dry. Flip and cook on the other side until the center is stable and it is browned on both sides. Remove from the pan and drizzle with tonkatsu sauce to serve. Continue with remaining batter and bacon.'],
-		category_id: 4, author_id: rand(1..7)
+		category_id: 4, author_id: rand(1..8)
 	},
 	{ title: 'Beef Bourguignon', difficulty: 4, time: 200, servings: 4,
 		ingredients: ['1/4 cup all-purpose flour', '1 teaspoon salt', '1/2 teaspoon ground black pepper', '2 pounds cubed stew meat', '4 tablespoons butter', '1 onion, chopped', '2 carrots, chopped', '1 clove garlic, minced', '2 cups red wine', '1 bay leaf', '3 tablespoons chopped fresh parsley', '1/2 teaspoon dried thyme', '1 (6 ounce) can sliced mushrooms', '1 (16 ounce) can canned onions'],
@@ -155,7 +269,7 @@ Recipe.create([
 			'Melt the butter or margarine in a large skillet over medium high heat. Add the meat and brown well on all sides. Pour this into a 2 quart casserole dish.', 
 			'Return the skillet to the heat and add the onion, carrots and garlic to it. Saute for 5 to 10 minutes, or until onion is tender. add the wine, bay leaf, parsley, thyme, and liquid from the mushrooms. Pour over meat.', 
 			'Bake, covered, at 350 degrees F (175 degrees C) for 2 1/2 hours. Remove cover, add canned onions and mushroom crowns, and bake for 30 more minutes.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Creamy Au Gratin Potatoes', difficulty: 3, time: 120, servings: 4,
 		ingredients: ['4 russet potatoes, sliced into 1/4 inch slices', '1 onion, sliced into rings', 'salt and pepper to taste', '3 tablespoons butter', '3 tablespoons all-purpose flour', '1/2 teaspoon salt', '2 cups milk', '1 1/2 cups shredded Cheddar cheese'],
@@ -163,7 +277,7 @@ Recipe.create([
 			'Layer 1/2 of the potatoes into bottom of the prepared casserole dish. Top with the onion slices, and add the remaining potatoes. Season with salt and pepper to taste.', 
 			'In a medium-size saucepan, melt butter over medium heat. Mix in the flour and salt, and stir constantly with a whisk for one minute. Stir in milk. Cook until mixture has thickened. Stir in cheese all at once, and continue stirring until melted, about 30 to 60 seconds. Pour cheese over the potatoes, and cover the dish with aluminum foil.', 
 			'Bake 1 1/2 hours in the preheated oven.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Gratin Dauphinois de Solange', difficulty: 3, time: 80, servings: 6,
 		ingredients: ['1 clove garlic, halved', '2 pounds potatoes, peeled and thinly sliced', '2 1/2 cups heavy whipping cream', '2 1/4 cups freshly grated Comte cheese', 'salt and freshly ground black pepper to taste'],
@@ -171,7 +285,7 @@ Recipe.create([
 			'Rub the cut sides of the garlic over the bottom and sides of an 8-inch baking dish.', 
 			'Spread a layer of potato slices in the bottom of dish. Pour in a third of the heavy cream; sprinkle a third of the Comte cheese on top. Season with salt and black pepper. Repeat layers twice more, ending with layers of heavy cream and Comte cheese.', 
 			'Bake in the preheated oven until potatoes are tender and cheese is golden brown, about 1 hour.'],
-		category_id: 2, author_id: rand(1..7)
+		category_id: 2, author_id: rand(1..8)
 	},
 	{ title: 'Chicken Enchiladas', difficulty: 3, time: 45, servings: 6,
 		ingredients: ['1 tablespoon butter', '1/2 cup chopped green onions', '1/2 teaspoon garlic powder', '1 (4 ounce) can diced green chiles', '1 (10.75 ounce) can condensed cream of mushroom soup', '1/2 cup sour cream', '1 1/2 cups cubed cooked chicken breast meat', '1 cup shredded Cheddar cheese, divided', '6 (12 inch) flour tortillas', '1/4 cup milk'],
@@ -181,17 +295,17 @@ Recipe.create([
 			'In a medium saucepan over medium heat, melt the butter and saute the green onion until tender (about 3 to 4 minutes). Add the garlic powder, then stir in the green chiles, cream of mushroom soup and sour cream. Mix well. Reserve 3/4 of this sauce and set aside. To the remaining 1/4 of the sauce in the saucepan, add the chicken and 1/2 cup of shredded Cheddar cheese. Stir together.', 
 			'Fill each flour tortilla with the chicken mixture and roll up. Place seam side down in the prepared baking dish.', 
 			'In a small bowl combine the reserved 3/4 of the sauce with the milk. Spoon this mixture over the rolled tortillas and top with the remaining 1/2 cup of shredded Cheddar cheese. Bake in the preheated oven for 30 to 35 minutes, or until cheese is bubbly.'],
-		category_id: 5, author_id: rand(1..7)
+		category_id: 5, author_id: rand(1..8)
 	},
 	{ title: 'Avocado Mango Salsa', difficulty: 1, time: 20, servings: 8,
 		ingredients: ['1 avocado - peeled, pitted and diced', '1 lime, juiced', '1 mango - peeled, seeded and diced', '1 small red onion, chopped', '1 habanero pepper, seeded and chopped', '1 tablespoon chopped fresh cilantro', 'salt to taste'],
 		directions: ['Place the avocado in a serving bowl, and mix with the lime juice. Mix in the mango, onion, habanero pepper, cilantro and salt.'],
-		category_id: 5, author_id: rand(1..7)
+		category_id: 5, author_id: rand(1..8)
 	},
 	{ title: 'Pico De Gallo', difficulty: 2, time: 50, servings: 4,
 		ingredients: ['1 medium tomato, diced', '1 onion, finely chopped', '1/2 fresh jalapeno pepper, seeded and chopped', '2 sprigs fresh cilantro, finely chopped', '1 green onion, finely chopped', '1/2 teaspoon garlic powder', '1/8 teaspoon salt', '1/8 teaspoon pepper'],
 		directions: ['In a medium bowl, combine tomato, onion, jalapeno pepper (to taste,) cilantro and green onion. Season with garlic powder, salt and pepper. Stir until evenly distributed. Refrigerate for 30 minutes.'],
-		category_id: 5, author_id: rand(1..7)
+		category_id: 5, author_id: rand(1..8)
 	},
 	{ title: 'Burrito Pie', difficulty: 4, time: 60, servings: 16,
 		ingredients: ['2 pounds ground beef', '1 onion, chopped', '2 teaspoons minced garlic', '1 (2 ounce) can black olives, sliced', '1 (4 ounce) can diced green chili peppers', '1 (10 ounce) can diced tomatoes with green chile peppers', '1 (16 ounce) jar taco sauce', '2 (16 ounce) cans refried beans', '12 (8 inch) flour tortillas', '9 ounces shredded Colby cheese'],
@@ -199,7 +313,7 @@ Recipe.create([
 			'In a large skillet over medium heat, saute the ground beef for 5 minutes. Add the onion and garlic, and saute for 5 more minutes. Drain any excess fat, if desired. Mix in the olives, green chile peppers, tomatoes with green chile peppers, taco sauce and refried beans. Stir mixture thoroughly, reduce heat to low, and let simmer for 15 to 20 minutes.', 
 			'Spread a thin layer of the meat mixture in the bottom of a 4 quart casserole dish. Cover with a layer of tortillas followed by more meat mixture, then a layer of cheese. Repeat tortilla, meat, cheese pattern until all the tortillas are used, topping off with a layer of meat mixture and cheese.', 
 			'Bake for 20 to 30 minutes in the preheated oven, or until cheese is slightly brown and bubbly.'],
-		category_id: 5, author_id: rand(1..7)
+		category_id: 5, author_id: rand(1..8)
 	},
 	{ title: 'Sweet Potato Burritos', difficulty: 3, time: 40, servings: 12,
 		ingredients: ['1 tablespoon vegetable oil', '1 onion, chopped', '4 cloves garlic, minced', '6 cups canned kidney beans, drained', '2 cups water', '3 tablespoons chili powder', '4 teaspoons prepared mustard', '2 teaspoons ground cumin', '1 pinch cayenne pepper, or to taste', '3 tablespoons soy sauce', '4 cups mashed cooked sweet potatoes', '12 (10 inch) flour tortillas, warmed', '8 ounces shredded Cheddar cheese'],
@@ -207,7 +321,7 @@ Recipe.create([
 			'Heat oil in a medium skillet and saute onion and garlic until soft. Mash beans into the onion mixture. Gradually stir in water; heat until warm, 2 to 3 minutes. Remove from heat and stir in the soy sauce, chili powder, mustard, cumin, and cayenne pepper.', 
 			'Divide bean mixture and mashed sweet potatoes evenly between the tortillas; top with cheese. Fold tortillas burrito-style around the fillings and place on a baking sheet.', 
 			'Bake in the preheated oven until warmed through, about 12 minutes.'],
-		category_id: 5, author_id: rand(1..7)
+		category_id: 5, author_id: rand(1..8)
 	},
 	{ title: 'Salsa Chicken', difficulty: 3, time: 45, servings: 4,
 		ingredients: ['4 skinless, boneless chicken breast halves', '4 teaspoons taco seasoning mix', '1 cup salsa', '1 cup shredded Cheddar cheese', '2 tablespoons sour cream (optional)'],
@@ -215,7 +329,7 @@ Recipe.create([
 			'Place chicken breasts in a lightly greased 9x13 inch baking dish. Sprinkle taco seasoning on both sides of chicken breasts, and pour salsa over all.', 
 			'Bake at 375 degrees F (190 degrees C) for 25 to 35 minutes, or until chicken is tender and juicy and its juices run clear.', 
 			'Sprinkle chicken evenly with cheese, and continue baking for an additional 3 to 5 minutes, or until cheese is melted and bubbly. Top with sour cream if desired, and serve.'],
-		category_id: 5, author_id: rand(1..7)
+		category_id: 5, author_id: rand(1..8)
 	},
 	{ title: 'Raw Pad Thai', difficulty: 3, time: 30, servings: 4,
 		ingredients: ['2 zucchini, ends trimmed', '2 carrots', '1 head red cabbage, thinly sliced', '1 red bell pepper, thinly sliced', '1/2 cup bean sprouts', '3/4 cup raw almond butter', '2 oranges, juiced', '2 tablespoons raw honey', '1 tablespoon minced fresh ginger root', '1 tablespoon Nama Shoyu (raw soy sauce)', '1 tablespoon unpasteurized miso', '1 clove garlic, minced', '1/4 teaspoon cayenne pepper'],
@@ -225,28 +339,28 @@ Recipe.create([
 			'Whisk together almond butter, orange juice, honey, ginger, Nama Shoyu, miso, garlic, and cayenne pepper in a bowl.', 
 			'Pour half of sauce into cabbage mixture and toss to coat.', 
 			'Top zucchini noodles with cabbage mixture. Pour remaining sauce over each portion.'],
-		category_id: 6, author_id: rand(1..7)
+		category_id: 6, author_id: rand(1..8)
 	},
 	{ title: 'Slow Cooker Thai Peanut Pork', difficulty: 3, time: 490, servings: 8,
 		ingredients: ['2 red bell pepper, seeded and sliced into strips', '4 (8 ounce) boneless pork loin chops', '1/2 cup teriyaki sauce', '1/4 cup creamy peanut butter', '2 tablespoons rice vinegar', '1 teaspoon crushed red pepper flakes', '2 cloves garlic, minced', '1/2 cup chopped green onions', '1/4 cup chopped roasted peanuts', '2 limes, cut into wedges'],
 		directions: ['Coat a slow cooker with cooking spray. Place the bell pepper strips and pork chops into the slow cooker. Pour the teriyaki sauce, vinegar, red pepper flakes, and garlic over the pork chops.', 
 			'Cover and cook on Low until the pork is very tender, 8 to 9 hours. Once tender, remove the pork from the slow cooker, and whisk in the peanut butter until smooth. Return the pork to the slow cooker, and cook 10 minutes more.', 
 			'Pour into a serving dish and sprinkle with green onions and peanuts to garnish. Decorate with lime wedges to serve.'],
-		category_id: 6, author_id: rand(1..7)
+		category_id: 6, author_id: rand(1..8)
 	},
 	{ title: 'Tom Ka Gai (Coconut Chicken Soup)', difficulty: 2, time: 35, servings: 6,
 		ingredients: ['3/4 pound boneless, skinless chicken meat', '3 tablespoons vegetable oil', '2 (14 ounce) cans coconut milk', '2 cups water', '2 tablespoons minced fresh ginger root', '4 tablespoons fish sauce', '1/4 cup fresh lime juice', '1/4 teaspoon cayenne pepper', '1/2 teaspoon ground turmeric', '2 tablespoons thinly sliced green onion', '1 tablespoon chopped fresh cilantro'],
 		directions: ['Cut chicken into thin strips and saute in oil for to 2 to 3 minutes until the chicken turns white.', 
 			'In a pot, bring coconut milk and water to a boil. Reduce heat. Add ginger, fish sauce, lime juice, cayenne powder and turmeric. Simmer until the chicken is done, 10 to 15 minutes.', 
 			'Sprinkle with scallions and fresh cilantro and serve steaming hot.'],
-		category_id: 6, author_id: rand(1..7)
+		category_id: 6, author_id: rand(1..8)
 	},
 	{ title: 'Thai Pineapple Chicken Curry', difficulty: 3, time: 50, servings: 6,
 		ingredients: ['2 cups uncooked jasmine rice', '1 quart water', '1/4 cup red curry paste', '2 (13.5 ounce) cans coconut milk', '2 skinless, boneless chicken breast halves - cut into thin strips', '3 tablespoons fish sauce', '1/4 cup white sugar', '1 1/2 cups sliced bamboo shoots, drained', '1/2 red bell pepper, julienned', '1/2 green bell pepper, julienned', '1/2 small onion, chopped', '1 cup pineapple chunks, drained'],
 		directions: ['Bring rice and water to a boil in a pot. Reduce heat to low, cover, and simmer 25 minutes.', 
 			'In a bowl, whisk together curry paste and 1 can coconut milk. Transfer to a wok, and mix in remaining coconut milk, chicken, fish sauce, sugar, and bamboo shoots. Bring to a boil, and cook 15 minutes, until chicken juices run clear.', 
 			'Mix the red bell pepper, green bell pepper, and onion into the wok. Continue cooking 10 minutes, until chicken juices run clear and peppers are tender. Remove from heat, and stir in pineapple. Serve over the cooked rice.'],
-		category_id: 6, author_id: rand(1..7)
+		category_id: 6, author_id: rand(1..8)
 	},
 	{ title: 'Thai Sweet Sticky Rice With Mango (Khao Neeo Mamuang)', difficulty: 3, time: 90, servings: 4,
 		ingredients: ['1 1/2 cups uncooked short-grain white rice', '2 cups water', '1 1/2 cups coconut milk', '1 cup white sugar', '1/2 teaspoon salt', '1/2 cup coconut milk', '1 tablespoon white sugar', '1/4 teaspoon salt', '1 tablespoon tapioca starch', '3 mangos, peeled and sliced', '1 tablespoon toasted sesame seeds'],
@@ -254,11 +368,23 @@ Recipe.create([
 			'While the rice cooks, mix together 1 1/2 cups coconut milk, 1 cup sugar, and 1/2 teaspoon salt in a saucepan over medium heat; bring to a boil; remove from heat and set aside. Stir the cooked rice into the coconut milk mixture; cover. Allow to cool for 1 hour.', 
 			'Make a sauce by mixing together 1/2 cup coconut milk, 1 tablespoon sugar, 1/4 teaspoon salt, and the tapioca starch in a saucepan; bring to a boil.', 
 			'Place the sticky rice on a serving dish. Arrange the mangos on top of the rice. Pour the sauce over the mangos and rice. Sprinkle with sesame seeds.'],
-		category_id: 6, author_id: rand(1..7)
+		category_id: 6, author_id: rand(1..8)
+	},
+	{ title: 'Curried Coconut Chicken', difficulty: 4, time: 70, servings: 4,
+		ingredients: ['2 pounds boneless skinless chicken breasts, cut into 1/2-inch chunks', '1 teaspoon salt and pepper, or to taste', '1 1/2 tablespoons vegetable oil', '2 tablespoons curry powder', '1/2 onion, thinly sliced', '2 cloves garlic, crushed', '1 (14 ounce) can coconut milk', '1 (14.5 ounce) can stewed, diced tomatoes', '1 (8 ounce) can tomato sauce', '3 tablespoons sugar'],
+		directions: ['Season chicken pieces with salt and pepper.', 
+			'Heat oil and curry powder in a large skillet over medium-high heat for two minutes. Stir in onions and garlic, and cook 1 minute more. Add chicken, tossing lightly to coat with curry oil. Reduce heat to medium, and cook for 7 to 10 minutes, or until chicken is no longer pink in center and juices run clear.', 
+			'Pour coconut milk, tomatoes, tomato sauce, and sugar into the pan, and stir to combine. Cover and simmer, stirring occasionally, approximately 30 to 40 minutes.'],
+		category_id: 6, author_id: rand(1..8)
+	},
+	{ title: 'Thai Coconut Soup', difficulty: 2, time: 65, servings: 8,
+		ingredients: ['1 tablespoon vegetable oil', '2 tablespoons grated fresh ginger', '1 stalk lemon grass, minced', '2 teaspoons red curry paste', '4 cups chicken broth', '3 tablespoons fish sauce', '1 tablespoon light brown sugar', '3 (13.5 ounce) cans coconut milk', '1/2 pound fresh shiitake mushrooms, sliced', '1 pound medium shrimp - peeled and deveined', '2 tablespoons fresh lime juice', 'salt to taste', '1/4 cup chopped fresh cilantro'],
+		directions: ['Heat the oil in a large pot over medium heat. Cook and stir the ginger, lemongrass, and curry paste in the heated oil for 1 minute. Slowly pour the chicken broth over the mixture, stirring continually. Stir in the fish sauce and brown sugar; simmer for 15 minutes. Stir in the coconut milk and mushrooms; cook and stir until the mushrooms are soft, about 5 minutes. Add the shrimp; cook until no longer translucent about 5 minutes. Stir in the lime juice; season with salt; garnish with cilantro.'],
+		category_id: 6, author_id: rand(1..8)
 	}
 ])
 
 # not all 49 will be created due to validation condition
-49.times do
-	Favorite.create(user_id: rand(1..7), recipe_id: rand(1..32))
+80.times do
+	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..50))
 end
