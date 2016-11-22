@@ -8,7 +8,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       t.string :ingredients, array: true
       t.string :directions, array: true
       t.integer :category_id
-      t.integer :user_id
+      t.integer :author_id
 
       t.timestamps
     end
