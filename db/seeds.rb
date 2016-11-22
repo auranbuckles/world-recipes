@@ -2,7 +2,9 @@ Category.create([
 	{ name: 'Chinese' },
 	{ name: 'French' },
 	{ name: 'Italian' },
-	{ name: 'Japanese' }
+	{ name: 'Japanese' },
+	{ name: 'Mexican' },
+	{ name: 'Thai' }
 ]);
 
 User.create([
@@ -162,9 +164,101 @@ Recipe.create([
 			'In a medium-size saucepan, melt butter over medium heat. Mix in the flour and salt, and stir constantly with a whisk for one minute. Stir in milk. Cook until mixture has thickened. Stir in cheese all at once, and continue stirring until melted, about 30 to 60 seconds. Pour cheese over the potatoes, and cover the dish with aluminum foil.', 
 			'Bake 1 1/2 hours in the preheated oven.'],
 		category_id: 2, author_id: rand(1..7)
+	},
+	{ title: 'Gratin Dauphinois de Solange', difficulty: 3, time: 80, servings: 6,
+		ingredients: ['1 clove garlic, halved', '2 pounds potatoes, peeled and thinly sliced', '2 1/2 cups heavy whipping cream', '2 1/4 cups freshly grated Comte cheese', 'salt and freshly ground black pepper to taste'],
+		directions: ['Preheat oven to 350 degrees F (175 degrees C).', 
+			'Rub the cut sides of the garlic over the bottom and sides of an 8-inch baking dish.', 
+			'Spread a layer of potato slices in the bottom of dish. Pour in a third of the heavy cream; sprinkle a third of the Comte cheese on top. Season with salt and black pepper. Repeat layers twice more, ending with layers of heavy cream and Comte cheese.', 
+			'Bake in the preheated oven until potatoes are tender and cheese is golden brown, about 1 hour.'],
+		category_id: 2, author_id: rand(1..7)
+	},
+	{ title: 'Chicken Enchiladas', difficulty: 3, time: 45, servings: 6,
+		ingredients: ['1 tablespoon butter', '1/2 cup chopped green onions', '1/2 teaspoon garlic powder', '1 (4 ounce) can diced green chiles', '1 (10.75 ounce) can condensed cream of mushroom soup', '1/2 cup sour cream', '1 1/2 cups cubed cooked chicken breast meat', '1 cup shredded Cheddar cheese, divided', '6 (12 inch) flour tortillas', '1/4 cup milk'],
+		directions: ['Preheat oven to 400 degrees F (200 degrees C). Butter a 1 quart casserole dish.', 
+			'Layer 1/2 of the potatoes into bottom of the prepared casserole dish. Top with the onion slices, and add the remaining potatoes. Season with salt and pepper to taste.', 
+			'Preheat oven to 350 degrees F (175 degrees C). Lightly grease a large baking dish.', 
+			'In a medium saucepan over medium heat, melt the butter and saute the green onion until tender (about 3 to 4 minutes). Add the garlic powder, then stir in the green chiles, cream of mushroom soup and sour cream. Mix well. Reserve 3/4 of this sauce and set aside. To the remaining 1/4 of the sauce in the saucepan, add the chicken and 1/2 cup of shredded Cheddar cheese. Stir together.', 
+			'Fill each flour tortilla with the chicken mixture and roll up. Place seam side down in the prepared baking dish.', 
+			'In a small bowl combine the reserved 3/4 of the sauce with the milk. Spoon this mixture over the rolled tortillas and top with the remaining 1/2 cup of shredded Cheddar cheese. Bake in the preheated oven for 30 to 35 minutes, or until cheese is bubbly.'],
+		category_id: 5, author_id: rand(1..7)
+	},
+	{ title: 'Avocado Mango Salsa', difficulty: 1, time: 20, servings: 8,
+		ingredients: ['1 avocado - peeled, pitted and diced', '1 lime, juiced', '1 mango - peeled, seeded and diced', '1 small red onion, chopped', '1 habanero pepper, seeded and chopped', '1 tablespoon chopped fresh cilantro', 'salt to taste'],
+		directions: ['Place the avocado in a serving bowl, and mix with the lime juice. Mix in the mango, onion, habanero pepper, cilantro and salt.'],
+		category_id: 5, author_id: rand(1..7)
+	},
+	{ title: 'Pico De Gallo', difficulty: 2, time: 50, servings: 4,
+		ingredients: ['1 medium tomato, diced', '1 onion, finely chopped', '1/2 fresh jalapeno pepper, seeded and chopped', '2 sprigs fresh cilantro, finely chopped', '1 green onion, finely chopped', '1/2 teaspoon garlic powder', '1/8 teaspoon salt', '1/8 teaspoon pepper'],
+		directions: ['In a medium bowl, combine tomato, onion, jalapeno pepper (to taste,) cilantro and green onion. Season with garlic powder, salt and pepper. Stir until evenly distributed. Refrigerate for 30 minutes.'],
+		category_id: 5, author_id: rand(1..7)
+	},
+	{ title: 'Burrito Pie', difficulty: 4, time: 60, servings: 16,
+		ingredients: ['2 pounds ground beef', '1 onion, chopped', '2 teaspoons minced garlic', '1 (2 ounce) can black olives, sliced', '1 (4 ounce) can diced green chili peppers', '1 (10 ounce) can diced tomatoes with green chile peppers', '1 (16 ounce) jar taco sauce', '2 (16 ounce) cans refried beans', '12 (8 inch) flour tortillas', '9 ounces shredded Colby cheese'],
+		directions: ['Preheat oven to 350 degrees F (175 degrees C).', 
+			'In a large skillet over medium heat, saute the ground beef for 5 minutes. Add the onion and garlic, and saute for 5 more minutes. Drain any excess fat, if desired. Mix in the olives, green chile peppers, tomatoes with green chile peppers, taco sauce and refried beans. Stir mixture thoroughly, reduce heat to low, and let simmer for 15 to 20 minutes.', 
+			'Spread a thin layer of the meat mixture in the bottom of a 4 quart casserole dish. Cover with a layer of tortillas followed by more meat mixture, then a layer of cheese. Repeat tortilla, meat, cheese pattern until all the tortillas are used, topping off with a layer of meat mixture and cheese.', 
+			'Bake for 20 to 30 minutes in the preheated oven, or until cheese is slightly brown and bubbly.'],
+		category_id: 5, author_id: rand(1..7)
+	},
+	{ title: 'Sweet Potato Burritos', difficulty: 3, time: 40, servings: 12,
+		ingredients: ['1 tablespoon vegetable oil', '1 onion, chopped', '4 cloves garlic, minced', '6 cups canned kidney beans, drained', '2 cups water', '3 tablespoons chili powder', '4 teaspoons prepared mustard', '2 teaspoons ground cumin', '1 pinch cayenne pepper, or to taste', '3 tablespoons soy sauce', '4 cups mashed cooked sweet potatoes', '12 (10 inch) flour tortillas, warmed', '8 ounces shredded Cheddar cheese'],
+		directions: ['Preheat oven to 350 degrees F (175 degrees C).', 
+			'Heat oil in a medium skillet and saute onion and garlic until soft. Mash beans into the onion mixture. Gradually stir in water; heat until warm, 2 to 3 minutes. Remove from heat and stir in the soy sauce, chili powder, mustard, cumin, and cayenne pepper.', 
+			'Divide bean mixture and mashed sweet potatoes evenly between the tortillas; top with cheese. Fold tortillas burrito-style around the fillings and place on a baking sheet.', 
+			'Bake in the preheated oven until warmed through, about 12 minutes.'],
+		category_id: 5, author_id: rand(1..7)
+	},
+	{ title: 'Salsa Chicken', difficulty: 3, time: 45, servings: 4,
+		ingredients: ['4 skinless, boneless chicken breast halves', '4 teaspoons taco seasoning mix', '1 cup salsa', '1 cup shredded Cheddar cheese', '2 tablespoons sour cream (optional)'],
+		directions: ['Preheat oven to 375 degrees F (190 degrees C).', 
+			'Place chicken breasts in a lightly greased 9x13 inch baking dish. Sprinkle taco seasoning on both sides of chicken breasts, and pour salsa over all.', 
+			'Bake at 375 degrees F (190 degrees C) for 25 to 35 minutes, or until chicken is tender and juicy and its juices run clear.', 
+			'Sprinkle chicken evenly with cheese, and continue baking for an additional 3 to 5 minutes, or until cheese is melted and bubbly. Top with sour cream if desired, and serve.'],
+		category_id: 5, author_id: rand(1..7)
+	},
+	{ title: 'Raw Pad Thai', difficulty: 3, time: 30, servings: 4,
+		ingredients: ['2 zucchini, ends trimmed', '2 carrots', '1 head red cabbage, thinly sliced', '1 red bell pepper, thinly sliced', '1/2 cup bean sprouts', '3/4 cup raw almond butter', '2 oranges, juiced', '2 tablespoons raw honey', '1 tablespoon minced fresh ginger root', '1 tablespoon Nama Shoyu (raw soy sauce)', '1 tablespoon unpasteurized miso', '1 clove garlic, minced', '1/4 teaspoon cayenne pepper'],
+		directions: ['Slice zucchini lengthwise with a vegetable peeler to create long thin noodles. Place on individual plates.', 
+			'Slice carrots into long strips with vegetable peeler similar to the zucchini.', 
+			'Combine carrots, cabbage, red bell pepper, and bean sprouts in a large bowl.', 
+			'Whisk together almond butter, orange juice, honey, ginger, Nama Shoyu, miso, garlic, and cayenne pepper in a bowl.', 
+			'Pour half of sauce into cabbage mixture and toss to coat.', 
+			'Top zucchini noodles with cabbage mixture. Pour remaining sauce over each portion.'],
+		category_id: 6, author_id: rand(1..7)
+	},
+	{ title: 'Slow Cooker Thai Peanut Pork', difficulty: 3, time: 490, servings: 8,
+		ingredients: ['2 red bell pepper, seeded and sliced into strips', '4 (8 ounce) boneless pork loin chops', '1/2 cup teriyaki sauce', '1/4 cup creamy peanut butter', '2 tablespoons rice vinegar', '1 teaspoon crushed red pepper flakes', '2 cloves garlic, minced', '1/2 cup chopped green onions', '1/4 cup chopped roasted peanuts', '2 limes, cut into wedges'],
+		directions: ['Coat a slow cooker with cooking spray. Place the bell pepper strips and pork chops into the slow cooker. Pour the teriyaki sauce, vinegar, red pepper flakes, and garlic over the pork chops.', 
+			'Cover and cook on Low until the pork is very tender, 8 to 9 hours. Once tender, remove the pork from the slow cooker, and whisk in the peanut butter until smooth. Return the pork to the slow cooker, and cook 10 minutes more.', 
+			'Pour into a serving dish and sprinkle with green onions and peanuts to garnish. Decorate with lime wedges to serve.'],
+		category_id: 6, author_id: rand(1..7)
+	},
+	{ title: 'Tom Ka Gai (Coconut Chicken Soup)', difficulty: 2, time: 35, servings: 6,
+		ingredients: ['3/4 pound boneless, skinless chicken meat', '3 tablespoons vegetable oil', '2 (14 ounce) cans coconut milk', '2 cups water', '2 tablespoons minced fresh ginger root', '4 tablespoons fish sauce', '1/4 cup fresh lime juice', '1/4 teaspoon cayenne pepper', '1/2 teaspoon ground turmeric', '2 tablespoons thinly sliced green onion', '1 tablespoon chopped fresh cilantro'],
+		directions: ['Cut chicken into thin strips and saute in oil for to 2 to 3 minutes until the chicken turns white.', 
+			'In a pot, bring coconut milk and water to a boil. Reduce heat. Add ginger, fish sauce, lime juice, cayenne powder and turmeric. Simmer until the chicken is done, 10 to 15 minutes.', 
+			'Sprinkle with scallions and fresh cilantro and serve steaming hot.'],
+		category_id: 6, author_id: rand(1..7)
+	},
+	{ title: 'Thai Pineapple Chicken Curry', difficulty: 3, time: 50, servings: 6,
+		ingredients: ['2 cups uncooked jasmine rice', '1 quart water', '1/4 cup red curry paste', '2 (13.5 ounce) cans coconut milk', '2 skinless, boneless chicken breast halves - cut into thin strips', '3 tablespoons fish sauce', '1/4 cup white sugar', '1 1/2 cups sliced bamboo shoots, drained', '1/2 red bell pepper, julienned', '1/2 green bell pepper, julienned', '1/2 small onion, chopped', '1 cup pineapple chunks, drained'],
+		directions: ['Bring rice and water to a boil in a pot. Reduce heat to low, cover, and simmer 25 minutes.', 
+			'In a bowl, whisk together curry paste and 1 can coconut milk. Transfer to a wok, and mix in remaining coconut milk, chicken, fish sauce, sugar, and bamboo shoots. Bring to a boil, and cook 15 minutes, until chicken juices run clear.', 
+			'Mix the red bell pepper, green bell pepper, and onion into the wok. Continue cooking 10 minutes, until chicken juices run clear and peppers are tender. Remove from heat, and stir in pineapple. Serve over the cooked rice.'],
+		category_id: 6, author_id: rand(1..7)
+	},
+	{ title: 'Thai Sweet Sticky Rice With Mango (Khao Neeo Mamuang)', difficulty: 3, time: 90, servings: 4,
+		ingredients: ['1 1/2 cups uncooked short-grain white rice', '2 cups water', '1 1/2 cups coconut milk', '1 cup white sugar', '1/2 teaspoon salt', '1/2 cup coconut milk', '1 tablespoon white sugar', '1/4 teaspoon salt', '1 tablespoon tapioca starch', '3 mangos, peeled and sliced', '1 tablespoon toasted sesame seeds'],
+		directions: ['Combine the rice and water in a saucepan; bring to a boil; cover and reduce heat to low. Simmer until water is absorbed, 15 to 20 minutes.', 
+			'While the rice cooks, mix together 1 1/2 cups coconut milk, 1 cup sugar, and 1/2 teaspoon salt in a saucepan over medium heat; bring to a boil; remove from heat and set aside. Stir the cooked rice into the coconut milk mixture; cover. Allow to cool for 1 hour.', 
+			'Make a sauce by mixing together 1/2 cup coconut milk, 1 tablespoon sugar, 1/4 teaspoon salt, and the tapioca starch in a saucepan; bring to a boil.', 
+			'Place the sticky rice on a serving dish. Arrange the mangos on top of the rice. Pour the sauce over the mangos and rice. Sprinkle with sesame seeds.'],
+		category_id: 6, author_id: rand(1..7)
 	}
 ])
 
-35.times do
-	Favorite.create(user_id: rand(1..7), recipe_id: rand(1..20))
+# not all 49 will be created due to validation condition
+49.times do
+	Favorite.create(user_id: rand(1..7), recipe_id: rand(1..32))
 end
