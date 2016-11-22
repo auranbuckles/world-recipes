@@ -15,6 +15,16 @@
 					templateUrl: 'recipes/recipes.html',
 					controller: 'RecipeController as vm'
 				})
+				.state('categories', {
+					url: '/categories',
+					templateUrl: 'categories/categories.html',
+					controller: 'CategoryController as vm'
+				})
+				.state('userProfile', {
+					url: '/user/:id',
+					templateUrl: 'recipes/recipes.html',
+					controller: 'RecipeController as vm'
+				})
 
 			$urlRouterProvider.otherwise('/')
 		})
