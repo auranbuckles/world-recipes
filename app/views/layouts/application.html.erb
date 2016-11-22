@@ -2,13 +2,21 @@
 <html>
   <head>
     <title>WorldRecipes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag    'application' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body ng-app="app">
+    <div class="container">
+    	<h1 class="logo">
+				<a href="/">World Recipes</a>
+			</h1>
+
+		  <%#= render 'layouts/messages' %>
+		  <%#= render 'layouts/navigation' %>
+    	<%= yield %>
+   	</div>
   </body>
 </html>
