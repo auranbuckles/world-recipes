@@ -145,5 +145,16 @@ Recipe.create([
 		ingredients: ['2 eggs', '2 slices ham, chopped (optional)', '1/2 cup shredded Cheddar cheese', '1 tablespoon chopped onion (optional)', '1 tablespoon chopped green bell pepper (optional)', '2 tablespoons chopped fresh tomato (optional)', '1 tablespoon chunky salsa (optional)', '2 fresh mushrooms, sliced (optional)'],
 		directions: ['Crack the eggs into a large resealable freezer bag. Press out most of the air, and seal. Shake or squeeze to beat the eggs. Open the bag, and add the ham, cheese, onion, green pepper, tomato, salsa, and mushrooms. Squeeze out as much of the air as you can, and seal the bag.', 'Bring a large pot of water to a boil. Place up to 8 bags at a time into the boiling water. Cook for exactly 13 minutes. Open the bag, and let the omelet roll out onto a plate. The omelet should roll out easily.'],
 		category_id: 2, user_id: rand(1..5)
+	},
+	{ title: 'Okonomiyaki', difficulty: 4, time: 45, servings: 4,
+		ingredients: ['12 ounces sliced bacon', '1 1/3 cups water', '4 eggs', '3 cups all-purpose flour', '1 teaspoon salt', '1 medium head cabbage, cored and sliced', '2 tablespoons minced pickled ginger', '1/4 cup tonkatsu sauce or barbeque sauce'],
+		directions: ['Fry the bacon in a large skillet over medium heat until slightly crispy. Remove to paper towels to drain and set aside.', 
+			'In a large bowl, stir together the water and eggs. Gradually stir in the flour and salt until smooth. Add the cabbage and ginger; stir until evenly distributed.', 
+			'Heat a skillet over medium heat and coat with cooking spray. Pour about 1/4 of the batter into the center of the skillet. Place 4 slices of cooked bacon in the center. Use a spatula to shape the pancake into a circle. Fry for about 5 minutes or until the edges are dry. Flip and cook on the other side until the center is stable and it is browned on both sides. Remove from the pan and drizzle with tonkatsu sauce to serve. Continue with remaining batter and bacon.'],
+		category_id: 4, user_id: rand(1..5)
 	}
 ])
+
+25.times do
+	Favorite.create(user_id: rand(1..5), recipe_id: rand(1..18))
+end
