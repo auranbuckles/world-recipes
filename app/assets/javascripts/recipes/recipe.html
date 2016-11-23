@@ -5,7 +5,8 @@
 	<li>Difficulty: {{ vm.recipe.difficulty }}</li>
 	<li>Time: {{ vm.recipe.time }}</li>
 	<li>Servings: {{ vm.recipe.servings }}</li>
-	<!-- <li>Category: {{ vm.recipe.category }}</li> -->
+	<li>Category: {{ vm.recipe.category.name }}</li>
+	<li>Added to favorites by {{ vm.recipe.favorited_users.length }} users</li>
 </ul>
 
 <h3>Ingredients</h3>
@@ -21,5 +22,3 @@
 		<li>{{ direction }}</li>
 	</div>
 </ol>
-
-{{vm.recipe}}
