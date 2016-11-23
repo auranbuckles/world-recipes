@@ -2,19 +2,19 @@
 <p>by {{ vm.recipe.author.username }}</p>
 <p>{{ vm.recipe.description }}</p>
 
-<ul>
-	<li>Difficulty: {{ vm.recipe.difficulty }}</li>
-	<li>Time: {{ vm.recipe.time }}</li>
-	<li>Servings: {{ vm.recipe.servings }}</li>
-	<li>Category: {{ vm.recipe.category.name }}</li>
-	<li>Added to favorites by {{ vm.recipe.favorited_users.length }} users</li>
-</ul>
+<p>Difficulty: {{ vm.recipe.difficulty }}</p>
+<p>Time: {{ vm.recipe.time }}</p>
+<p>Servings: {{ vm.recipe.servings }}</p>
+<p>Category: {{ vm.recipe.category.name }}</p>
+<p>Added to favorites by {{ vm.recipe.favorited_users.length }} users</p>
 
 <h3>Ingredients</h3>
 
-<div ng-repeat="ingredient in vm.recipe.ingredients">
-	{{ ingredient }}
-</div>
+<ul>
+	<li ng-repeat="ingredient in vm.recipe.ingredients">
+		{{ ingredient }}
+	</li>
+</ul>
 
 <h3>Directions</h3>
 
