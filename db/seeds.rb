@@ -203,6 +203,15 @@ Recipe.create([
 			'Bake in preheated oven for 45 minutes.'],
 		category_id: 2, author_id: rand(1..8)
 	},
+	{ title: 'Tarte a l\'Oignon (French Onion Pie)', difficulty: 4, time: 80, servings: 10, description: 'This is a traditional French holiday side dish made without any cheese. It\'s also a very simple side dish that will impress other cooks at potluck parties.', 
+		ingredients: ['10 slices bacon, cut into 1 inch pieces', '5 onions, thinly sliced', '1 teaspoon salt', '1/8 teaspoon freshly ground black pepper', '1/2 cup milk', '1/2 cup heavy cream', '1 tablespoon all-purpose flour', '4 eggs', '1 pinch ground nutmeg', '1 (9 inch) unbaked pie crust'],
+		directions: ['Preheat oven to 400 degrees F (200 degrees C).', 
+			'Place the bacon into a skillet, and cook over medium heat until browned. Remove bacon from skillet, reserving 4 tablespoons bacon fat, and drain on paper towels.', 
+			'Place the onions into the same skillet with the bacon fat, and cook over medium-high heat until evenly browned, about 8 minutes. Season with salt and pepper. Combine the milk and cream in a bowl. Sprinkle the flour over the onions, and stir to blend. Stir in the milk mixture. Cook and stir over medium heat until the mixture thickens. Remove from heat, stir in the bacon, and set aside to cool 10 minutes.', 
+			'Beat the eggs in a mixing bowl until light colored and frothy. Stir a spoonful of the onion mixture into the eggs. Add another spoonful of the onion mixture, and continue stirring. Repeat, until all the onions have been stirred into the eggs and are thoroughly blended. Pour the mixture into the prepared pie shell. Sprinkle with nutmeg.', 
+			'Bake in preheated oven until the crust is lightly browned, about 20 minutes. Remove from the oven and cool 5 minutes before serving.'],
+		category_id: 2, author_id: rand(1..8)
+	},
 	{ title: 'Baked Chicken Cordon Bleu', difficulty: 4, time: 60, servings: 6, description: 'Easy recipe that tastes like you cooked all day. Chicken breasts are wrapped around ham and mozzarella cheese for a change in this version of the classic baked dish.', 
 		ingredients: ['6 skinless, boneless chicken breast halves - pounded to 1/2 inch thickness', '6 string cheese sticks', '6 slices ham', '1/2 cup butter, melted', '1 cup seasoned dry bread crumbs', 'toothpicks'],
 		directions: ['Preheat the oven to 350 degrees F (175 degrees C).', 
@@ -313,6 +322,12 @@ Recipe.create([
 		directions: ['Place the avocado in a serving bowl, and mix with the lime juice. Mix in the mango, onion, habanero pepper, cilantro and salt.'],
 		category_id: 5, author_id: rand(1..8)
 	},
+	{ title: 'Traditional Mexican Guacamole', difficulty: 1, time: 10, servings: 4, description: 'This guacamole is great! Whether or not you want it spicy, this guacamole is a dip to die for!', 
+		ingredients: ['2 avocados, peeled and pitted', '1 cup chopped tomatoes', '1/4 cup chopped onion', '1/4 cup chopped cilantro', '2 tablespoons lemon juice', '1 jalapeno pepper, seeded and minced (optional)', 'salt and ground black pepper to taste'],
+		directions: ['Mash avocados in a bowl until creamy.', 
+			'Mix tomatoes, onion, cilantro, lemon juice, and jalapeno pepper into mashed avocado until well combined; season with salt and black pepper.'],
+		category_id: 5, author_id: rand(1..8)
+	},
 	{ title: 'Pico De Gallo', difficulty: 2, time: 50, servings: 4, description: 'Sometimes when you eat authentic Mexican food, they give you this salsa stuff made with tomatoes, onions, and jalapenos. You can add a squeeze of lime juice to pico de gallo, but I prefer this basic recipe. Once you serve this with your Mexican dish such as tacos, you will want it with all your Mexican dishes!', 
 		ingredients: ['1 medium tomato, diced', '1 onion, finely chopped', '1/2 fresh jalapeno pepper, seeded and chopped', '2 sprigs fresh cilantro, finely chopped', '1 green onion, finely chopped', '1/2 teaspoon garlic powder', '1/8 teaspoon salt', '1/8 teaspoon pepper'],
 		directions: ['In a medium bowl, combine tomato, onion, jalapeno pepper (to taste,) cilantro and green onion. Season with garlic powder, salt and pepper. Stir until evenly distributed. Refrigerate for 30 minutes.'],
@@ -401,6 +416,6 @@ Recipe.create([
 ])
 
 # not all 49 will be created due to validation condition
-100.times do
-	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..50))
+120.times do
+	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..54))
 end
