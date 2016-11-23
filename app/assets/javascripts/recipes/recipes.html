@@ -1,6 +1,16 @@
+<div class="row">
+	<div class="col-md-3">
+		<form class="navbar-form" role="search">
+		    <div class="input-group add-on">
+		      <input class="form-control" placeholder="Search" ng-model="vm.search" type="text">
+		    </div>
+		  </form>
+	</div>
+</div>
+
 <div class="card-columns">
-	<div class="card card-block" ng-repeat="recipe in vm.recipes | orderBy: 'title'">
-    <a href="#/recipe/{{recipe.id}}"><h4 class="card-title">{{ recipe.title }}</h4></a>
+	<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: 'title'">
+    <a href="#" ui-sref="recipe({id: recipe.id})"><h4 class="card-title">{{ recipe.title }}</h4></a>
     <p class="card-text">{{ recipe.category.name }}</p>
     <p class="card-text">{{ recipe.description }}</p>
     <p class="card-text"><small class="text-muted">Submitted by {{ recipe.author.username }}</small></p>

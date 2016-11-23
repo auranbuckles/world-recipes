@@ -6,7 +6,7 @@
 
 		CategoryService.getCategory($stateParams.id)
 			.then(function(response) {
-				vm.category = response.data;
+				vm.categories = response.data;
 			});
 	}
 

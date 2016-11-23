@@ -10,6 +10,9 @@
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse by Category</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+<!--         <div ng-repeat="category in vm.categories">
+          <a class="dropdown-item" href="#" ui-sref="category({id: vm.category.id)">Chinese</a>
+        </div> -->
         <a class="dropdown-item" href="#/category/1">Chinese</a>
         <a class="dropdown-item" href="#/category/2">French</a>
         <a class="dropdown-item" href="#/category/3">Italian</a>
@@ -19,8 +22,4 @@
       </div>
     </li>
   </ul>
-  <form class="form-inline float-xs-right">
-    <input class="form-control" type="text" placeholder="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
 </nav>

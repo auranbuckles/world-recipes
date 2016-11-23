@@ -1,11 +1,9 @@
 (function() {
 	'use strict';
 
-	function HomeController ($scope) {
-		$scope.name = "Auran is home"
+	function HomeController () {
+		var ctrl = this;
 	}
-
-	HomeController.$inject = ['$scope']
 
 	angular
 		.module('app')

@@ -16,16 +16,16 @@
 					templateUrl: 'recipes/recipes.html',
 					controller: 'RecipeController as vm'
 				})
+				.state('recipes.new', {
+					url: '/recipe/new',
+					templateUrl: 'recipes/new.html',
+					controller: 'NewRecipeController as vm'
+				})
 				.state('recipe', {
 					url: '/recipe/:id',
 					templateUrl: 'recipes/recipe.html',
 					controller: 'ViewRecipeController as vm'
 				})
-				// .state('categories', {
-				// 	url: '/categories',
-				// 	templateUrl: 'categories/categories.html',
-				// 	controller: 'CategoryController as vm'
-				// })
 				.state('category', {
 					url: '/category/:id',
 					templateUrl: 'categories/category.html',

@@ -8,6 +8,14 @@
 			.then(function(response) {
 				vm.recipes = response.data;
 			});
+
+		// vm.search = '';
+
+		// vm.refilter = function() {
+		// 	vm.filteredList = $filter('filter')(vm.recipes, vm.search)
+		// };
+
+		// vm.refilter();
 	}
 
 	angular
