@@ -15,6 +15,11 @@
 					templateUrl: 'recipes/recipes.html',
 					controller: 'RecipeController as vm'
 				})
+				.state('recipe', {
+					url: '/recipe/:id',
+					templateUrl: 'recipes/recipe.html',
+					controller: 'ViewRecipeController as vm'
+				})
 				.state('categories', {
 					url: '/categories',
 					templateUrl: 'categories/categories.html',

@@ -1,0 +1,25 @@
+<h2>{{ vm.recipe.title }}</h2>
+<p>by {{ vm.recipe.author.username }}</p>
+
+<ul>
+	<li>Difficulty: {{ vm.recipe.difficulty }}</li>
+	<li>Time: {{ vm.recipe.time }}</li>
+	<li>Servings: {{ vm.recipe.servings }}</li>
+	<!-- <li>Category: {{ vm.recipe.category }}</li> -->
+</ul>
+
+<h3>Ingredients</h3>
+
+<div ng-repeat="ingredient in vm.recipe.ingredients">
+	{{ ingredient }}
+</div>
+
+<h3>Directions</h3>
+
+<ol>
+	<div ng-repeat="direction in vm.recipe.directions">
+		<li>{{ direction }}</li>
+	</div>
+</ol>
+
+{{vm.recipe}}
