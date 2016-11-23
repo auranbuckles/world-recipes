@@ -2,11 +2,13 @@
 	<tr>
 		<th>Recipe</th>
 		<th>Submitted By</th>
+		<th>Category</th>
 	</tr>
-	<tr ng-repeat="recipe in vm.recipes">
+	<tr ng-repeat="recipe in vm.recipes | orderBy: 'title'">
 		<td>
 				<a href="#/recipe/{{recipe.id}}">{{ recipe.title }}</a>
 		</td>
 		<td>{{ recipe.author.username }}</td>
+		<td>{{ recipe.category.name }}</td>
 	</tr>
 </table>

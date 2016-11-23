@@ -10,6 +10,7 @@
 					templateUrl: 'home/home.html',
 					controller: 'HomeController as vm'
 				})
+				// .state('login')
 				.state('recipes', {
 					url: '/recipes',
 					templateUrl: 'recipes/recipes.html',
@@ -20,9 +21,14 @@
 					templateUrl: 'recipes/recipe.html',
 					controller: 'ViewRecipeController as vm'
 				})
-				.state('categories', {
-					url: '/categories',
-					templateUrl: 'categories/categories.html',
+				// .state('categories', {
+				// 	url: '/categories',
+				// 	templateUrl: 'categories/categories.html',
+				// 	controller: 'CategoryController as vm'
+				// })
+				.state('category', {
+					url: '/category/:name',
+					templateUrl: 'categories/category.html',
 					controller: 'CategoryController as vm'
 				})
 				.state('userProfile', {
