@@ -5,6 +5,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       t.integer :difficulty
       t.integer :time
       t.integer :servings
+      t.string :description
       t.string :ingredients, array: true
       t.string :directions, array: true
       t.integer :category_id
