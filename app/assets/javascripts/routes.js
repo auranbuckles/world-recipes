@@ -27,7 +27,7 @@
 				// 	controller: 'CategoryController as vm'
 				// })
 				.state('category', {
-					url: '/category/:name',
+					url: '/category/:id',
 					templateUrl: 'categories/category.html',
 					controller: 'CategoryController as vm'
 				})

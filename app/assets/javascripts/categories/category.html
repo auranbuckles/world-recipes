@@ -1,1 +1,9 @@
-test
+<h2>{{ vm.category.name}} Recipes</h2>
+
+<div class="card-columns">
+	<div class="card card-block" ng-repeat="recipe in vm.category.recipes | orderBy: 'title'">
+    <h4 class="card-title">{{ recipe.title }}</h4>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
