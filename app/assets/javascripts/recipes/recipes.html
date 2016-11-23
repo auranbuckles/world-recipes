@@ -1,14 +1,8 @@
-<table>
-	<tr>
-		<th>Recipe</th>
-		<th>Submitted By</th>
-		<th>Category</th>
-	</tr>
-	<tr ng-repeat="recipe in vm.recipes | orderBy: 'title'">
-		<td>
-				<a href="#/recipe/{{recipe.id}}">{{ recipe.title }}</a>
-		</td>
-		<td>{{ recipe.author.username }}</td>
-		<td>{{ recipe.category.name }}</td>
-	</tr>
-</table>
+<div class="card-columns">
+	<div class="card card-block" ng-repeat="recipe in vm.recipes | orderBy: 'title'">
+    <a href="#/recipe/{{recipe.id}}"><h4 class="card-title">{{ recipe.title }}</h4></a>
+    <p class="card-text">{{ recipe.category.name }}</p>
+    <p class="card-text">{{ recipe.description }}</p>
+    <p class="card-text"><small class="text-muted">Submitted by {{ recipe.author.username }}</small></p>
+  </div>
+</div>
