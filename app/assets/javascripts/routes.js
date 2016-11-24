@@ -17,7 +17,7 @@
 					controller: 'RecipeController as vm'
 				})
 				.state('recipes.new', {
-					url: '/recipe/new',
+					url: '/recipes/new',
 					templateUrl: 'recipes/new.html',
 					controller: 'NewRecipeController as vm'
 				})
