@@ -3,8 +3,8 @@
 
 	angular
 		.module('app')
-		.config([
-      '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+		.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+			$httpProvider.defaults.withCredentials = true;
 			$stateProvider
 				.state('home', {
 					url: '/',
@@ -36,27 +36,8 @@
 					templateUrl: 'profile/profile.html',
 					controller: 'ProfileController as vm'
 				})
-				.state('login', {
-          url: '/login',
-          templateUrl: 'auth/login.html',
-          controller: 'AuthController',
-          onEnter: ['$state', 'Auth', function($state, Auth) {
-          Auth.currentUser().then(function(){
-            $state.go('home');
-        })
-      }]
-    })
-          .state('register', {
-          url: '/register',
-          templateUrl: 'auth/register.html',
-          controller: 'AuthController',
-          onEnter: ['$state', 'Auth', function($state, Auth) {
-          Auth.currentUser().then(function(){
-            $state.go('home');
-        })
-      }]
-    });
 
-        $urlRouterProvider.otherwise('/');
-      }]);
-  }());
+			$urlRouterProvider.otherwise('/')
+		})
+
+}());
