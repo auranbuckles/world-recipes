@@ -3,14 +3,14 @@
 
 	angular
 		.module('app')
-		.config(function($stateProvider, $urlRouterProvider) {
+		.config([
+      '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 			$stateProvider
 				.state('home', {
 					url: '/',
 					templateUrl: 'home/home.html',
 					controller: 'HomeController as vm'
 				})
-				// .state('login')
 				.state('recipes', {
 					url: '/recipes',
 					templateUrl: 'recipes/recipes.html',
@@ -31,13 +31,32 @@
 					templateUrl: 'categories/category.html',
 					controller: 'CategoryController as vm'
 				})
-				.state('userProfile', {
+				.state('profile', {
 					url: '/user/:id',
-					templateUrl: 'recipes/recipes.html',
-					controller: 'RecipeController as vm'
+					templateUrl: 'profile/profile.html',
+					controller: 'ProfileController as vm'
 				})
+				.state('login', {
+          url: '/login',
+          templateUrl: 'auth/login.html',
+          controller: 'AuthController',
+          onEnter: ['$state', 'Auth', function($state, Auth) {
+          Auth.currentUser().then(function(){
+            $state.go('home');
+        })
+      }]
+    })
+          .state('register', {
+          url: '/register',
+          templateUrl: 'auth/register.html',
+          controller: 'AuthController',
+          onEnter: ['$state', 'Auth', function($state, Auth) {
+          Auth.currentUser().then(function(){
+            $state.go('home');
+        })
+      }]
+    });
 
-			$urlRouterProvider.otherwise('/')
-		})
-
-}());
+        $urlRouterProvider.otherwise('/');
+      }]);
+  }());
