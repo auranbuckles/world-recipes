@@ -379,6 +379,12 @@ Recipe.create([
 			'Pour into a serving dish and sprinkle with green onions and peanuts to garnish. Decorate with lime wedges to serve.'],
 		category_id: 6, author_id: rand(1..8)
 	},
+	{ title: 'Peanut Butter Noodles', difficulty: 2, time: 25, servings: 4, description: 'This is kid friendly with an Asian twist. Can also be made with spaghetti pasta.', 
+		ingredients: ['1/2 cup chicken broth', '1 1/2 tablespoons minced fresh ginger root', '3 tablespoons soy sauce', '3 tablespoons peanut butter', '1 1/2 tablespoons honey', '2 teaspoons hot chile paste (optional)', '3 cloves garlic, minced', '8 ounces Udon noodles', '1/4 cup chopped green onions', '1/4 cup chopped peanuts'],
+		directions: ['Bring a large pot of water to a boil. Add noodles and cook until tender according to package directions. Drain.', 
+			'Meanwhile, combine chicken broth, ginger, soy sauce, peanut butter, honey, chili paste, and garlic in a small saucepan. Cook over medium heat until peanut butter melts and is heated through. Add noodles, and toss to coat. Garnish with green onions and peanuts.'],
+		category_id: 6, author_id: rand(1..8)
+	},
 	{ title: 'Tom Ka Gai (Coconut Chicken Soup)', difficulty: 2, time: 35, servings: 6, description: 'The quintessential Thai soup.', 
 		ingredients: ['3/4 pound boneless, skinless chicken meat', '3 tablespoons vegetable oil', '2 (14 ounce) cans coconut milk', '2 cups water', '2 tablespoons minced fresh ginger root', '4 tablespoons fish sauce', '1/4 cup fresh lime juice', '1/4 teaspoon cayenne pepper', '1/2 teaspoon ground turmeric', '2 tablespoons thinly sliced green onion', '1 tablespoon chopped fresh cilantro'],
 		directions: ['Cut chicken into thin strips and saute in oil for to 2 to 3 minutes until the chicken turns white.', 
@@ -417,5 +423,5 @@ Recipe.create([
 
 # not all 49 will be created due to validation condition
 120.times do
-	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..54))
+	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..55))
 end
