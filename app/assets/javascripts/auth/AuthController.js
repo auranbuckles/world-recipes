@@ -20,11 +20,9 @@ function AuthController (Auth,$scope,$http) {
     var credentials = {
       email: $scope.email,
       password: $scope.password
-      // token: $scope.token
     };
 
     console.log(credentials);
-    debugger;
 
 
     Auth.login(credentials, config).then(function(user) {
@@ -35,11 +33,11 @@ function AuthController (Auth,$scope,$http) {
 
     $scope.$on('devise:login', function(event, currentUser) {
       // after a login, a hard refresh, a new tab
-      $scope.currentUser = Auth._currentUser.email
+      $scope.currentUser = Auth._currentUser
 
       $http.get('/')
         .success(function(data) {
-          $scope.posts = data;
+          $scope.recipes = data;
           console.log(data)
         })
         .error(function(data) {
@@ -71,7 +69,7 @@ function AuthController (Auth,$scope,$http) {
 
       $http.get('/posts')
         .success(function(data) {
-          $scope.posts = data;
+          $scope.recipes = data;
           console.log(data)
         })
         .error(function(data) {
@@ -79,7 +77,7 @@ function AuthController (Auth,$scope,$http) {
         });
     }, function(error) {
       // An error occurred logging out.
-  });
+    });
 
     $scope.$on('devise:logout', function(event, oldCurrentUser) {
       // ...
