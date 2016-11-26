@@ -7,6 +7,11 @@
 			  <label for="title">Recipe Name</label>
 			  <input class="form-control" type="text" ng-model="title" required>
 			</div>
+
+			<div class="form-group">
+				<label for="description">Description</label>
+			  <input class="form-control" type="text" ng-model="description" required>
+			</div>
 		
 			<div class="form-group">
 			  <label for="difficulty">Difficulty</label>
@@ -26,8 +31,9 @@
 			</div>
 
 			<div class="form-group">
-				<label for="description">Description</label>
-			  <input class="form-control" type="textarea" ng-model="description" required>
+				<label for="description">Ingredients</label>
+			  <input class="form-control" type="text" ng-model="ingredients[0]" required>
+			  <input class="form-control" type="text" ng-model="ingredients[1]">
 			</div>
 
 			<input class="btn btn-primary" type="reset">
@@ -42,6 +48,12 @@
 		<h2>Recipe Preview</h2>
 
 		<h3>{{ title }}</h3>
+		<p>{{ description }}</p>
+
+		<p>Difficulty: {{ difficulty }}</p>
+		<p>Time: {{ time }}</p>
+		<p>Servings: {{ servings }}</p>
+		<!-- <p>Category: {{ category.name }}</p> -->
 	</div>
 </div>
 
