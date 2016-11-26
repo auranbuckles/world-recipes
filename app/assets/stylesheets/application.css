@@ -27,8 +27,19 @@ h1.logo a, h1.logo a:hover {
 
 h2 {
  	background-color: #E9F7D2;
- 	margin-top: 7px;
  	padding: 0.5em;
+}
+
+.navbar {
+	margin-bottom: 8px;
+}
+
+ol.list-group {
+    list-style: decimal inside;
+}
+
+ol .list-group-item {
+    display: list-item;
 }
 
 
