@@ -1,12 +1,12 @@
 (function() {
 	'use strict';
 
-	function NewRecipeController ($location, RecipeService) {
+	function NewRecipeController ($location, RecipeService, CategoryService) {
 		var vm = this;
 
-		RecipeService.getRecipes()
+		CategoryService.getCategories()
 			.then(function(response) {
-				vm.recipes = response.data;
+				vm.categories = response.data;
 			});
 
 	  vm.addRecipe = function() {
@@ -16,17 +16,19 @@
 	    	time: this.time,
 	    	servings: this.servings,
 	    	description: this.description,
-	    	ingredients: ['ingredient-1', 'ingredient-2'],
-	    	directions: ['direction-1', 'direction-2']
+	    	ingredients: this.ingredients,
+	    	directions: ['direction-1', 'direction-2'],
+	    	category_id: this.category.id
 	    };
+
 	    debugger;
 	    RecipeService.createRecipe(data);
 	    $location.path('profile');
 	  };
   
   	vm.addIngredient = function() {
-	    var newIngredientNo = vm.data.ingredients.length + 1;
-	    vm.data.ingredients.push('ingredient-'+ newIngredientNo);
+	    // var newIngredientNo = vm.data.ingredients.length + 1;
+	    vm.data.ingredients.push('');
 	  };
 	    
 	  vm.removeIngredient = function() {
