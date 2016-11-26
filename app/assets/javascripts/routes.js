@@ -9,7 +9,7 @@
 				.state('home', {
 					url: '/',
 					templateUrl: 'home/home.html',
-					controller: 'HomeController as vm'
+					controller: 'RecipeController as vm'
 				})
 				.state('recipes', {
 					url: '/recipes',
@@ -31,11 +31,6 @@
 					templateUrl: 'categories/category.html',
 					controller: 'CategoryController as vm'
 				})
-				// .state('users', {
-				// 	url: '/users',
-				// 	templateUrl: 'users/users.html',
-				// 	controller: 'UsersController as vm'
-				// })
 				.state('profile', {
 					url: '/profile',
 					templateUrl: 'users/profile.html',
