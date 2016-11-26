@@ -1,11 +1,11 @@
 <div class="row">
 	<div class="col-md-6">
 		<h2>New Recipe</h2>
-		
-		<form name="newRecipe" novalidate ng-submit="vm.addRecipe()">
+
+		<form name="newRecipe" validate ng-submit="vm.addRecipe()">
 			<div class="form-group">
 			  <label for="title">Recipe Name</label>
-			  <input class="form-control" type="text" ng-model="vm.title" required>
+			  <input class="form-control" type="text" name="title" ng-model="vm.title" required>
 			</div>
 
 <!-- 			<div ng-messages="form.title.$error" ng-if="form.title.$touched">
@@ -15,29 +15,29 @@
 
 			<div class="form-group">
 				<label for="category">Category</label>
-			  <select class="form-control" ng-model="vm.category" ng-options="category.name for category in vm.categories"></select>
+			  <select class="form-control" name="category" ng-model="vm.category" ng-options="category.name for category in vm.categories" required></select>
 			</div>
 
 			<div class="form-group">
 				<label for="description">Description</label>
-			  <input class="form-control" type="text" ng-model="vm.description" required>
+			  <input class="form-control" type="text" name="description" ng-model="vm.description" required>
 			</div>
 		
 			<div class="form-group">
 			  <label for="difficulty">Difficulty</label>
-			  <input class="form-control" type="number" ng-model="vm.difficulty" minLength="1" maxLength="5" required>
+			  <input class="form-control" type="number" name="difficulty" ng-model="vm.difficulty" minLength="1" maxLength="5" required>
 			  <small id="emailHelp" class="form-text text-muted">Enter a number between 1 and 5.</small>
 			</div>
 		
 			<div class="form-group">
 				<label for="time">Time to Make (Minutes)</label>
-			  <input class="form-control" type="number" ng-model="vm.time" step="5" required>
+			  <input class="form-control" type="number" name="time" ng-model="vm.time" step="5" required>
 			  <small id="emailHelp" class="form-text text-muted">Enter a number that is an increment of 5 minutes.</small>
 			</div>
 
 			<div class="form-group">
 				<label for="servings">Servings</label>
-			  <input class="form-control" type="number" ng-model="vm.servings" required>
+			  <input class="form-control" type="number" name="servings" ng-model="vm.servings" required>
 			</div>
 
 			<div class="form-group">
@@ -66,12 +66,12 @@
 		<h2>Recipe Preview</h2>
 
 		<h3>{{ vm.title }}</h3>
+		<h4 ng-show="newRecipe.category.$valid">Category: {{ vm.category.name }}</h4>
 		<p>{{ vm.description }}</p>
 
-		<p>Difficulty: {{ vm.difficulty }}</p>
-		<p>Time: {{ vm.time }}</p>
-		<p>Servings: {{ vm.servings }}</p>
-		<!-- <p>Category: {{ category.name }}</p> -->
+		<p ng-show="newRecipe.difficulty.$valid">Difficulty: {{ vm.difficulty }}</p>
+		<p ng-show="newRecipe.time.$valid">Time: {{ vm.time }}</p>
+		<p ng-show="newRecipe.servings.$valid">Servings: {{ vm.servings }}</p>
 
 		<h4>Ingredients</h4>
 		<ul>
