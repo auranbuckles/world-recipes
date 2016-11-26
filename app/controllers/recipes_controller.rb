@@ -14,6 +14,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.author = current_user
     binding.pry
     if @recipe.save
       respond_to do |format|
