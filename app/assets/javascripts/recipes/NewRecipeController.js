@@ -12,7 +12,7 @@
 	  vm.addRecipe = function() {
 	    var data = {
 	    	title: this.title,
-	    	difficulty: this.difficulty;
+	    	difficulty: this.difficulty
 	    };
 	    RecipeService.createRecipe(data);
 	    $location.path('recipes');
