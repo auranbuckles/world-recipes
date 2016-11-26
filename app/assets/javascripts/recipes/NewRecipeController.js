@@ -12,10 +12,25 @@
 	  vm.addRecipe = function() {
 	    var data = {
 	    	title: this.title,
-	    	difficulty: this.difficulty
+	    	difficulty: this.difficulty,
+	    	time: ,
+	    	servings: ,
+	    	description: ,
+	    	ingredients: ['ingredient-1', 'ingredient-2'],
+	    	directions: ['direction-1', 'direction-2']
 	    };
 	    RecipeService.createRecipe(data);
 	    $location.path('recipes');
+	  };
+  
+  	vm.addIngredient = function() {
+	    var newIngredientNo = vm.data.ingredients.length + 1;
+	    vm.data.ingredients.push('ingredient-'+ newIngredientNo);
+	  };
+	    
+	  vm.removeIngredient = function() {
+	    var lastIngredient = vm.data.ingredients.length - 1;
+	    vm.data.ingredients.splice(lastIngredient);
 	  };
 	}
 
