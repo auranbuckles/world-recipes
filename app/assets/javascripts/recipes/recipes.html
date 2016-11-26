@@ -1,25 +1,23 @@
+<h2>All Recipes</h2>
+
 <div class="row">
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<form class="navbar-form" role="search">
 		    <div class="input-group add-on">
 		      <input class="form-control" placeholder="Search any" ng-model="vm.search.$" type="text">
 		    </div>
 		  </form>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<form class="navbar-form" role="search">
 		    <div class="input-group add-on">
 		      <input class="form-control" placeholder="Search by recipe name" ng-model="vm.search.title" type="text">
 		    </div>
 		  </form>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<form class="navbar-form" role="search">
 		    <div class="input-group add-on">
 		      <input class="form-control" placeholder="Search by ingredients" ng-model="vm.search.ingredients" type="text">
@@ -27,6 +25,8 @@
 		  </form>
 	</div>
 </div>
+
+<br>
 
 <div class="card-columns">
 	<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: 'title'">
