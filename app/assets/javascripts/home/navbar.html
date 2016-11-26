@@ -24,10 +24,19 @@
           Hi, {{currentUser.username}}
           <button class="btn" ng-click="logOut()">Log Out</button>
         </div>
+        
         <div ng-hide="currentUser">
           <input class="form-control" ng-model="email" type="text" placeholder="Email">
           <input class="form-control" ng-model="password" type="password" placeholder="Password">
-          <button class="btn" ng-click="login()">Login</button>
+          <button class="btn" ng-click="login()" id="login">Login</button>
+        </div>
+
+        <div ng-hide="currentUser">
+          <input class="form-control" ng-model="username" type="text" placeholder="Username">
+          <input class="form-control" ng-model="email" type="text" placeholder="Email">
+          <input class="form-control" ng-model="password" type="password" placeholder="Password">
+          <input class="form-control" ng-model="password_confirmation" type="password" placeholder="Password Confirmation">
+          <button class="btn" ng-click="register()">Sign Up</button>
         </div>
         
       </form>
