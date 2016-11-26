@@ -38,7 +38,7 @@ function AuthController (Auth,$scope,$http) {
 
     $scope.$on('devise:new-session', function(event, currentUser) {
       // user logged in by Auth.login({...})
-      $scope.currentUser = Auth._currentUser.email
+      $scope.currentUser = Auth._currentUser
     });
   }
 
@@ -53,8 +53,8 @@ function AuthController (Auth,$scope,$http) {
 
     Auth.logout(config1).then(function(oldUser) {
       $scope.currentUser = ""
-      console.log(oldUser.email)
-      alert(oldUser.email + " you're signed out now.");
+      console.log("signed out" + oldUser.email)
+      alert("You are signed out now.");
 
       $http.get('/')
         .success(function(data) {
@@ -74,8 +74,6 @@ function AuthController (Auth,$scope,$http) {
    }
 
 };
-
-
 
 angular
   .module('app')
