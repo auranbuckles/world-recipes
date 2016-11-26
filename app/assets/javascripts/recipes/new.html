@@ -1,17 +1,26 @@
 <h2>New Recipe</h2>
 
 <form name="newRecipe" validate ng-submit="vm.addRecipe()">
-  <label for="title">Recipe Name</label>
-  <input type="text" name="title" ng-model="title" required>
+	<div class="form-group">
+	  <label for="title">Recipe Name</label>
+	  <input class="form-control" type="text" name="title" ng-model="title" required>
+	</div>
 
-  <label for="difficulty">Difficulty (between 1 and 5)</label>
-  <input type="number" ng-model="difficulty" min="1" max="5" required>
+	<div class="form-group">
+	  <label for="difficulty">Difficulty</label>
+	  <input class="form-control" type="number" ng-model="difficulty" min="1" max="5" required>
+	  <small id="emailHelp" class="form-text text-muted">Enter a number between 1 and 5.</small>
+	</div>
 
-  <label for="time">Time to Make</label>
-  <input type="number" ng-model="time" required>
+	<div class="form-group">
+		<label for="time">Time to Make</label>
+	  <input class="form-control" type="number" ng-model="time" required>
+	</div>
 
 </form>
 
 <div ng-show="newRecipe.$valid">
 	<input type="submit" value="Create Recipe">
 </div>
+
+<!-- <h1>{{ newRecipe.title }}</h1> -->
