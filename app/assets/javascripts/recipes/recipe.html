@@ -1,11 +1,11 @@
 <h2>{{ vm.recipe.title }}</h2>
 <p>by {{ vm.recipe.author.username }}</p>
+<p>Category: {{ vm.recipe.category.name }}</p>
 <p>{{ vm.recipe.description }}</p>
 
 <p>Difficulty: {{ vm.recipe.difficulty }}</p>
 <p>Time: {{ vm.recipe.time }}</p>
 <p>Servings: {{ vm.recipe.servings }}</p>
-<p>Category: {{ vm.recipe.category.name }}</p>
 <p>Added to favorites by {{ vm.recipe.favorited_users.length }} users</p>
 
 <h3>Ingredients</h3>
