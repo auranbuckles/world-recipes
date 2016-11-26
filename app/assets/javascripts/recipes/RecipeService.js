@@ -8,6 +8,10 @@ function RecipeService($http) {
 		return $http.get('http://localhost:3000/recipes/' + id)
 	};
 
+	this.createRecipe = function(data) {
+    $http.post('http://localhost:3000/recipes', data);
+  };
+
 }
 
 angular

@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 	resources :categories, only: [:index, :show]
 
   resources :recipes, only: [:index, :show, :create, :update, :destroy]
+  
   post 'recipes/:id/favorite', to: 'recipes#favorite'
 end
