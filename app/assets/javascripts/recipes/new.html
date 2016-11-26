@@ -1,26 +1,37 @@
-<h2>New Recipe</h2>
-
-<form name="newRecipe" validate ng-submit="vm.addRecipe()">
-	<div class="form-group">
-	  <label for="title">Recipe Name</label>
-	  <input class="form-control" type="text" name="title" ng-model="title" required>
+<div class="row">
+	<div class="col-md-6">
+		<h2>New Recipe</h2>
+		
+		<form name="newRecipe" validate ng-submit="vm.addRecipe()">
+			<div class="form-group">
+			  <label for="title">Recipe Name</label>
+			  <input class="form-control" type="text" ng-model="title" required>
+			</div>
+		
+			<div class="form-group">
+			  <label for="difficulty">Difficulty</label>
+			  <input class="form-control" type="number" ng-model="difficulty" min="1" max="5" required>
+			  <small id="emailHelp" class="form-text text-muted">Enter a number between 1 and 5.</small>
+			</div>
+		
+			<div class="form-group">
+				<label for="time">Time to Make (Minutes)</label>
+			  <input class="form-control" type="number" ng-model="time" step="5" required>
+			  <small id="emailHelp" class="form-text text-muted">Enter a number that is an increment of 5 minutes.</small>
+			</div>
+		
+		</form>
+		
+		<div ng-show="newRecipe.$valid">
+			<input class="btn btn-primary" type="submit" value="Create Recipe">
+		</div>
 	</div>
 
-	<div class="form-group">
-	  <label for="difficulty">Difficulty</label>
-	  <input class="form-control" type="number" ng-model="difficulty" min="1" max="5" required>
-	  <small id="emailHelp" class="form-text text-muted">Enter a number between 1 and 5.</small>
+	<div class="col-md-6">
+		<h2>Recipe Preview</h2>
+
+		<h3>{{ title }}</h3>
 	</div>
-
-	<div class="form-group">
-		<label for="time">Time to Make</label>
-	  <input class="form-control" type="number" ng-model="time" required>
-	</div>
-
-</form>
-
-<div ng-show="newRecipe.$valid">
-	<input type="submit" value="Create Recipe">
 </div>
 
 <!-- <h1>{{ newRecipe.title }}</h1> -->
