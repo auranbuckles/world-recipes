@@ -1,5 +1,4 @@
 function AuthController (Auth,$scope,$http) {
-  // Use your configured Auth service.
 
   var config = {
     headers: {
@@ -85,6 +84,8 @@ function AuthController (Auth,$scope,$http) {
    }
 
 };
+
+
 
 angular
   .module('app')

@@ -16,15 +16,6 @@
 
 			<div ng-include src="'home/navbar.html'"></div>
 
-      <div ng-controller="AuthController">
-        {{currentUser}}
-        <input ng-model="email" type="text">
-        <input ng-model="password" type="text">
-        <button ng-click="login()">Log In</button>
-        <button ng-click="logOut()">Log Out</button>
-       
-      </div>
-
     	<%= yield %>
    	</div>
   </body>
