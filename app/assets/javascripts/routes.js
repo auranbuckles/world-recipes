@@ -31,9 +31,14 @@
 					templateUrl: 'categories/category.html',
 					controller: 'CategoryController as vm'
 				})
+				// .state('users', {
+				// 	url: '/users',
+				// 	templateUrl: 'users/users.html',
+				// 	controller: 'UsersController as vm'
+				// })
 				.state('profile', {
-					url: '/user/:id',
-					templateUrl: 'profile/profile.html',
+					url: '/profile',
+					templateUrl: 'users/profile.html',
 					controller: 'ProfileController as vm'
 				})
 
