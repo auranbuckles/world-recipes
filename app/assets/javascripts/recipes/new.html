@@ -2,16 +2,21 @@
 	<div class="col-md-6">
 		<h2>New Recipe</h2>
 		
-		<form name="newRecipe" validate ng-submit="vm.addRecipe()">
+		<form name="newRecipe" novalidate ng-submit="vm.addRecipe()">
 			<div class="form-group">
 			  <label for="title">Recipe Name</label>
 			  <input class="form-control" type="text" ng-model="vm.title" required>
 			</div>
 
-			<div ng-messages="form.title.$error" ng-if="form.title.$touched">
-<!--         <div ng-message="required">Email is required!</div>
-        <div ng-message="minlength">Must be more than 2 characters!</div> -->
-      </div>
+<!-- 			<div ng-messages="form.title.$error" ng-if="form.title.$touched">
+        <div ng-message="required">Email is required!</div>
+        <div ng-message="minlength">Must be more than 2 characters!</div>
+      </div> -->
+
+			<div class="form-group">
+				<label for="category">Category</label>
+			  <select class="form-control" ng-model="vm.category" ng-options="category.name for category in vm.categories"></select>
+			</div>
 
 			<div class="form-group">
 				<label for="description">Description</label>
@@ -36,10 +41,18 @@
 			</div>
 
 			<div class="form-group">
-				<label for="description">Ingredients</label>
+			<!-- <div class="form-group" ng-repeat="ingredient in vm.ingredients"> -->
+				<label for="ingredients">Ingredients</label>
 			  <input class="form-control" type="text" ng-model="vm.ingredients[0]" required>
 			  <input class="form-control" type="text" ng-model="vm.ingredients[1]">
 			</div>
+
+<!-- 			<fieldset ng-repeat="ingredient in vm.ingredients">     
+	      <input type="text" ng-model="ingredient.value" name="" placeholder="Ingredient 1">
+	     
+	      <button class="remove" ng-show="$last" ng-click="removeIngredient()">-</button>
+		   </fieldset>
+		   <button class="btn btn-primary addfields" ng-click="addIngredient()">Add Ingredient</button> -->
 
 			<input class="btn btn-primary" type="reset">
 
@@ -52,14 +65,23 @@
 	<div class="col-md-6">
 		<h2>Recipe Preview</h2>
 
-		<h3>{{ title }}</h3>
-		<p>{{ description }}</p>
+		<h3>{{ vm.title }}</h3>
+		<p>{{ vm.description }}</p>
 
-		<p>Difficulty: {{ difficulty }}</p>
-		<p>Time: {{ time }}</p>
-		<p>Servings: {{ servings }}</p>
+		<p>Difficulty: {{ vm.difficulty }}</p>
+		<p>Time: {{ vm.time }}</p>
+		<p>Servings: {{ vm.servings }}</p>
 		<!-- <p>Category: {{ category.name }}</p> -->
+
+		<h4>Ingredients</h4>
+		<ul>
+			<li>{{ vm.ingredients }}</li>
+		</ul>
+
+		<pre>data = {{ vm | json }}</pre>
 	</div>
 </div>
+
+<br>
 
 <!-- <h1>{{ newRecipe.title }}</h1> -->
