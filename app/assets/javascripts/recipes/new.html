@@ -10,25 +10,40 @@
 				  <input class="form-control" type="text" name="title" ng-model="vm.title" required>
 				</div>
 				
-				<div class="alert alert-danger" ng-show="titleField.title.$touched && titleField.title.$invalid">Recipe Name Required.</div>
+				<div class="alert alert-danger" ng-show="titleField.title.$touched && titleField.title.$invalid">A Recipe name is required.</div>
 			</ng-form>
 
-			<div class="form-group">
-				<label for="category">Category</label>
-			  <select class="form-control" name="category" ng-model="vm.category" ng-options="category.name for category in vm.categories" required></select>
-			</div>
+			<ng-form name="categoryField">
+				<div class="form-group">
+					<label for="category">Category</label>
+				  <select class="form-control" name="category" ng-model="vm.category" ng-options="category.name for category in vm.categories" required></select>
+				</div>
 
-			<div class="form-group">
-				<label for="description">Description</label>
-			  <input class="form-control" type="text" name="description" ng-model="vm.description" required>
-			</div>
+				<div class="alert alert-danger" ng-show="categoryField.category.$touched && categoryField.category.$invalid">A category is required.</div>
+			</ng-form>
+
+			<ng-form name="descriptionField">
+				<div class="form-group">
+					<label for="description">Description</label>
+				  <input class="form-control" type="text" name="description" ng-model="vm.description" required>
+				</div>
+
+				<div class="alert alert-danger" ng-show="descriptionField.description.$touched && descriptionField.description.$invalid">A description is required.</div>
+			</ng-form>
 		
-			<div class="form-group">
-			  <label for="difficulty">Difficulty</label>
-			  <input class="form-control" type="number" name="difficulty" ng-model="vm.difficulty" minLength="1" maxLength="5" required>
-			  <small id="emailHelp" class="form-text text-muted">Enter a number between 1 and 5.</small>
-			</div>
-		
+			<ng-form name="difficultyField">
+				<div class="form-group">
+				  <label for="difficulty">Difficulty</label>
+				  <input class="form-control" type="number" name="difficulty" ng-model="vm.difficulty" min="1" max="5" required>
+				  <small id="emailHelp" class="form-text text-muted">Enter a number between 1 and 5.</small>
+				</div>
+
+				<div ng-messages="difficultyField.difficulty.$error" ng-show="difficultyField.difficulty.$touched && difficultyField.difficulty.$invalid">
+					<div class="alert alert-danger" ng-show="difficultyField.difficulty.$error.required">A difficulty level is required.</div>
+					<div class="alert alert-danger" ng-show="difficultyField.difficulty.$error.max || difficultyField.difficulty.$error.min">Must be between 1 and 5.</div>
+				</div>
+			</ng-form>
+
 			<div class="form-group">
 				<label for="time">Time to Make (Minutes)</label>
 			  <input class="form-control" type="number" name="time" ng-model="vm.time" step="5" required>
