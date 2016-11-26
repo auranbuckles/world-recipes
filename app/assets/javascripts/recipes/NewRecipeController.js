@@ -13,12 +13,13 @@
 	    var data = {
 	    	title: this.title,
 	    	difficulty: this.difficulty,
-	    	time: ,
-	    	servings: ,
-	    	description: ,
+	    	time: this.time,
+	    	servings: this.servings,
+	    	description: this.description,
 	    	ingredients: ['ingredient-1', 'ingredient-2'],
 	    	directions: ['direction-1', 'direction-2']
 	    };
+	    debugger;
 	    RecipeService.createRecipe(data);
 	    $location.path('recipes');
 	  };
