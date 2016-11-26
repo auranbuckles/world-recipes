@@ -15,12 +15,12 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.author = current_user
-    binding.pry
-    if @recipe.save
-      respond_to do |format|
-        format.json {render json: @recipe}
-      end
-    end
+    @recipe.save
+    # if @recipe.save
+    #   respond_to do |format|
+    #     format.json { render json: @recipe, status: :ok }
+    #   end
+    # end
   end
 
   def update
