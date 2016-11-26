@@ -13,7 +13,13 @@ class RecipesController < ApplicationController
   end
 
   def create
-  	
+    @recipe = Recipe.new(recipe_params)
+    binding.pry
+    if @recipe.save
+      respond_to do |format|
+        format.json {render json: @recipe}
+      end
+    end
   end
 
   def update
