@@ -5,15 +5,6 @@ function AuthController (Auth,$scope,$http) {
       'X-HTTP-Method-Override': 'POST'
     }
   };
-  
-  // $http.get('/')
-  // .success(function(data) {
-  //   $scope.posts = data;
-  //   console.log(data)
-  // })
-  // .error(function(data) {
-
-  // });
 
   $scope.login = function() {
     var credentials = {
@@ -21,7 +12,7 @@ function AuthController (Auth,$scope,$http) {
       password: $scope.password
     };
 
-    console.log(credentials);
+    console.log(credentials)
 
 
     Auth.login(credentials, config).then(function(user) {
@@ -36,8 +27,7 @@ function AuthController (Auth,$scope,$http) {
 
       $http.get('/')
         .success(function(data) {
-          $scope.recipes = data;
-          console.log(data)
+          console.log("login success")
         })
         .error(function(data) {
 
@@ -66,15 +56,15 @@ function AuthController (Auth,$scope,$http) {
       console.log(oldUser.email)
       alert(oldUser.email + " you're signed out now.");
 
-      $http.get('/posts')
+      $http.get('/')
         .success(function(data) {
-          $scope.recipes = data;
-          console.log(data)
+          console.log("logout success")
         })
         .error(function(data) {
-
+          console.log("logout failed")
         });
     }, function(error) {
+      console.log("logout failed")
       // An error occurred logging out.
     });
 
