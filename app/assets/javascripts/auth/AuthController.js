@@ -6,6 +6,37 @@ function AuthController (Auth,$scope,$http) {
     }
   };
 
+  $scope.register = function() {
+    var credentials = {
+      username: $scope.username,
+      email: $scope.email,
+      password: $scope.password,
+      password_confirmation: $scope.password
+    };
+
+    console.log(credentials)
+
+    Auth.register(credentials, config).then(function(registeredUser) {
+      console.log(registeredUser); // => {id: 1, ect: '...'}
+    }, function(error) {
+      // Registration failed...
+      console.log("registration failed")
+    });
+
+    $scope.$on('devise:new-registration', function(event, user) {
+      // log in the user
+      // debugger;      
+      $http.get('/')
+        .success(function(data) {
+          console.log("sign up success")
+        })
+        .error(function(data) {
+
+        });
+    });
+
+  }
+
   $scope.login = function() {
     var credentials = {
       email: $scope.email,
