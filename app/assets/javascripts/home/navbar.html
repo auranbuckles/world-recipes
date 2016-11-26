@@ -20,14 +20,16 @@
     </li>
     <div ng-controller="AuthController">
       <form class="form-inline float-xs-right">
-        <div ng-if="Auth._currentUser">
-          HI
+        <div ng-show="currentUser">
+          Hi, {{currentUser.username}}
+          <button class="btn" ng-click="logOut()">Log Out</button>
         </div>
-        {{currentUser.username}}
-        <input class="form-control" ng-model="email" type="text" placeholder="Email">
-        <input class="form-control" ng-model="password" type="password" placeholder="Password">
-        <button class="btn" ng-click="login()">Login</button>
-        <button class="btn" ng-click="logOut()">Log Out</button>
+        <div ng-hide="currentUser">
+          <input class="form-control" ng-model="email" type="text" placeholder="Email">
+          <input class="form-control" ng-model="password" type="password" placeholder="Password">
+          <button class="btn" ng-click="login()">Login</button>
+        </div>
+        
       </form>
        
     </div>
