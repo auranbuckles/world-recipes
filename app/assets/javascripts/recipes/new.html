@@ -2,16 +2,16 @@
 	<div class="col-md-6">
 		<h2>New Recipe</h2>
 
-		<form name="newRecipe" validate ng-submit="vm.addRecipe()">
-			<div class="form-group">
-			  <label for="title">Recipe Name</label>
-			  <input class="form-control" type="text" name="title" ng-model="vm.title" required>
-			</div>
-
-<!-- 			<div ng-messages="form.title.$error" ng-if="form.title.$touched">
-        <div ng-message="required">Email is required!</div>
-        <div ng-message="minlength">Must be more than 2 characters!</div>
-      </div> -->
+		<form name="newRecipe" novalidate ng-submit="vm.addRecipe()">
+			
+			<ng-form name="titleField">
+				<div class="form-group">
+				  <label for="title">Recipe Name</label>
+				  <input class="form-control" type="text" name="title" ng-model="vm.title" required>
+				</div>
+				
+				<div class="alert alert-danger" ng-show="titleField.title.$touched && titleField.title.$invalid">Recipe Name Required.</div>
+			</ng-form>
 
 			<div class="form-group">
 				<label for="category">Category</label>
@@ -97,10 +97,8 @@
 			</ol>
 		</div>
 
-		<pre>data = {{ vm | json }}</pre>
+		<pre>data = {{ newRecipe | json }}</pre>
 	</div>
 </div>
 
 <br>
-
-<!-- <h1>{{ newRecipe.title }}</h1> -->
