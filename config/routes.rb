@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
 	devise_for :users
 
-	resources :users, only: [:show]
+	resources :users, only: [:index]
+
+	get 'user/profile' => 'users#profile'
 
 	resources :categories, only: [:index, :show]
 
