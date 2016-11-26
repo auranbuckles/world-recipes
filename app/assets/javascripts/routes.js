@@ -4,7 +4,7 @@
 	angular
 		.module('app')
 		.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-			$httpProvider.defaults.withCredentials = true;
+			// $httpProvider.defaults.withCredentials = true;
 			$stateProvider
 				.state('home', {
 					url: '/',
@@ -16,8 +16,8 @@
 					templateUrl: 'recipes/recipes.html',
 					controller: 'RecipeController as vm'
 				})
-				.state('recipes.new', {
-					url: '/recipes/new',
+				.state('newRecipe', {
+					url: '/new',
 					templateUrl: 'recipes/new.html',
 					controller: 'NewRecipeController as vm'
 				})
