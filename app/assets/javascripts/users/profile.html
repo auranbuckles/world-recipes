@@ -1,3 +1,10 @@
 <h2>My Recipes</h2>
 
-{{ vm.recipes }}
+<div class="card-columns">
+	<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: 'title'">
+    <a href="#" ui-sref="recipe({id: recipe.id})"><h4 class="card-title">{{ recipe.title }}</h4></a>
+    <p class="card-text">{{ recipe.category.name }}</p>
+    <p class="card-text">{{ recipe.description }}</p>
+    <p class="card-text"><small class="text-muted">Added to favorites by {{ recipe.favorited_users.length }} users</small></p>
+  </div>
+</div>
