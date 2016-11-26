@@ -1,8 +1,13 @@
 (function() {
 	'use strict';
 
-	function HomeController () {
-		var ctrl = this;
+	function HomeController (RecipeService) {
+		var vm = this;
+
+		RecipeService.getRecipes()
+			.then(function(response) {
+				vm.recipes = response.data;
+			});
 	}
 
 	angular

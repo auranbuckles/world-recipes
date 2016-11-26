@@ -1,1 +1,11 @@
-<ui-view>Welcome to World Recipes!</ui-view>
+<ui-view><h2>Featured Recipes</h2></ui-view>
+
+<div class="card-columns">
+	<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: '-favorited_users' | limitTo: 10 ">
+    <a href="#" ui-sref="recipe({id: recipe.id})"><h4 class="card-title">{{ recipe.title }}</h4></a>
+    <p class="card-text">{{ recipe.category.name }}</p>
+    <p class="card-text">{{ recipe.description }}</p>
+    <p class="card-text"><small class="text-muted">Submitted by {{ recipe.author.username }}</small></p>
+    <p class="card-text"><small class="text-muted">Favorited by {{ recipe.favorited_users.length }} users</small></p>
+  </div>
+</div>
