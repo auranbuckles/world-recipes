@@ -21,7 +21,7 @@
 	    };
 	    debugger;
 	    RecipeService.createRecipe(data);
-	    $location.path('recipes');
+	    $location.path('profile');
 	  };
   
   	vm.addIngredient = function() {
