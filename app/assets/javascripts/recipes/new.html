@@ -43,7 +43,7 @@
 			<div class="form-group">
 			<!-- <div class="form-group" ng-repeat="ingredient in vm.ingredients"> -->
 				<label for="ingredients">Ingredients</label>
-			  <input class="form-control" type="text" ng-model="vm.ingredients[0]" required>
+			  <input class="form-control" type="text" name="ingredients" ng-model="vm.ingredients[0]" required>
 			  <input class="form-control" type="text" ng-model="vm.ingredients[1]">
 			</div>
 
@@ -65,18 +65,37 @@
 	<div class="col-md-6">
 		<h2>Recipe Preview</h2>
 
-		<h3>{{ vm.title }}</h3>
-		<h4 ng-show="newRecipe.category.$valid">Category: {{ vm.category.name }}</h4>
-		<p>{{ vm.description }}</p>
+		<div class="jumbotron">
+			<h3>{{ vm.title }}</h3>
+			<h4 ng-show="newRecipe.category.$valid">Category: {{ vm.category.name }}</h4>
+			<!-- <p>by {{ vm.author.username }}</p> -->
+			
+			<p>{{ vm.description }}</p>
+			
+			<p ng-show="newRecipe.difficulty.$valid">Difficulty: {{ vm.difficulty }}</p>
+			<p ng-show="newRecipe.time.$valid">Time: {{ vm.time }}</p>
+			<p ng-show="newRecipe.servings.$valid">Servings: {{ vm.servings }}</p>
+		</div>
 
-		<p ng-show="newRecipe.difficulty.$valid">Difficulty: {{ vm.difficulty }}</p>
-		<p ng-show="newRecipe.time.$valid">Time: {{ vm.time }}</p>
-		<p ng-show="newRecipe.servings.$valid">Servings: {{ vm.servings }}</p>
+		<div class="jumbotron" ng-show="newRecipe.ingredients.$valid">
+			<h4>Ingredients</h4>
+			
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="ingredient in vm.ingredients">
+					{{ ingredient }}
+				</li>
+			</ul>
+		</div>
 
-		<h4>Ingredients</h4>
-		<ul>
-			<li>{{ vm.ingredients }}</li>
-		</ul>
+		<div class="jumbotron" ng-show="newRecipe.directions.$valid">
+			<h4>Directions</h4>
+			
+			<ol class="list-group">
+				<li class="list-group-item" ng-repeat="direction in vm.directions">
+					{{ direction }}
+				</li>
+			</ol>
+		</div>
 
 		<pre>data = {{ vm | json }}</pre>
 	</div>
