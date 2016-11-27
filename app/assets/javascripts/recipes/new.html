@@ -67,9 +67,9 @@
 			<div class="alert alert-danger" ng-show="newRecipe.servings.$touched && newRecipe.servings.$invalid">Servings is required.</div>
 
 			<!-- ingredients -->
-
+			
+			<label for="ingredients">Ingredients</label>
 			<div class="form-group" ng-repeat="ingredient in vm.ingredients">
-				<label for="ingredients">Ingredients</label>
 			  <input class="form-control" type="text" name="ingredients" ng-model="vm.ingredients[$index]" required>
 			</div>
 
@@ -123,7 +123,7 @@
 			</ol>
 		</div>
 
-		<pre>data = {{ newRecipe | json }}</pre>
+		<!-- <pre>data = {{ newRecipe | json }}</pre> -->
 	</div>
 </div>
 
