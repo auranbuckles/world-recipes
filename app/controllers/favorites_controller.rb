@@ -2,7 +2,6 @@ class FavoritesController < ApplicationController
   def create
     @favorite = Favorite.new(favorite_params)
     @favorite.user = current_user
-    binding.pry
     @favorite.save
   end
 

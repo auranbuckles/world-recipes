@@ -13,8 +13,6 @@
 			var data = {
 				recipe_id: this.recipe.id
 			}
-
-			debugger;
 			RecipeService.createFavorite(data);
 		}
 	}

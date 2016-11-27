@@ -421,7 +421,6 @@ Recipe.create([
 	}
 ])
 
-# not all 49 will be created due to validation condition
 120.times do
 	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..55))
 end
