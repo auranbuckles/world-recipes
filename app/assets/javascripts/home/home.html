@@ -2,7 +2,8 @@
 
 <ui-view>
 
-<h2>Most Popular Recipes</h2>
+<h2>Welcome!</h2>
+<h4>Take a look at our top 10 recipes:</h4>
 
 <div class="card-columns">
 	<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: '-favorited_users' | limitTo: 10 ">
