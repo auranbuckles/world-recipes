@@ -8,7 +8,7 @@
 			$stateProvider
 				.state('home', {
 					url: '/',
-					templateUrl: 'home/home.html',
+					templateUrl: 'home.html',
 					controller: 'RecipeController as vm'
 				})
 				.state('home.recipes', {
@@ -23,12 +23,12 @@
 				})
 				.state('home.recipe', {
 					url: 'recipe/:id',
-					templateUrl: 'recipes/recipe.html',
+					templateUrl: 'recipes/show.html',
 					controller: 'ViewRecipeController as vm'
 				})
 				.state('home.category', {
 					url: 'category/:id',
-					templateUrl: 'categories/category.html',
+					templateUrl: 'category.html',
 					controller: 'CategoryController as vm'
 				})
 				.state('home.profile', {
