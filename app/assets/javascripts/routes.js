@@ -36,6 +36,11 @@
 					templateUrl: 'users/profile.html',
 					controller: 'ProfileController as vm'
 				})
+				.state('favorites', {
+					url: '/favorites',
+					templateUrl: 'users/favorites.html',
+					controller: 'FavoritesController as vm'
+				})
 
 			$urlRouterProvider.otherwise('/')
 		})
