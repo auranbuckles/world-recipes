@@ -1,8 +1,13 @@
 (function() {
 	'use strict';
 
-	function ViewRecipeController (RecipeService, $stateParams) {
+	function ViewRecipeController (RecipeService, $stateParams, $state) {
 		var vm = this;
+
+		vm.reloadRoute = function() {
+	    $state.reload();
+	    console.log("reloading")
+		};
 
 		RecipeService.getRecipe($stateParams.id)
 			.then(function(response) {
@@ -14,6 +19,7 @@
 				recipe_id: this.recipe.id
 			}
 			RecipeService.createFavorite(data);
+			vm.reloadRoute();
 		}
 	}
 

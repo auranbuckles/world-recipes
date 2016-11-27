@@ -16,7 +16,7 @@
 	    	time: this.time,
 	    	servings: this.servings,
 	    	description: this.description,
-	    	ingredients: this.ingredients,
+	    	ingredients: ['ingredient1', 'ingredient2'],
 	    	directions: this.directions,
 	    	category_id: this.category.id
 	    };
