@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 	before_action :find_recipe, except: [:index, :create, :favorite]
-	# before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
   	@recipes = Recipe.all

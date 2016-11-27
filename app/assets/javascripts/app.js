@@ -6,11 +6,6 @@
 		.config(function(AuthProvider) {
       // Configure Auth service with AuthProvider
     })
-    .controller('AuthController', function(Auth) {
-      // Use your configured Auth service.
-      console.log(Auth._currentUser);
-      console.log(Auth.isAuthenticated());
-    })
     .filter('titleize', function() {
 	    return function(input, all) {
 	      var reg = (all) ? /([^\W_]+[^\s-]*) */g : /([^\W_]+[^\s-]*)/;
