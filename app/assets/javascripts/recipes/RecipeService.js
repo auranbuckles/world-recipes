@@ -13,6 +13,11 @@ function RecipeService($http) {
     			.then(console.log("posting new recipe..."))
   };
 
+  this.createFavorite = function(data) {
+  	$http.post('http://localhost:3000/recipes/addfavorite', data)
+			  	.then(console.log("posting new favorite..."))
+  }
+
 }
 
 angular

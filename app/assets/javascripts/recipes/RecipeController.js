@@ -8,6 +8,7 @@
 			.then(function(response) {
 				vm.recipes = response.data;
 			});
+
 	}
 
 	angular

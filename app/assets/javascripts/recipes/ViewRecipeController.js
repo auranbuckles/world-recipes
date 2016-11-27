@@ -8,6 +8,15 @@
 			.then(function(response) {
 				vm.recipe = response.data;
 			});
+
+		vm.addFavorite = function() {
+			var data = {
+				recipe_id: this.recipe.id
+			}
+
+			debugger;
+			RecipeService.createFavorite(data);
+		}
 	}
 
 	angular
