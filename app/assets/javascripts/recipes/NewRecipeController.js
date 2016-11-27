@@ -16,24 +16,26 @@
 	    	time: this.time,
 	    	servings: this.servings,
 	    	description: this.description,
-	    	ingredients: this.ingredients,
-	    	directions: ['direction-1', 'direction-2'],
+	    	ingredients: [this.ingredients[0]],
+	    	directions: '["direction-1", "direction-2"]',
 	    	category_id: this.category.id
 	    };
 
-	    debugger;
+	    data.ingredients.push("ingredient1", "ingredient2")
+
 	    RecipeService.createRecipe(data);
 	    $location.path('profile');
 	  };
   
   	vm.addIngredient = function() {
-	    // var newIngredientNo = vm.data.ingredients.length + 1;
-	    vm.data.ingredients.push('');
+  		debugger;
+	    var newIngredientNo = data.ingredients.length + 1;
+	    data.ingredients.push('');
 	  };
 	    
 	  vm.removeIngredient = function() {
 	    var lastIngredient = vm.data.ingredients.length - 1;
-	    vm.data.ingredients.splice(lastIngredient);
+	    data.ingredients.splice(lastIngredient);
 	  };
 	}
 
