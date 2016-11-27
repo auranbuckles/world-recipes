@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-	before_action :find_recipe, except: [:index, :create]
+	before_action :find_recipe, except: [:index, :create, :favorite]
 	# before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -15,13 +15,18 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.author = current_user
-    binding.pry
     @recipe.save
     # if @recipe.save
     #   respond_to do |format|
     #     format.json { render json: @recipe, status: :ok }
     #   end
     # end
+  end
+
+  def favorite
+    @favorite = Favorite.new(favorite_params)
+    @favorite.user = current_user
+    @favorite.save
   end
 
   def update
@@ -36,6 +41,10 @@ class RecipesController < ApplicationController
 
   def recipe_params
   	params.require(:recipe).permit(:id, :title, :difficulty, :time, :servings, :description, :ingredients, :directions, :category_id, :author_id)
+  end
+
+  def favorite_params
+    params.require(:favorite).permit(:id, :recipe_id, :user_id)
   end
 
   def find_recipe

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'favorites/create'
+
   root 'application#index'
 
 	devise_for :users
@@ -10,6 +12,6 @@ Rails.application.routes.draw do
 	resources :categories, only: [:index, :show]
 
   resources :recipes, only: [:index, :show, :create, :update, :destroy]
-  
-  post 'recipes/:id/favorite', to: 'recipes#favorite'
+
+  resources :favorites, only: [:create]
 end
