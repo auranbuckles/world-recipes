@@ -13,7 +13,7 @@
 				})
 				.state('home.recipes', {
 					url: 'recipes',
-					templateUrl: 'recipes/recipes.html',
+					templateUrl: 'recipes/index.html',
 					controller: 'RecipeController as vm'
 				})
 				.state('home.newRecipe', {

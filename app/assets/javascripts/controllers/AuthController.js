@@ -16,25 +16,24 @@ function AuthController (Auth,$scope,$http) {
 
     console.log(credentials)
 
-    Auth.register(credentials, config).then(function(registeredUser) {
-      console.log(registeredUser); // => {id: 1, ect: '...'}
-    }, function(error) {
-      // Registration failed...
-      console.log("registration failed")
-    });
+    Auth.register(credentials, config)
+      .then(function(registeredUser) {
+        console.log(registeredUser); // => {id: 1, ect: '...'}
+        console.log("sign up success");
+      }, function(error) {
+        // Registration failed...
+        console.log("registration failed")
+      });
 
     $scope.$on('devise:new-registration', function(event, user) {
       // log in the user
-      // debugger;      
       $http.get('/')
         .success(function(data) {
-          console.log("sign up success")
         })
         .error(function(data) {
-
         });
     });
-
+    
   }
 
   $scope.login = function() {
