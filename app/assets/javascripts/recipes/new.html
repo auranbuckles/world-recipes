@@ -11,18 +11,16 @@
 			  <input class="form-control" type="text" name="title" ng-model="vm.title" required>
 			</div>
 			
-			<div class="alert alert-danger" ng-show="newRecipe.title.$touched && newRecipe.title.$invalid">A Recipe name is required.</div>
+			<div class="alert alert-danger" ng-show="newRecipe.title.$touched && newRecipe.title.$invalid">Recipe name is required.</div>
 
 			<!-- category -->
 
-			<ng-form name="categoryField">
-				<div class="form-group">
-					<label for="category">Category</label>
-				  <select class="form-control" name="category" ng-model="vm.category" ng-options="category.name for category in vm.categories" required></select>
-				</div>
+			<div class="form-group">
+				<label for="category">Category</label>
+			  <select class="form-control" name="category" ng-model="vm.category" ng-options="category.name for category in vm.categories" required></select>
+			</div>
 
-				<div class="alert alert-danger" ng-show="categoryField.category.$touched && categoryField.category.$invalid">A category is required.</div>
-			</ng-form>
+			<div class="alert alert-danger" ng-show="newRecipe.category.$touched && newRecipe.category.$invalid">Category is required.</div>
 
 			<!-- description -->
 
@@ -31,7 +29,7 @@
 			  <input class="form-control" type="text" name="description" ng-model="vm.description" required>
 			</div>
 
-			<div class="alert alert-danger" ng-show="newRecipe.description.$touched && newRecipe.description.$invalid">A description is required.</div>
+			<div class="alert alert-danger" ng-show="newRecipe.description.$touched && newRecipe.description.$invalid">Description is required.</div>
 
 			<!-- difficulty -->
 		
@@ -46,16 +44,29 @@
 				<div class="alert alert-danger" ng-show="newRecipe.difficulty.$error.max || newRecipe.difficulty.$error.min">Must be between 1 and 5.</div>
 			</div>
 
+			<!-- time -->
+
 			<div class="form-group">
 				<label for="time">Time to Make (Minutes)</label>
-			  <input class="form-control" type="number" name="time" ng-model="vm.time" step="5" required>
+			  <input class="form-control" type="number" name="time" ng-model="vm.time" min="5" step="5" required>
 			  <small id="emailHelp" class="form-text text-muted">Enter a number that is an increment of 5 minutes.</small>
 			</div>
+
+			<div ng-show="newRecipe.time.$touched && newRecipe.time.$invalid">
+				<div class="alert alert-danger" ng-show="newRecipe.time.$error.required">Time is required.</div>
+				<div class="alert alert-danger" ng-show="newRecipe.time.$error.min">Must be at least 5 minutes.</div>
+			</div>
+
+			<!-- servings -->
 
 			<div class="form-group">
 				<label for="servings">Servings</label>
 			  <input class="form-control" type="number" name="servings" ng-model="vm.servings" required>
 			</div>
+
+			<div class="alert alert-danger" ng-show="newRecipe.servings.$touched && newRecipe.servings.$invalid">Servings is required.</div>
+
+			<!-- ingredients -->
 
 			<div class="form-group">
 			<!-- <div class="form-group" ng-repeat="ingredient in vm.ingredients"> -->
