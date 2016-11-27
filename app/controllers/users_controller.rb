@@ -16,4 +16,15 @@ class UsersController < ApplicationController
       render json: @recipes, status: :ok
     end
   end
+
+  def favorites
+  	@user = current_user
+  	if @user
+  		@favorites = @user.favorite_recipes
+  		render json: @favorites, status: :ok
+  	else
+  		@recipes = Recipe.all
+      render json: @recipes, status: :ok
+    end
+  end
 end

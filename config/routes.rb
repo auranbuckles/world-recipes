@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 	resources :users, only: [:index]
 
 	get 'user/profile' => 'users#profile'
+	get 'user/favorites' => 'users#favorites'
 
 	resources :categories, only: [:index, :show]
 
