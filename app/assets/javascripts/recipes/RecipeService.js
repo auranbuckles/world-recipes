@@ -9,7 +9,8 @@ function RecipeService($http) {
 	};
 
 	this.createRecipe = function(data) {
-    $http.post('http://localhost:3000/recipes', data);
+    $http.post('http://localhost:3000/recipes', data)
+    			.then(console.log("posting new recipe..."))
   };
 
 }

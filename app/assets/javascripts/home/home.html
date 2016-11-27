@@ -1,4 +1,4 @@
-<ui-view><h2>Featured Recipes</h2></ui-view>
+<ui-view><h2>Most Popular Recipes</h2></ui-view>
 
 <div class="card-columns">
 	<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: '-favorited_users' | limitTo: 10 ">
