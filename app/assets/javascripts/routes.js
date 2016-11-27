@@ -11,33 +11,33 @@
 					templateUrl: 'home/home.html',
 					controller: 'RecipeController as vm'
 				})
-				.state('recipes', {
-					url: '/recipes',
+				.state('home.recipes', {
+					url: 'recipes',
 					templateUrl: 'recipes/recipes.html',
 					controller: 'RecipeController as vm'
 				})
-				.state('newRecipe', {
-					url: '/new',
+				.state('home.newRecipe', {
+					url: 'new',
 					templateUrl: 'recipes/new.html',
 					controller: 'NewRecipeController as vm'
 				})
-				.state('recipe', {
-					url: '/recipe/:id',
+				.state('home.recipe', {
+					url: 'recipe/:id',
 					templateUrl: 'recipes/recipe.html',
 					controller: 'ViewRecipeController as vm'
 				})
-				.state('category', {
-					url: '/category/:id',
+				.state('home.category', {
+					url: 'category/:id',
 					templateUrl: 'categories/category.html',
 					controller: 'CategoryController as vm'
 				})
-				.state('profile', {
-					url: '/profile',
+				.state('home.profile', {
+					url: 'profile',
 					templateUrl: 'users/profile.html',
 					controller: 'ProfileController as vm'
 				})
-				.state('favorites', {
-					url: '/favorites',
+				.state('home.favorites', {
+					url: 'favorites',
 					templateUrl: 'users/favorites.html',
 					controller: 'FavoritesController as vm'
 				})

@@ -5,17 +5,17 @@
       <a class="nav-link" href="#" ui-sref="home">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" ui-sref="recipes">Browse Recipes</a>
+      <a class="nav-link" href="#" ui-sref="home.recipes">Browse Recipes</a>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse by Category</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-        <a class="dropdown-item" ui-sref="category({id: 1})">Chinese</a>
-        <a class="dropdown-item" ui-sref="category({id: 2})">French</a>
-        <a class="dropdown-item" ui-sref="category({id: 3})">Italian</a>
-        <a class="dropdown-item" ui-sref="category({id: 4})">Japanese</a>
-        <a class="dropdown-item" ui-sref="category({id: 5})">Mexican</a>
-        <a class="dropdown-item" ui-sref="category({id: 6})">Thai</a>
+        <a class="dropdown-item" ui-sref="home.category({id: 1})">Chinese</a>
+        <a class="dropdown-item" ui-sref="home.category({id: 2})">French</a>
+        <a class="dropdown-item" ui-sref="home.category({id: 3})">Italian</a>
+        <a class="dropdown-item" ui-sref="home.category({id: 4})">Japanese</a>
+        <a class="dropdown-item" ui-sref="home.category({id: 5})">Mexican</a>
+        <a class="dropdown-item" ui-sref="home.category({id: 6})">Thai</a>
       </div>
     </li>
     <div ng-controller="AuthController">
@@ -23,13 +23,13 @@
         <div ng-show="currentUser">
           <li class="nav-item nav-link">Hi, {{currentUser.username}}</li>
           <li class="nav-item">
-            <a class="nav-link" href="#" ui-sref="profile">My Recipes</a>
+            <a class="nav-link" href="#" ui-sref="home.profile">My Recipes ({{currentUser.recipes.length}})</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" ui-sref="favorites">My Favorites</a>
+            <a class="nav-link" href="#" ui-sref="home.favorites">My Favorites ({{currentUser.favorite_recipes.length}})</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" ui-sref="newRecipe">Create Recipe</a>
+            <a class="nav-link" href="#" ui-sref="home.newRecipe">Create Recipe</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"> </a>
