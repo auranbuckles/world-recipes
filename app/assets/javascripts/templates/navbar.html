@@ -18,6 +18,7 @@
         <a class="dropdown-item" ui-sref="home.category({id: 6})">Thai</a>
       </div>
     </li>
+
     <div ng-controller="AuthController">
       <form class="form-inline float-xs-right">
         <div ng-show="currentUser">
@@ -52,7 +53,7 @@
           <input class="form-control" ng-model="email" type="text" placeholder="Email">
           <input class="form-control" ng-model="password" type="password" placeholder="Password">
           <input class="form-control" ng-model="password_confirmation" type="password" placeholder="Password Confirmation">
-          <button class="btn" ng-click="register()"><div ng-click="login()">Sign Up</div></button>
+          <button class="btn" ng-click="registerlogin()">Sign Up</button>
         </div>
         
       </form>

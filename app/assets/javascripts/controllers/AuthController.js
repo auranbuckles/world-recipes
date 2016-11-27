@@ -1,4 +1,4 @@
-function AuthController (Auth,$scope,$http) {
+function AuthController (Auth,$scope,$http,$timeout) {
 
   var config = {
     headers: {
@@ -34,6 +34,13 @@ function AuthController (Auth,$scope,$http) {
         });
     });
     
+  }
+
+  $scope.registerlogin = function() {
+    $scope.register();
+    $timeout(function() {
+      $scope.login();
+    }, 500);
   }
 
   $scope.login = function() {
