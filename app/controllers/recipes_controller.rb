@@ -23,12 +23,6 @@ class RecipesController < ApplicationController
     # end
   end
 
-  def favorite
-    @favorite = Favorite.new(favorite_params)
-    @favorite.user = current_user
-    @favorite.save
-  end
-
   def update
   	
   end
@@ -41,10 +35,6 @@ class RecipesController < ApplicationController
 
   def recipe_params
   	params.require(:recipe).permit(:id, :title, :difficulty, :time, :servings, :description, :ingredients, :directions, :category_id, :author_id)
-  end
-
-  def favorite_params
-    params.require(:favorite).permit(:id, :recipe_id, :user_id)
   end
 
   def find_recipe

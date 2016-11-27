@@ -14,7 +14,7 @@ function RecipeService($http) {
   };
 
   this.createFavorite = function(data) {
-  	$http.post('http://localhost:3000/recipes/addfavorite', data)
+  	$http.post('http://localhost:3000/favorites', data)
 			  	.then(console.log("posting new favorite..."))
   }
 
