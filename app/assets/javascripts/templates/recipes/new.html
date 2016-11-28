@@ -69,9 +69,9 @@
 			<!-- ingredients -->
 			
 			<label for="ingredients">Ingredients</label>
-			<div class="form-group" ng-repeat="ingredient in vm.ingredients">
+			<!-- <div class="form-group" ng-repeat="ingredient in vm.ingredients"> -->
 			  <input class="form-control" type="text" name="ingredients" ng-model="vm.ingredients[$index]" required>
-			</div>
+			<!-- </div> -->
 
 <!-- 			<fieldset ng-repeat="ingredient in vm.ingredients">     
 	      <input type="text" ng-model="ingredient.value" name="" placeholder="Ingredient 1">
@@ -123,7 +123,7 @@
 			</ol>
 		</div>
 
-		<!-- <pre>data = {{ newRecipe | json }}</pre> -->
+		<pre>data = {{ vm | json }}</pre>
 	</div>
 </div>
 
