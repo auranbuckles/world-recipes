@@ -9,7 +9,7 @@
 				.state('home', {
 					url: '/',
 					templateUrl: 'home.html',
-					controller: 'AuthController as vm'
+					controller: 'AuthController'
 				})
 				.state('home.recipes', {
 					url: 'recipes',

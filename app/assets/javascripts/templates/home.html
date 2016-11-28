@@ -64,9 +64,9 @@
 </nav>
 
 <ui-view>
-	<div ng-controller="RecipeController">
+	<div ng-controller="RecipeController as vm">
 		<h2>Welcome!</h2>
-<!-- 		<h4>Take a look at our top 10 recipes:</h4>
+		<h4>Take a look at our top 10 recipes:</h4>
 
 		<div class="card-columns">
 			<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: '-favorited_users' | limitTo: 10 ">
@@ -76,7 +76,7 @@
 		    <p class="card-text"><small class="text-muted">Submitted by {{ recipe.author.username }}</small></p>
 		    <p class="card-text"><small class="text-muted">Favorited by {{ recipe.favorited_users.length }} users</small></p>
 		  </div>
-		</div> -->
+		</div>
 	</div>
 
 </ui-view>
