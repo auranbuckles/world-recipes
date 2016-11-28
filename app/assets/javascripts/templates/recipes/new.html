@@ -93,8 +93,8 @@
 
 		<div class="jumbotron">
 			<h3>{{ vm.title | titleize }}</h3>
+			<p ng-show="newRecipe.title.$valid">by {{ currentUser.username }}</p>
 			<h4 ng-show="newRecipe.category.$valid">Category: {{ vm.category.name }}</h4>
-			<!-- <p>by {{ vm.author.username }}</p> -->
 			
 			<p>{{ vm.description }}</p>
 			
