@@ -7,9 +7,6 @@
 		vm.reloadRoute = function() {
 	    $state.reload();
 	    console.log("reloading")
-	    document.getElementById("login").click(function (e) {
-	  		return false;
-	  	});
 		};
 
 		RecipeService.getRecipe($stateParams.id)
@@ -23,11 +20,6 @@
 			}
 			RecipeService.createFavorite(data);
 			vm.reloadRoute();
-		}
-
-		vm.addedToFavorites = function() {
-			debugger;
-			return true;
 		}
 
 		vm.stringify = function(obj) {
