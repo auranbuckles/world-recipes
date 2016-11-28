@@ -9,12 +9,13 @@
 	<p>Time: {{ vm.recipe.time }}</p>
 	<p>Servings: {{ vm.recipe.servings }}</p>
 	<p>Added to favorites by {{ vm.recipe.favorited_users.length }} users</p>
-	<form novalidate ng-submit="vm.addFavorite()" ng-hide="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email))">
-		<input class="btn btn-primary" type="submit" value="Add to Favorites &#9825;">
+
+	<form novalidate ng-submit="vm.addFavorite()" ng-hide="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email))" ng-show="isAuthenticated()">
+		<input class="btn btn-danger" type="submit" value="Add to Favorites &#9825;">
 	</form>
 
 	<div ng-show="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email))">
-		<button class="btn btn-primary">Added to Favorites &#9829;</button>
+		<button class="btn btn-success">Added to Favorites &#9829;</button>
 	</div>
 
 </div>
