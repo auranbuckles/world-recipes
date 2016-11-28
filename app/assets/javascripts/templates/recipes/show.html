@@ -14,9 +14,7 @@
 		<input class="btn btn-danger" type="submit" value="Add to Favorites &#9825;">
 	</form>
 
-	<div ng-show="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email))">
-		<button class="btn btn-success">Added to Favorites &#9829;</button>
-	</div>
+	<div class="btn btn-success" ng-show="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email))">Added to Favorites &#9829;</div>
 
 </div>
 
