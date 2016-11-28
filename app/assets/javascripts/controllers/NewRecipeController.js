@@ -16,8 +16,8 @@
 	    	time: this.time,
 	    	servings: this.servings,
 	    	description: this.description,
-	    	ingredients: ['ingredient1', 'ingredient2'],
-	    	directions: this.directions,
+	    	ingredients: "ingredient1\r\ningredient2",
+	    	directions: "direction1\r\ndirection2",
 	    	category_id: this.category.id
 	    };
 
