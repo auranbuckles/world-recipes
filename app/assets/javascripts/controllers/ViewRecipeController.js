@@ -21,6 +21,16 @@
 			RecipeService.createFavorite(data);
 			vm.reloadRoute();
 		}
+
+		vm.addedToFavorites = function() {
+			debugger;
+			return true;
+		}
+
+		vm.stringify = function(obj) {
+			return JSON.stringify(obj);
+		}
+
 	}
 
 	angular
