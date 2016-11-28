@@ -49,7 +49,7 @@ function AuthController (Auth,$scope,$http,$timeout) {
       password: $scope.password
     };
 
-    console.log(credentials)
+    console.log(credentials);
 
 
     Auth.login(credentials, config).then(function(user) {
@@ -108,7 +108,11 @@ function AuthController (Auth,$scope,$http,$timeout) {
     $scope.$on('devise:logout', function(event, oldCurrentUser) {
       // ...
     });
-   }
+  }
+
+  $scope.isAuthenticated = function() {
+    return Auth.isAuthenticated();
+  }
 
 };
 
