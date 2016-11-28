@@ -6,6 +6,13 @@
 		.config(function(AuthProvider) {
       // Configure Auth service with AuthProvider
     })
+    .run(function() {
+    	window.onbeforeunload = function () {
+		  	document.getElementById("login").click(function (e) {
+		  		return false;
+		  	});
+			};
+    })
     .filter('titleize', function() {
 	    return function(input, all) {
 	      var reg = (all) ? /([^\W_]+[^\s-]*) */g : /([^\W_]+[^\s-]*)/;
