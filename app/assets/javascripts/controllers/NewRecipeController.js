@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	function NewRecipeController ($location, RecipeService, CategoryService) {
+	function NewRecipeController ($state, RecipeService, CategoryService) {
 		var vm = this;
 
 		CategoryService.getCategories()
@@ -27,7 +27,7 @@
 	    debugger;
 
 	    RecipeService.createRecipe(data);
-	    $location.path('profile');
+	    $state.go('home.profile');
 	  };
 
   	// vm.addIngredient = function() {
