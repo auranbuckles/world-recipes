@@ -5,7 +5,6 @@
 		var vm = this;
 
 		vm.reloadRoute = function() {
-			debugger;
 	    $state.reload();
 	    console.log("reloading")
 		};
