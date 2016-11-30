@@ -21,6 +21,18 @@
 	    vm.ingredients.splice(lastItem);
 	  };
 
+	  vm.directions = [{text: ''}];
+
+	  vm.addNewDirection = function() {
+	    var newItemNo = vm.directions.length+1;
+	    vm.directions.push({text: ''});
+	  };
+	    
+	  vm.removeDirection = function() {
+	    var lastItem = vm.directions.length-1;
+	    vm.directions.splice(lastItem);
+	  };
+
 	  vm.addRecipe = function() {
 
 	  	var ingredients = this.ingredients;
@@ -33,6 +45,16 @@
 			  }
 	  	}
 
+	  	var directions = this.directions;
+	  	var allDirections = [];
+
+	  	for (var key in directions) {
+	  		if (directions.hasOwnProperty(key)) {
+			    var direction = directions[key].text;
+			    allDirections.push(direction);
+			  }
+	  	}
+
 	    var data = {
 	    	title: this.title,
 	    	difficulty: this.difficulty,
@@ -40,7 +62,7 @@
 	    	servings: this.servings,
 	    	description: this.description,
 	    	ingredients: allIngredients.join("\r\n"),
-	    	directions: ["direction1", "direction2"].join("\r\n"),
+	    	directions: allDirections.join("\r\n"),
 	    	category_id: this.category.id
 	    };
 
