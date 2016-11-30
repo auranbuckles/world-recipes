@@ -24,13 +24,14 @@
 	  vm.addRecipe = function() {
 
 	  	var ingredients = this.ingredients;
+	  	var allIngredients = [];
 
 	  	for (var key in ingredients) {
 	  		if (ingredients.hasOwnProperty(key)) {
-			    console.log(key + " -> " + ingredients[key]);
-			    debugger;
+			    var ingredient = ingredients[key].quantity + " " + ingredients[key].name;
+			    allIngredients.push(ingredient);
 			  }
-	  		// debugger;
+	  		debugger;
 	  	}
 
 	    var data = {
