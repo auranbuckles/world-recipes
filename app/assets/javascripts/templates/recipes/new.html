@@ -70,15 +70,21 @@
 			
 			<label for="ingredients">Ingredients</label>
 			<!-- <div class="form-group" ng-repeat="ingredient in vm.ingredients"> -->
-			  <input class="form-control" type="text" name="ingredients" ng-model="vm.ingredients[$index]" required>
-			<!-- </div> -->
+<!-- 		  <input class="form-control" type="text" name="ingredients" ng-model="vm.ingredients[$index]" required> -->
 
-<!-- 			<fieldset ng-repeat="ingredient in vm.ingredients">     
-	      <input type="text" ng-model="ingredient.value" name="" placeholder="Ingredient 1">
-	     
-	      <button class="remove" ng-show="$last" ng-click="removeIngredient()">-</button>
-		   </fieldset> -->
-		   <div class="btn btn-primary" ng-click="addIngredient()">Add Ingredient</div>
+			<fieldset  data-ng-repeat="choice in vm.choices">
+	      <input type="text" ng-model="choice.name" name="" placeholder="Enter mobile number">
+	      <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+		  </fieldset>
+	   	<button class="addfields" ng-click="addNewChoice()">Add fields</button>
+	       
+		  <div id="choicesDisplay">
+		    {{ vm.choices }}
+		  </div>
+
+<!-- 		   <div class="btn btn-primary" ng-click="addIngredient()">Add Ingredient</div> -->
+
+			<!-- buttons -->
 
 			<input class="btn btn-primary" type="reset">
 
@@ -123,7 +129,7 @@
 			</ol>
 		</div>
 
-		<pre>data = {{ vm | json }}</pre>
+		<pre>choices = {{ vm.choices | json }}</pre>
 	</div>
 </div>
 
