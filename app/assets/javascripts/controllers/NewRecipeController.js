@@ -13,7 +13,7 @@
 	  
 	  vm.addNewIngredient = function() {
 	    var newItemNo = vm.ingredients.length+1;
-	    vm.ingredients.push({'quantity': '', 'name': ''});
+	    vm.ingredients.push({quantity: '', name: ''});
 	  };
 	    
 	  vm.removeIngredient = function() {
@@ -23,13 +23,23 @@
 
 	  vm.addRecipe = function() {
 
+	  	var ingredients = this.ingredients;
+
+	  	for (var key in ingredients) {
+	  		if (ingredients.hasOwnProperty(key)) {
+			    console.log(key + " -> " + ingredients[key]);
+			    debugger;
+			  }
+	  		// debugger;
+	  	}
+
 	    var data = {
 	    	title: this.title,
 	    	difficulty: this.difficulty,
 	    	time: this.time,
 	    	servings: this.servings,
 	    	description: this.description,
-	    	ingredients: this.choices,
+	    	ingredients: this.ingredients,
 	    	directions: ["direction1", "direction2"].join("\r\n"),
 	    	category_id: this.category.id
 	    };
