@@ -9,16 +9,16 @@
 				vm.categories = response.data;
 			});
 
-	  vm.choices = [{id: 'choice1'}, {id: 'choice2'}];
+	  vm.ingredients = [{quantity: '', name: ''}, {quantity: '', name: ''}];
 	  
-	  vm.addNewChoice = function() {
-	    var newItemNo = vm.choices.length+1;
-	    vm.choices.push({'id':'choice'+newItemNo});
+	  vm.addNewIngredient = function() {
+	    var newItemNo = vm.ingredients.length+1;
+	    vm.ingredients.push({'quantity': '', 'name': ''});
 	  };
 	    
-	  vm.removeChoice = function() {
-	    var lastItem = vm.choices.length-1;
-	    vm.choices.splice(lastItem);
+	  vm.removeIngredient = function() {
+	    var lastItem = vm.ingredients.length-1;
+	    vm.ingredients.splice(lastItem);
 	  };
 
 	  vm.addRecipe = function() {
