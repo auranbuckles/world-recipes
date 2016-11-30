@@ -31,7 +31,6 @@
 			    var ingredient = ingredients[key].quantity + " " + ingredients[key].name;
 			    allIngredients.push(ingredient);
 			  }
-	  		debugger;
 	  	}
 
 	    var data = {
@@ -40,27 +39,17 @@
 	    	time: this.time,
 	    	servings: this.servings,
 	    	description: this.description,
-	    	ingredients: this.ingredients,
+	    	ingredients: allIngredients.join("\r\n"),
 	    	directions: ["direction1", "direction2"].join("\r\n"),
 	    	category_id: this.category.id
 	    };
 
-	    // data.directions = JSON.stringify(data.directions);
 	    debugger;
 
 	    RecipeService.createRecipe(data);
 	    $state.go('home.profile');
 	  };
 
-  	// vm.addIngredient = function() {
-	  //   var newIngredientNo = data.ingredients.length + 1;
-	  //   data.ingredients.push('');
-	  // };
-	    
-	  // vm.removeIngredient = function() {
-	  //   var lastIngredient = vm.data.ingredients.length - 1;
-	  //   data.ingredients.splice(lastIngredient);
-	  // };
 	}
 
 	angular
