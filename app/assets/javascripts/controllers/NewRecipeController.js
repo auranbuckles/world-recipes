@@ -66,8 +66,6 @@
 	    	category_id: this.category.id
 	    };
 
-	    debugger;
-
 	    RecipeService.createRecipe(data);
 	    $state.go('home.profile');
 	  };

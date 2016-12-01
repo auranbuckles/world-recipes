@@ -69,8 +69,6 @@ function AuthController (Auth,$scope,$http,$timeout) {
         .error(function(data) {
 
         });
-        //do an http.get in order to get the posts belonging to 
-        //the current user?
     });
 
     $scope.$on('devise:new-session', function(event, currentUser) {
@@ -90,7 +88,6 @@ function AuthController (Auth,$scope,$http,$timeout) {
 
     Auth.logout(config1).then(function(oldUser) {
       $scope.currentUser = ""
-      console.log("signed out" + oldUser.email)
       alert("You are signed out now.");
 
       $http.get('/')
