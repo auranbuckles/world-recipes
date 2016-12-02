@@ -36,16 +36,13 @@
 	  vm.addRecipe = function() {
 
 	  	var ingredients = this.ingredients;
-	  	debugger;
 	  	var allIngredients = [];
 
 	  	for (var key in ingredients) {
 	  		if (ingredients.hasOwnProperty(key)) {
 			    var ingredient = ingredients[key].quantity + " " + ingredients[key].name;
-			    debugger;
 			    allIngredients.push(ingredient);
 			  }
-			  debugger;
 	  	}
 
 	  	var directions = this.directions;
@@ -68,8 +65,6 @@
 	    	directions: allDirections.join("\r\n"),
 	    	category_id: this.category.id
 	    };
-
-	    debugger;
 
 	    RecipeService.createRecipe(data);
 	    $state.go('home.profile');
