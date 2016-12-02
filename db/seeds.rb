@@ -55,6 +55,41 @@ Recipe.create([
 			'Bake for 30 minutes in the preheated oven, or until cheeses are melted.'],
 		category_id: 3, author_id: rand(1..8)
 	},
+	{ title: 'Cinnamon Hazelnut Biscotti', difficulty: 4, time: 95, servings: 30, description: 'These are delicious with coffee and they smell wonderful!', 
+		ingredients: ['3/4 cup butter', '1 cup white sugar', '2 eggs', '1 1/2 teaspoons vanilla extract', '2 1/2 cups all-purpose flour', '1 teaspoon ground cinnamon', '3/4 teaspoon baking powder', '1/2 teaspoon salt', '1 cup hazelnuts'],
+		directions: ['Preheat oven to 350 degrees F(175 degrees C). Grease a cookie sheet or line with parchment paper.', 
+			'In a medium bowl, cream together butter and sugar until light and fluffy. Beat in eggs and vanilla. Sift together the flour, cinnamon, baking powder, and salt; mix into the egg mixture. Stir in the hazelnuts. Shape dough into two equal logs approximately 12 inches long. Place logs on baking sheet, and flatten out to about 1/2 inch thickness.', 
+			'Bake for about 30 minutes in preheated oven, or until edges are golden and the center is firm. Remove from oven to cool on the pans. When loaves are cool enough to handle, use a serrated knife to slice the loaves diagonally into 1/2 inch thick slices. Return the slices to the baking sheet.', 
+			'Bake for an additional 10 minutes, turning over once. Cool completely, and store in an airtight container at room temperature.'],
+		category_id: 3, author_id: rand(1..8)
+	},
+	{ title: 'Double Tomato Bruschetta', difficulty: 3, time: 35, servings: 12, description: 'A delicious and easy appetizer. The balsamic vinegar gives it a little bite. Dried basil can be substituted but it is best with fresh.', 
+		ingredients: ['6 roma (plum) tomatoes, chopped', 
+			'1/2 cup sun-dried tomatoes, packed in oil', 
+			'3 cloves minced garlic', '1/4 cup olive oil', '2 tablespoons balsamic vinegar', '1/4 cup fresh basil, stems removed', '1/4 teaspoon salt', '1/4 teaspoon ground black pepper', '1 French baguette', '2 cups shredded mozzarella cheese'],
+		directions: ['Preheat the oven on broiler setting.', 
+			'In a large bowl, combine the roma tomatoes, sun-dried tomatoes, garlic, olive oil, vinegar, basil, salt, and pepper. Allow the mixture to sit for 10 minutes.', 
+			'Cut the baguette into 3/4-inch slices. On a baking sheet, arrange the baguette slices in a single layer. Broil for 1 to 2 minutes, until slightly brown.', 
+			'Divide the tomato mixture evenly over the baguette slices. Top the slices with mozzarella cheese.', 
+			'Broil for 5 minutes, or until the cheese is melted.'],
+		category_id: 3, author_id: rand(1..8)
+	},
+	{ title: 'Italian Breaded Pork Chops', difficulty: 3, time: 60, servings: 4, description: 'My father\'s side of the family is Sicilian, and has been making these pork chops for at least 3 generations. My husband frequently requests these over my marinated and grilled pork chops when I give him a choice. If you do not have an oven-proof skillet, you may cook the chops on the stove at medium-low.', 
+		ingredients: ['3 eggs, lightly beaten', '3 tablespoons milk', '1 1/2 cups Italian seasoned bread crumbs', '1/2 cup grated Parmesan cheese', '2 tablespoons dried parsley', '2 tablespoons olive oil', '4 cloves garlic, peeled and chopped', '4 pork chops'],
+		directions: ['Preheat oven to 325 degrees F (160 degrees C).', 
+			'In a small bowl, beat together the eggs and milk. In a separate small bowl, mix the bread crumbs, Parmesan cheese, and parsley.', 
+			'Heat the olive oil in a large, oven-proof skillet over medium heat. Stir in the garlic, and cook until lightly browned. Remove garlic, reserving for other uses.', 
+			'Dip each pork chop into the egg mixture, then into the bread crumb mixture, coating evenly. Place coated pork chops in the skillet, and brown abut 5 minutes on each side.', 
+			'Place the skillet and pork chops in the preheated oven, and cook 25 minutes, or to an internal temperature of 145 degrees F (63 degrees C).'],
+		category_id: 3, author_id: rand(1..8)
+	},
+	{ title: 'Peppered Shrimp Alfredo', difficulty: 3, time: 50, servings: 6, description: 'Yummy shrimp in an Alfredo sauce, with portobello mushrooms and red peppers.', 
+		ingredients: ['12 ounces penne pasta', '1/4 cup butter', '2 tablespoons extra-virgin olive oil', '1 onion, diced', '2 cloves garlic, minced', '1 red bell pepper, diced', '1/2 pound portobello mushrooms, diced', '1 pound medium shrimp, peeled and deveined', '1 (15 ounce) jar Alfredo sauce', '1/2 cup grated Romano cheese', '1/2 cup cream', '1 teaspoon cayenne pepper, or more to taste', 'Salt and pepper to taste', '1/4 cup chopped parsley'],
+		directions: ['Bring a large pot of lightly salted water to a boil. Add pasta and cook for 8 to 10 minutes or until al dente; drain.', 
+			'Meanwhile, melt butter together with the olive oil in a saucepan over medium heat. Stir in onion, and cook until softened and translucent, about 2 minutes. Stir in garlic, red pepper, and mushroom; cook over medium-high heat until soft, about 2 minutes more.', 
+			'Stir in the shrimp, and cook until firm and pink, then pour in Alfredo sauce, Romano cheese, and cream; bring to a simmer stirring constantly until thickened, about 5 minutes. Season with cayenne, salt, and pepper to taste. Stir drained pasta into the sauce, and serve sprinkled with chopped parsley.'],
+		category_id: 3, author_id: rand(1..8)
+	},
 	{ title: 'Italian Spaghetti Sauce with Meatballs', difficulty: 3, time: 140, servings: 6, description: 'This is a recipe I got from my mother years ago -- it\'s great.', 
 		ingredients: ['Meatballs', '1 pound lean ground beef', '1 cup fresh bread crumbs', '1 tablespoon dried parsley', '1 tablespoon grated Parmesan cheese', '1/4 teaspoon ground black pepper', '1/8 teaspoon garlic powder', '1 egg, beaten', 'sauce', '3/4 cup chopped onion', '5 cloves garlic, minced', '1/4 cup olive oil', '2 (28 ounce) cans whole peeled tomatoes', '2 teaspoons salt', '1 teaspoon white sugar', '1 bay leaf', '1 (6 ounce) can tomato paste', '3/4 teaspoon dried basil', '1/2 teaspoon ground black pepper'],
 		directions: ['In a large bowl, combine ground beef, bread crumbs, parsley, Parmesan, 1/4 teaspoon black pepper, garlic powder and beaten egg. Mix well and form into 12 balls. Store, covered, in refrigerator until needed.', 
@@ -131,6 +166,19 @@ Recipe.create([
 			'Place pork into pot, add additional water if needed to cover pork with the sauce. Then, reduce heat to medium-low, cover, and simmer for 3 hours until the pork is tender, and the sauce has thickened.'],
 		category_id: 4, author_id: rand(1..8)
 	},
+	{ title: 'Slow Cooker Teriyaki Pork Tenderloin', difficulty: 3, time: 275, servings: 8, description: 'This sweet and spicy tenderloin recipe is super easy! Make it as spicy as you like by adding more or different types of chili peppers. This version is mild enough for my 4-year-old to enjoy. Two 1 pound tenderloins might only feed six because everyone will want seconds!', 
+		ingredients: ['2 tablespoons olive oil', '2 pounds pork tenderloin', '1/2 cup teriyaki sauce', '1 cup chicken broth', '1/4 cup brown sugar', '4 cloves garlic, chopped', '3 fresh red chile pepper, finely chopped', '1/2 large onion, sliced', '1/4 teaspoon black pepper'],
+		directions: ['Heat the olive oil in a skillet over medium-high heat. Brown tenderloins on all sides, about 10 minutes. Meanwhile, mix together teriyaki sauce, chicken broth, and brown sugar in a bowl. Stir in garlic, red chile pepper, onion, and black pepper.', 
+			'Put browned tenderloins into slow cooker, cover with the teriyaki sauce mixture. Cook on High for about 4 hours, turning 2 to 3 times during the cooking time to ensure even doneness.', 
+			'Remove tenderloins from the slow cooker and let rest for 5 minutes before slicing. If desired, spoon liquid over slices when serving.'],
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Chicken Katsu', difficulty: 3, time: 20, servings: 4, description: 'This is my family recipe for Chicken Katsu - Japanese style fried chicken. Can also be used to make Tonkatsu, just use pork cutlets instead of chicken. Serve with white rice and tonkatsu sauce.', 
+		ingredients: ['4 skinless, boneless chicken breast halves - pounded to 1/2 inch thickness', 'salt and pepper to taste', '2 tablespoons all-purpose flour', '1 egg, beaten', '1 cup panko bread crumbs', '1 cup oil for frying, or as needed'],
+		directions: ['Season the chicken breasts on both sides with salt and pepper. Place the flour, egg and panko crumbs into separate shallow dishes. Coat the chicken breasts in flour, shaking off any excess. Dip them into the egg, and then press into the panko crumbs until well coated on both sides.', 
+			'Heat 1/4 inch of oil in a large skillet over medium-high heat. Place chicken in the hot oil, and cook 3 or 4 minutes per side, or until golden brown.'],
+		category_id: 4, author_id: rand(1..8)
+	},
 	{ title: 'Green Tea Layer Cake', difficulty: 4, time: 55, servings: 12, description: 'This is a light and moist cake that is not too sweet and has a refreshing green tea fragrance. The frosting uses cream cheese but has enough sweetness to mask the sour taste. The matcha (green tea) powder gives it a delicate green hue too. This cake can also be baked as a sheet cake in a 9x 13 inch pan or as 2 separate round cakes in two 8 inch round pans. Adjust baking time accordingly.', 
 		ingredients: ['1 cup all-purpose flour', '1 cup cake flour', '1 teaspoon baking soda', '1 teaspoon salt', '4 teaspoons powdered green tea', '1 1/4 cups white sugar', '1 cup vegetable oil', '3 eggs', '1 cup plain yogurt', '1 1/2 teaspoons vanilla extract', '1 1/4 cups confectioners\' sugar', '2 teaspoons powdered green tea', '2 tablespoons butter, softened', '1 (3 ounce) package cream cheese, softened', '1/2 teaspoon vanilla extract', '1 1/2 teaspoons milk'],
 		directions: ['Preheat oven to 350 degrees F (175 degrees C). Grease and flour 2 - 9 inch round pans. Sift together the all-purpose flour, cake flour, baking soda, salt, and green tea powder; set aside.', 
@@ -182,6 +230,13 @@ Recipe.create([
 			'Mash the black bean sauce in a small bowl with 1 teaspoon of water to make it easy to spread. In a separate small bowl, mix the hot chili sauce with 1 teaspoon of water. Set the sauces aside.', 
 			'Spray a large skillet generously with cooking spray, and heat over medium-low heat. Pour the batter into the skillet, and spread evenly to make a thin crepe. Cook the crepe for 1 to 2 minutes, until firm. Pour the egg evenly over the crepe. Cook an additional 1 to 2 minutes, until the egg is set. Sprinkle the crepe with green onion slices and cilantro leaves, pressing them firmly into the cooked egg.', 
 			'Flip the crepe and spread with bean sauce and chili sauce. Place the crackers in the center of the crepe, leaving about 1/4 inch of space between the two crackers. Flip the top third of the crepe down over the crackers, flip the bottom third up, and then fold the crepe in half so the crackers are stacked on top of each other in a tidy package. Serve hot.'],
+			category_id: 1, author_id: rand(1..8)
+	},
+	{ title: 'Green Onion Cakes', difficulty: 2, time: 70, servings: 8, description: 'An excellent and simple recipe, these will make some delicious green onion cakes that are addictive and are just as good, if not better, than the store bought ones.', 
+		ingredients: ['3 cups bread flour',' 1 1/4 cups boiling water', '2 tablespoons vegetable oil', 'salt and pepper to taste', '1 bunch green onions, finely chopped', '2 teaspoons vegetable oil'],
+		directions: ['Use a fork to mix flour and boiling water in a large bowl. Knead dough into a ball. Cover bowl with plastic wrap; let dough rest for 30 to 60 minutes.', 
+			'Evenly divide dough into 16 pieces. Roll each piece into a 1/4 inch thick circle. Brush each circle with oil, season with salt and pepper, and sprinkle with about 1 teaspoon of green onions. Roll up, cigar style, and pinch open ends together to form a circle. Roll each circle flat to 1/4 inch.', 
+			'Heat 2 teaspoons oil in a large skillet. Fry cakes until golden brown, about 2 minutes on each side.'],
 			category_id: 1, author_id: rand(1..8)
 	},
 	{ title: 'Creme Brulee', difficulty: 3, time: 40, servings: 4, description: 'Chocolate lined ramekins filled with absolutely sinful creme brulee. Top with fresh berries when in season. Perfect for that special dinner, but easy enough to make everyday!', 
@@ -240,6 +295,13 @@ Recipe.create([
 		directions: ['In a small bowl, stir together the soy sauce, mirin, honey and sesame oil. Divide into two equal parts. Stir the rice vinegar into one part and set aside as a dipping sauce.', 
 			'Spread the sesame seeds out on a plate. Coat the tuna steaks with the remaining soy sauce mixture, then press into the sesame seeds to coat.', 
 			'Heat olive oil in a cast iron skillet over high heat until very hot. Place steaks in the pan, and sear for about 30 seconds on each side. Serve with the dipping sauce and wasabi paste.'],
+		category_id: 4, author_id: rand(1..8)
+	},
+	{ title: 'Agedashi-esque Tofu', difficulty: 2, time: 15, servings: 2, description: 'A very simple version of the Japanese sushi accompaniment. Serve with stir fry, rice, goma ae or any oriental meal.', 
+		ingredients: ['1 (12 ounce) package extra firm tofu', '3 tablespoons cornstarch', 'oil for frying', '2 green onions, chopped', '2 tablespoons hoisin sauce'],
+		directions: ['Cut tofu into 12 cubes. Place cornstarch on a plate or in a shallow bowl and dredge tofu in it, coating thoroughly.', 
+			'Heat enough oil so that tofu will be half-way submerged. Fry tofu in hot oil for 3 to 5 minutes on each side, or until crispy. Drain on paper towels.', 
+			'Sprinkle green onions over tofu and drizzle with hoisin sauce. Serve immediately.'],
 		category_id: 4, author_id: rand(1..8)
 	},
 	{ title: 'Honey Walnut Shrimp', difficulty: 3, time: 30, servings: 4, description: 'Hong Kong Style Chinese recipe! Crispy battered shrimp tossed in creamy sauce topped with sugar coated walnuts.', 
@@ -362,6 +424,15 @@ Recipe.create([
 			'Sprinkle chicken evenly with cheese, and continue baking for an additional 3 to 5 minutes, or until cheese is melted and bubbly. Top with sour cream if desired, and serve.'],
 		category_id: 5, author_id: rand(1..8)
 	},
+	{ title: 'Enchiladas Verdes', difficulty: 4, time: 60, servings: 9, description: 'I learned this recipe from an amazing cook from Puebla. I\'ve been perfecting it for over 15 years and realized that it was time to share it when my foodie friends tried to drink the sauce out of the saucepan. I use the roasted or baked chicken from the grocery store. I did it once only to save time, but found that they are tastier. Be conservative with the cream and the cheese. Do not use sour cream!', 
+		ingredients: ['2 cloves garlic', '3 serrano peppers', '1 pound small green tomatillos, husks removed', '1 cup vegetable oil for frying', '9 corn tortillas', '3 cups water', '4 teaspoons chicken bouillon granules', '1/2 store-bought rotisserie chicken, meat removed and shredded', '1/4 head iceberg lettuce, shredded', '1 cup cilantro leaves', '1 (8 ounce) container Mexican crema, crema fresca', '1 cup grated cotija cheese'],
+		directions: ['Cover a large griddle with aluminum foil and preheat to medium-high.', 
+			'Cook the garlic, serrano peppers, and tomatillos on the hot griddle until toasted and blackened, turning occasionally, about 5 minutes for the garlic, 10 minutes for the peppers, and 15 minutes for the tomatillos. Remove to a bowl and allow to cool.', 
+			'Heat oil in a small, deep skillet to 350 degrees F (175 degrees C). Using kitchen tongs, fry the tortillas individually, turning them once. They shouldn\'t be in the hot oil for more than 5 seconds per side. Remove excess oil with paper towels and keep warm. Remember that the hotter the oil, the less that the tortillas will absorb.', 
+			'Place the toasted garlic, serrano peppers, tomatillos, and the water in a blender and blend until smooth; pour into a saucepan over medium heat and bring to a boil. Dissolve the chicken bouillon into the mixture, reduce heat to medium-low, and cook at a simmer until slightly thickened, about 10 minutes. The sauce shouldn\'t be too thick.', 
+			'Soak three tortillas in the sauce, one at a time, for a few seconds, fill them with shredded chicken, sprinkle the meat with some of the sauce, roll them and place them seam side down on a pasta bowl. Spoon a generous amount of sauce over them and top them with lettuce, cilantro, crema, and cotija cheese. Pour a little more sauce over the whole thing if desired. Repeat the procedure twice more. Serve immediately.'],
+		category_id: 5, author_id: rand(1..8)
+	},
 	{ title: 'Raw Pad Thai', difficulty: 3, time: 30, servings: 4, description: 'This is an uncooked version of pad Thai. Great for the hot summer days!', 
 		ingredients: ['2 zucchini, ends trimmed', '2 carrots', '1 head red cabbage, thinly sliced', '1 red bell pepper, thinly sliced', '1/2 cup bean sprouts', '3/4 cup raw almond butter', '2 oranges, juiced', '2 tablespoons raw honey', '1 tablespoon minced fresh ginger root', '1 tablespoon Nama Shoyu (raw soy sauce)', '1 tablespoon unpasteurized miso', '1 clove garlic, minced', '1/4 teaspoon cayenne pepper'],
 		directions: ['Slice zucchini lengthwise with a vegetable peeler to create long thin noodles. Place on individual plates.', 
@@ -422,5 +493,5 @@ Recipe.create([
 ])
 
 120.times do
-	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..55))
+	Favorite.create(user_id: rand(1..8), recipe_id: rand(1..64))
 end
