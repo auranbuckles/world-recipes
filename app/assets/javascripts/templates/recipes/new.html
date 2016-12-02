@@ -90,8 +90,8 @@
 
 	  	<div class="form-group">
 	  		<ol>
-	  			<li>
-	  				<fieldset data-ng-repeat="direction in vm.directions">
+	  			<li data-ng-repeat="direction in vm.directions">
+	  				<fieldset>
   						<div class="col-md-10 inline-input">
   							<input class="form-control" type="text" ng-model="direction.text" placeholder="Enter direction" required>
   						</div>

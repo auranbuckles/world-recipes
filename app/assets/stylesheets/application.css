@@ -35,11 +35,11 @@ h2 {
 }
 
 ol.list-group {
-    list-style: decimal inside;
+  list-style: decimal inside;
 }
 
 ol .list-group-item {
-    display: list-item;
+  display: list-item;
 }
 
 .inline-input {
