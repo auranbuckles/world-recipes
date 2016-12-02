@@ -74,7 +74,7 @@
 				
 				<fieldset data-ng-repeat="ingredient in vm.ingredients">
 					<div class="col-md-5 inline-input">
-						<input class="form-control" type="text" ng-model="ingredient.quantity" placeholder="Enter quantity" required>
+						<input class="form-control" type="text" name="ingredient" ng-model="ingredient.quantity" placeholder="Enter quantity" required>
 					</div>
 					<div class="col-md-5 inline-input">
 						<input class="form-control" type="text" ng-model="ingredient.name" placeholder="Enter ingredient" required>
@@ -92,9 +92,9 @@
 	  		<ol>
 	  			<li>
 	  				<fieldset data-ng-repeat="direction in vm.directions">
-	  						<div class="col-md-10 inline-input">
-	  							<input class="form-control" type="text" ng-model="direction.text" placeholder="Enter direction" required>
-	  						</div>
+  						<div class="col-md-10 inline-input">
+  							<input class="form-control" type="text" ng-model="direction.text" placeholder="Enter direction" required>
+  						</div>
 	  					<button class="btn btn-danger" type="button" ng-show="$last" ng-click="vm.removeDirection()">-</button>
 	  				</fieldset>
 	  			</li>
