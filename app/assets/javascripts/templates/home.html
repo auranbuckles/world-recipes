@@ -65,8 +65,7 @@
 
 <ui-view>
 	<div ng-controller="RecipeController as vm">
-		<h2>Welcome!</h2>
-		<h4>Take a look at our top 10 recipes:</h4>
+		<h2>Welcome! Here are our top 10 recipes!</h2>
 
 		<div class="card-columns">
 			<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: '-favorited_users' | limitTo: 10 ">
