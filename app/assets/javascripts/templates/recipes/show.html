@@ -22,11 +22,9 @@
 	<h4>Ingredients</h4>
 	
 	<ul class="list-group">
-		<div ng-repeat="ingredients in vm.recipe.ingredients">
-			<li class="list-group-item" ng-repeat="ingredient in ingredients">
-				{{ ingredient }}
-			</li>
-		</div>
+		<li class="list-group-item" ng-repeat="ingredient in vm.recipe.ingredients">
+			{{ ingredient }}
+		</li>
 	</ul>
 </div>
 
@@ -34,10 +32,8 @@
 	<h4>Directions</h4>
 	
 	<ol class="list-group">
-		<div ng-repeat="directions in vm.recipe.directions">
-			<li class="list-group-item" ng-repeat="direction in directions">
-				{{ direction }}
-			</li>
-		</div>
+		<li class="list-group-item" ng-repeat="direction in vm.recipe.directions">
+			{{ direction }}
+		</li>
 	</ol>
 </div>
