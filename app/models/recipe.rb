@@ -5,10 +5,10 @@ class Recipe < ApplicationRecord
 	has_many :favorited_users, through: :favorites, source: :user
 
 	def ingredients=(str)
-    write_attribute( :ingredients, str.split(/\r\n/) )
+    write_attribute( :ingredients, str.split('/r/n') )
 	end
 
 	def directions=(str)
-    write_attribute( :directions, str.split(/\r\n/) )
+    write_attribute( :directions, str.split('/r/n') )
 	end
 end
