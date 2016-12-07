@@ -61,8 +61,8 @@
 	    	time: this.time,
 	    	servings: this.servings,
 	    	description: this.description,
-	    	ingredients: allIngredients.join("\r\n"),
-	    	directions: allDirections.join("\r\n"),
+	    	ingredients: allIngredients.join("/r/n"),
+	    	directions: allDirections.join("/r/n"),
 	    	category_id: this.category.id
 	    };
 
