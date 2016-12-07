@@ -18,14 +18,6 @@ class RecipesController < ApplicationController
     @recipe.save
   end
 
-  def update
-  	
-  end
-
-  def destroy
-  	
-  end
-
   private
 
   def recipe_params
