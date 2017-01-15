@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122040427) do
+ActiveRecord::Schema.define(version: 20170115175634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,18 +28,25 @@ ActiveRecord::Schema.define(version: 20161122040427) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "recipes", force: :cascade do |t|
     t.string   "title"
+    t.integer  "upvotes",     default: 0
     t.integer  "difficulty"
     t.integer  "time"
     t.integer  "servings"
     t.string   "description"
-    t.string   "ingredients",              array: true
-    t.string   "directions",               array: true
+    t.string   "ingredients",                          array: true
+    t.string   "directions",                           array: true
     t.integer  "category_id"
     t.integer  "author_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "users", force: :cascade do |t|
