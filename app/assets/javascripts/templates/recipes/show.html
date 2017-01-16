@@ -48,7 +48,7 @@
 <div class="jumbotron">
 	<h3>Comments <small>({{ vm.recipe.notes.length }} comments)</small></h3>
 
-	<form name="createNote" novalidate ng-submit="vm.addNote()">
+	<form name="vm.createNote" novalidate ng-submit="vm.addNote()">
 		<div class="form-group">
 		  <input class="form-control" type="text" name="content" ng-model="vm.content" placeholder="Join the discussion..." required>
 		</div>
@@ -60,8 +60,8 @@
 
 	<div class="list-unstyled">
 		<li class="media" ng-repeat="note in vm.recipe.notes">
-			{{ note.content }}
-			{{ note.created_at }}
+			<p class="lead">{{ note.content }}</p>
+			<div class="small text-muted">Created {{ note.created_at }}</div>
 			<hr>
 		</li>
 	</div>
