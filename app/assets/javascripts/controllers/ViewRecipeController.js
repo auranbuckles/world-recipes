@@ -24,10 +24,10 @@
 
 		vm.addNote = function() {
 			var data = {
-				// content: this.content
+				content: this.content,
 				recipe_id: this.recipe.id
 			}
-			NoteService.createNote(data);
+			RecipeService.createNote(data);
 			vm.reloadRoute();
 		}
 

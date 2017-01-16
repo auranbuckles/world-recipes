@@ -22,6 +22,11 @@ function RecipeService($http) {
 			  	.then(console.log("posting new favorite..."))
   }
 
+  this.createNote = function(data) {
+  	$http.post('http://localhost:3000/notes', data)
+			  	.then(console.log("posting new note..."))
+  }
+
 }
 
 angular
