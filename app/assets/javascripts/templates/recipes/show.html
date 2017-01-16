@@ -42,3 +42,16 @@
 		</li>
 	</ol>
 </div>
+
+<!-- New Notes Form -->
+
+<div class="jumbotron">
+	<h3>Comments</h3>
+
+	<form name="createNote" novalidate ng-submit="vm.addNote()">
+		<div class="form-group">
+		  <input class="form-control" type="text" name="content" ng-model="vm.content" required>
+		</div>
+	</form>
+</div>
+<br>
