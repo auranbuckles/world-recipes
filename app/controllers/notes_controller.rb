@@ -2,7 +2,9 @@ class NotesController < ApplicationController
 
 	def create
 		@note = Note.new(note_params)
-    @note.save
+    if @note.save
+    	render json: @note
+    end
 	end
 
 	private

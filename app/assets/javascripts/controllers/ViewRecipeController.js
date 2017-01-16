@@ -28,7 +28,7 @@
 				recipe_id: this.recipe.id
 			}
 			RecipeService.createNote(data);
-			vm.reloadRoute();
+			// vm.reloadRoute();
 		}
 
 		vm.upvote = function() {
