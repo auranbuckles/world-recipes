@@ -22,6 +22,15 @@
 			vm.reloadRoute();
 		}
 
+		vm.addNote = function() {
+			var data = {
+				content: this.content
+				recipe_id: this.recipe.id
+			}
+			NoteService.createNote(data);
+			vm.reloadRoute();
+		}
+
 		vm.upvote = function() {
 			var data = {
 				upvotes: this.recipe.upvotes + 1
