@@ -13,13 +13,13 @@
 	<p>Difficulty: {{ vm.recipe.difficulty }}</p>
 	<p>Time: {{ vm.recipe.time }}</p>
 	<p>Servings: {{ vm.recipe.servings }}</p>
-	<p>Added to favorites by {{ vm.recipe.favorited_users.length }} users</p>
+	<p>Added to favorites by {{ vm.recipe.favorites.length }} users</p>
 
-	<form novalidate ng-submit="vm.addFavorite()" ng-hide="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email))" ng-show="isAuthenticated()">
+	<form novalidate ng-submit="vm.addFavorite()" ng-hide="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email)) || vm.added" ng-show="isAuthenticated()">
 		<input class="btn btn-danger" type="submit" value="Add to Favorites &#9825;">
 	</form>
 
-	<div class="btn btn-success" ng-show="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email))">Added to Favorites &#9829;</div>
+	<div class="btn btn-success" ng-show="vm.stringify(vm.recipe.favorited_users).includes(vm.stringify(currentUser.email)) || vm.added">Added to Favorites &#9829;</div>
 
 </div>
 
@@ -59,7 +59,7 @@
 	<hr>
 
 	<div class="list-unstyled">
-		<li class="media" ng-repeat="note in vm.recipe.notes">
+		<li class="media" ng-repeat="note in vm.recipe.notes | orderBy:'-'">
 			<p class="lead">{{ note.content }}</p>
 			<div class="small text-muted">Created {{ note.created_at }}</div>
 			<hr>

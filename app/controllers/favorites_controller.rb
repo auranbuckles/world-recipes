@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new(favorite_params)
     @favorite.user = current_user
     if @favorite.save
-    	render :json @favorite
+    	render json: @favorite
     end
   end
 
