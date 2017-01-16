@@ -2,7 +2,9 @@ class FavoritesController < ApplicationController
   def create
     @favorite = Favorite.new(favorite_params)
     @favorite.user = current_user
-    @favorite.save
+    if @favorite.save
+    	render :json @favorite
+    end
   end
 
   private

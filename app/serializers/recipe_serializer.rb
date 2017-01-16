@@ -3,7 +3,7 @@ class RecipeSerializer < ActiveModel::Serializer
 
   belongs_to :category
   belongs_to :author, class_name: 'User'
-  # has_many :favorites
+  has_many :favorites
 	has_many :favorited_users, through: :favorites, source: :user
 	has_many :notes
 end
