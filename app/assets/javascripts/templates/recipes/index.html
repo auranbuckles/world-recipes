@@ -34,5 +34,11 @@
     <p class="card-text">{{ recipe.category.name }}</p>
     <p class="card-text">{{ recipe.description }}</p>
     <p class="card-text"><small class="text-muted">Submitted by {{ recipe.author.username }}</small></p>
+
+    <form novalidate ng-submit="vm.upvote(recipe)">
+			<input class="btn btn-success btn-sm" type="submit" value="Upvote &#8679;">
+			{{ recipe.upvotes }}
+		</form>
+    <!-- <button ng-click="vm.upvote(recipe)">Upvote</button> {{ recipe.counter }} -->
   </div>
 </div>
