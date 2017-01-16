@@ -10,21 +10,28 @@ function RecipeService($http) {
 
 	this.createRecipe = function(data) {
     $http.post('http://localhost:3000/recipes', data)
-    			.then(console.log("posting new recipe..."))
+    	.then(console.log("posting new recipe..."))
   };
 
   this.updateRecipe = function(id, data) {
-  	$http.put('http://localhost:3000/recipes/' + id, data)
+  	return $http.put('http://localhost:3000/recipes/' + id, data)
+  		.then(function(response) {
+  			return response.data
+  		})
   }
 
   this.createFavorite = function(data) {
-  	$http.post('http://localhost:3000/favorites', data)
-			  	.then(console.log("posting new favorite..."))
+  	return $http.post('http://localhost:3000/favorites', data)
+			.then(function(response) {
+				return response.data
+			})
   }
 
   this.createNote = function(data) {
-  	$http.post('http://localhost:3000/notes', data)
-			  	.then(console.log("posting new note..."))
+  	return $http.post('http://localhost:3000/notes', data)
+	  	.then(function(response) {
+	  		return response.data
+	  	})
   }
 
 }

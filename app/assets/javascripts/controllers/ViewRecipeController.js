@@ -18,8 +18,11 @@
 			var data = {
 				recipe_id: this.recipe.id
 			}
-			RecipeService.createFavorite(data);
-			vm.reloadRoute();
+			RecipeService.createFavorite(data)
+				.then(function(data) {
+					vm.recipe.favorites.push(data)
+				})
+			vm.added = true;
 		}
 
 		vm.addNote = function() {
@@ -27,17 +30,24 @@
 				content: this.content,
 				recipe_id: this.recipe.id
 			}
-			RecipeService.createNote(data);
-			// vm.reloadRoute();
+			RecipeService.createNote(data)
+				.then(function(data) {
+					vm.recipe.notes.push(data)
+				});
+			// vm.createNote.$setPristine();
+			// vm.createNote.$setUntouched();
 		}
 
 		vm.upvote = function() {
 			var data = {
 				upvotes: this.recipe.upvotes + 1
 			}
-			RecipeService.updateRecipe($stateParams.id, data);
-			console.log("added 1 upvote");
-			vm.reloadRoute();
+			RecipeService.updateRecipe($stateParams.id, data)
+				.then(function(data) {
+					// debugger;
+					// vm.recipe.push(data)
+				});
+			// vm.reloadRoute();
 		}
 
 		vm.stringify = function(obj) {
