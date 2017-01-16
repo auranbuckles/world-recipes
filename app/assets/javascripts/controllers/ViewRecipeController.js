@@ -22,6 +22,15 @@
 			vm.reloadRoute();
 		}
 
+		vm.upvote = function() {
+			var data = {
+				upvotes: this.recipe.upvotes + 1
+			}
+			RecipeService.updateRecipe($stateParams.id, data);
+			console.log("added 1 upvote");
+			vm.reloadRoute();
+		}
+
 		vm.stringify = function(obj) {
 			return JSON.stringify(obj);
 		}
