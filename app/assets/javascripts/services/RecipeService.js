@@ -13,6 +13,10 @@ function RecipeService($http) {
     			.then(console.log("posting new recipe..."))
   };
 
+  this.updateRecipe = function(id, data) {
+  	$http.put('http://localhost:3000/recipes/' + id, data)
+  }
+
   this.createFavorite = function(data) {
   	$http.post('http://localhost:3000/favorites', data)
 			  	.then(console.log("posting new favorite..."))
