@@ -1,10 +1,11 @@
 <div class="jumbotron">
 	<h3>{{ vm.recipe.title }}</h3>
 	<p>by {{ vm.recipe.author.username }}</p>
-		<form novalidate ng-submit="vm.upvote()">
-			<input class="btn btn-success btn-sm" type="submit" value="Upvote &#8679;">
-			{{ vm.recipe.upvotes }}
-		</form>
+
+	<form novalidate ng-submit="vm.upvote()">
+		<input class="btn btn-success btn-sm" type="submit" value="Upvote &#8679;">
+		{{ vm.recipe.upvotes }}
+	</form>
 	<br>
 	<h4>Category: {{ vm.recipe.category.name }}</h4>
 	

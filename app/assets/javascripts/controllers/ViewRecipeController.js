@@ -44,10 +44,9 @@
 			}
 			RecipeService.updateRecipe($stateParams.id, data)
 				.then(function(data) {
-					// debugger;
 					// vm.recipe.push(data)
 				});
-			// vm.reloadRoute();
+			vm.reloadRoute();
 		}
 
 		vm.stringify = function(obj) {
