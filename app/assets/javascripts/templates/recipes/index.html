@@ -1,5 +1,7 @@
 <h2>All Recipes</h2>
 
+<!-- Search bars -->
+
 <div class="row">
 	<div class="col-md-4">
 		<form class="navbar-form" role="search">
@@ -27,6 +29,9 @@
 </div>
 
 <br>
+<p ng-show="vm.loading">Loading...</p>
+
+<!-- Recipes -->
 
 <div class="card-columns">
 	<div class="card card-block" ng-repeat="recipe in vm.recipes | filter: vm.search | orderBy: 'title'">
