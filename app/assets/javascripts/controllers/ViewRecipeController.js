@@ -25,7 +25,7 @@
 			vm.added = true;
 		}
 
-		vm.addNote = function() {
+		vm.addComment = function() {
 			var data = {
 				content: this.content,
 				recipe_id: this.recipe.id
@@ -35,8 +35,8 @@
 					vm.recipe.notes.push(data)
 				});
 			vm.content = "";
-			vm.newNote.$setPristine();
-			vm.newNote.$setUntouched();
+			vm.newComment.$setPristine();
+			vm.newComment.$setUntouched();
 		}
 
 		vm.upvote = function() {
