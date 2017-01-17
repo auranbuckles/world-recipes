@@ -34,8 +34,9 @@
 				.then(function(data) {
 					vm.recipe.notes.push(data)
 				});
-			// vm.createNote.$setPristine();
-			// vm.createNote.$setUntouched();
+			vm.content = "";
+			vm.newNote.$setPristine();
+			vm.newNote.$setUntouched();
 		}
 
 		vm.upvote = function() {
@@ -44,9 +45,8 @@
 			}
 			RecipeService.updateRecipe($stateParams.id, data)
 				.then(function(data) {
-					// vm.recipe.push(data)
+					vm.recipe = data
 				});
-			vm.reloadRoute();
 		}
 
 		vm.stringify = function(obj) {

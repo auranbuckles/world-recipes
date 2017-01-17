@@ -22,9 +22,13 @@
 			var data = {
 				upvotes: recipe.upvotes + 1
 			}
-			RecipeService.updateRecipe(recipe.id, data);
-			console.log("added 1 upvote");
-			vm.reloadRoute();
+			var i = vm.recipes.indexOf(recipe)
+			vm.recipes.splice(i, 1)
+			RecipeService.updateRecipe(recipe.id, data)
+				.then(function(data) {
+					vm.recipes.push(data)
+				});
+			// vm.reloadRoute();
 
 			// recipe.counter += 1;
 			// console.log("added 1 upvote")

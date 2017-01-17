@@ -49,10 +49,12 @@
 <div class="jumbotron">
 	<h3>Comments <small>({{ vm.recipe.notes.length }} comments)</small></h3>
 
-	<form name="vm.createNote" novalidate ng-submit="vm.addNote()">
+	<form name="vm.newNote" novalidate ng-submit="vm.addNote()">
 		<div class="form-group">
-		  <input class="form-control" type="text" name="content" ng-model="vm.content" placeholder="Join the discussion..." required>
+		  <input class="form-control" type="text" name="content" ng-model="vm.content" ng-minlength="1" placeholder="Join the discussion..." required>
 		</div>
+
+		<div class="alert alert-danger" ng-show="vm.newNote.content.$touched && vm.newNote.content.$invalid">Your comment must have content.</div>
 
 		<input class="btn btn-primary" type="submit" value="Submit">
 	</form>
