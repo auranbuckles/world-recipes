@@ -15,9 +15,12 @@
  */
 
 h1.logo {
- 	background-color: #774D87;
+ 	background-image: url("banner.jpg");
+ 	background-size: 100% auto;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
  	color: white;
- 	padding: 1em;
+ 	padding: 3em;
 }
 
 h1.logo a, h1.logo a:hover {
